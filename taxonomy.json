@@ -1,0 +1,5590 @@
+{
+  "taxonomy_version": "1.0",
+  "source": "context.json",
+  "goals": [
+    "Make browsing intuitive and non-overwhelming",
+    "Make it easy to identify what a table represents",
+    "Provide a clean hierarchy with table families"
+  ],
+  "domains": [
+    {
+      "name": "RGS Core",
+      "description": "",
+      "groups": [
+        {
+          "name": "Patient",
+          "description": "Patient profiles, devices, diagnoses, language, and subscriptions.",
+          "table_families": [
+            {
+              "family": "patient_language",
+              "label": "Patient Language",
+              "variants": [
+                "patient_language_app",
+                "patient_language_plus"
+              ]
+            }
+          ],
+          "tables": [
+            {
+              "table": "patient",
+              "label": "Patient",
+              "note": ""
+            },
+            {
+              "table": "patient_affectation",
+              "label": "Patient Affectation",
+              "note": ""
+            },
+            {
+              "table": "patient_affectation_features",
+              "label": "Patient Affectation Features",
+              "note": ""
+            },
+            {
+              "table": "patient_aisn_data",
+              "label": "Patient Aisn Data",
+              "note": ""
+            },
+            {
+              "table": "patient_device_data",
+              "label": "Patient Device Data",
+              "note": ""
+            },
+            {
+              "table": "patient_diagnosis_data",
+              "label": "Patient Diagnosis Data",
+              "note": ""
+            },
+            {
+              "table": "patient_inactivity",
+              "label": "Patient Inactivity",
+              "note": ""
+            },
+            {
+              "table": "patient_privacy_policy",
+              "label": "Patient Privacy Policy",
+              "note": ""
+            },
+            {
+              "table": "patient_software",
+              "label": "Patient Software",
+              "note": ""
+            },
+            {
+              "table": "patient_subscription",
+              "label": "Patient Subscription",
+              "note": ""
+            }
+          ],
+          "subgroups": []
+        },
+        {
+          "name": "Clinician",
+          "description": "Clinician profiles, activities, and patient/protocol links.",
+          "table_families": [],
+          "tables": [
+            {
+              "table": "clinician",
+              "label": "Clinician",
+              "note": ""
+            },
+            {
+              "table": "clinician_activity",
+              "label": "Clinician Activity",
+              "note": ""
+            },
+            {
+              "table": "clinician_activity_patient",
+              "label": "Clinician Activity Patient",
+              "note": ""
+            },
+            {
+              "table": "clinician_activity_protocol",
+              "label": "Clinician Activity Protocol",
+              "note": ""
+            },
+            {
+              "table": "clinician_patient",
+              "label": "Clinician Patient",
+              "note": ""
+            },
+            {
+              "table": "clinician_privacy_policy",
+              "label": "Clinician Privacy Policy",
+              "note": ""
+            }
+          ],
+          "subgroups": []
+        },
+        {
+          "name": "Hospital",
+          "description": "Hospital organizations, subscriptions, software/protocol links.",
+          "table_families": [],
+          "tables": [
+            {
+              "table": "hospital",
+              "label": "Hospital",
+              "note": ""
+            },
+            {
+              "table": "hospital_clinician",
+              "label": "Hospital Clinician",
+              "note": ""
+            },
+            {
+              "table": "hospital_project",
+              "label": "Hospital Project",
+              "note": ""
+            },
+            {
+              "table": "hospital_software",
+              "label": "Hospital Software",
+              "note": ""
+            },
+            {
+              "table": "hospital_subscription",
+              "label": "Hospital Subscription",
+              "note": ""
+            },
+            {
+              "table": "protocol_hospital",
+              "label": "Protocol Hospital",
+              "note": ""
+            },
+            {
+              "table": "protocol_software_hospital",
+              "label": "Protocol Software Hospital",
+              "note": ""
+            }
+          ],
+          "subgroups": []
+        },
+        {
+          "name": "Prescriptions",
+          "description": "Prescriptions across application contexts.",
+          "table_families": [
+            {
+              "family": "prescription",
+              "label": "Prescription",
+              "variants": [
+                "prescription_app",
+                "prescription_clinic",
+                "prescription_home",
+                "prescription_plus",
+                "prescription_web"
+              ]
+            }
+          ],
+          "tables": [
+            {
+              "table": "prescription_change_reason",
+              "label": "Prescription Change Reason",
+              "note": "Reasons for prescription changes."
+            }
+          ],
+          "subgroups": []
+        },
+        {
+          "name": "sessions",
+          "description": "Sessions across application contexts.",
+          "table_families": [
+            {
+              "family": "session",
+              "label": "Session",
+              "variants": [
+                "session_app",
+                "session_clinic",
+                "session_home",
+                "session_icu",
+                "session_plus",
+                "session_web"
+              ]
+            }
+          ],
+          "tables": [],
+          "subgroups": []
+        },
+        {
+          "name": "Recordings",
+          "description": "Recordings across application contexts.",
+          "table_families": [
+            {
+              "family": "recording",
+              "label": "Recording",
+              "variants": [
+                "recording_app",
+                "recording_clinic",
+                "recording_home",
+                "recording_icu",
+                "recording_plus",
+                "recording_web"
+              ]
+            }
+          ],
+          "tables": [],
+          "subgroups": []
+        },
+        {
+          "name": "patient_aisn_data",
+          "description": "AISN-specific patient data.",
+          "table_families": [],
+          "tables": [
+            {
+              "table": "patient_aisn_data",
+              "label": "Patient Aisn Data",
+              "note": ""
+            }
+          ],
+          "subgroups": []
+        }
+      ]
+    },
+    {
+      "name": "Clinical Trial",
+      "description": "",
+      "groups": [
+        {
+          "name": "AISN",
+          "description": "AISN clinical trial context (no direct tables).",
+          "table_families": [],
+          "tables": [
+            {
+              "table": "clinical_trials",
+              "label": "Clinical Trials",
+              "note": ""
+            },
+            {
+              "table": "patient_aisn_data",
+              "label": "Patient Aisn Data",
+              "note": ""
+            }
+          ],
+          "subgroups": []
+        }
+      ]
+    },
+    {
+      "name": "Engagement and Coaching",
+      "description": "",
+      "groups": [
+        {
+          "name": "AI Coach",
+          "description": "Coaching messages, schedules, and commitment tracking.",
+          "table_families": [],
+          "tables": [
+            {
+              "table": "coach_messages",
+              "label": "Coach Messages",
+              "note": ""
+            },
+            {
+              "table": "coach_messages_per_patient",
+              "label": "Coach Messages Per Patient",
+              "note": ""
+            },
+            {
+              "table": "coach_messages_per_protocol",
+              "label": "Coach Messages Per Protocol",
+              "note": ""
+            },
+            {
+              "table": "coach_messages_schedule_per_patient",
+              "label": "Coach Messages Schedule Per Patient",
+              "note": ""
+            },
+            {
+              "table": "coach_status",
+              "label": "Coach Status",
+              "note": ""
+            },
+            {
+              "table": "coach_training_time",
+              "label": "Coach Training Time",
+              "note": ""
+            },
+            {
+              "table": "commitment_answer",
+              "label": "Commitment Answer",
+              "note": ""
+            },
+            {
+              "table": "commitment_question",
+              "label": "Commitment Question",
+              "note": ""
+            },
+            {
+              "table": "commitment_question_patient",
+              "label": "Commitment Question Patient",
+              "note": ""
+            }
+          ],
+          "subgroups": []
+        },
+        {
+          "name": "EmotionalSlider",
+          "description": "Emotional questionnaires and evaluations.",
+          "table_families": [],
+          "tables": [
+            {
+              "table": "emotional_answer",
+              "label": "Emotional Answer",
+              "note": ""
+            },
+            {
+              "table": "emotional_question",
+              "label": "Emotional Question",
+              "note": ""
+            },
+            {
+              "table": "emotional_question_patient",
+              "label": "Emotional Question Patient",
+              "note": ""
+            },
+            {
+              "table": "evaluation",
+              "label": "Evaluation",
+              "note": ""
+            }
+          ],
+          "subgroups": []
+        }
+      ]
+    },
+    {
+      "name": "Difficulty Adaptation and Performance",
+      "description": "",
+      "groups": [
+        {
+          "name": "Difficulty Adaptation and Performance",
+          "description": "Adaptive difficulty settings, parameters, and performance estimators.",
+          "table_families": [
+            {
+              "family": "difficulty_modulators",
+              "label": "Difficulty Modulators",
+              "variants": [
+                "difficulty_modulators_app",
+                "difficulty_modulators_plus"
+              ]
+            },
+            {
+              "family": "difficulty_settings",
+              "label": "Difficulty Settings",
+              "variants": [
+                "difficulty_settings_app",
+                "difficulty_settings_plus"
+              ]
+            },
+            {
+              "family": "parameter",
+              "label": "Parameter",
+              "variants": [
+                "parameter_app",
+                "parameter_clinic",
+                "parameter_home",
+                "parameter_icu",
+                "parameter_plus",
+                "parameter_web"
+              ]
+            },
+            {
+              "family": "performance_estimators",
+              "label": "Performance Estimators",
+              "variants": [
+                "performance_estimators_app",
+                "performance_estimators_plus"
+              ]
+            }
+          ],
+          "tables": [],
+          "subgroups": []
+        }
+      ]
+    },
+    {
+      "name": "Measurements and Features",
+      "description": "",
+      "groups": [
+        {
+          "name": "Kinematic Features",
+          "description": "Kinematic features captured from sessions (e.g., displacement, volume, surfaces).",
+          "table_families": [
+            {
+              "family": "metric",
+              "label": "Metric",
+              "variants": [
+                "metric_app",
+                "metric_plus"
+              ]
+            }
+          ],
+          "tables": [],
+          "subgroups": []
+        }
+      ]
+    },
+    {
+      "name": "Predictive Analytics",
+      "description": "",
+      "groups": [
+        {
+          "name": "RecSys",
+          "description": "Recommendation system data, metrics, notes, and staging.",
+          "table_families": [],
+          "tables": [
+            {
+              "table": "clinical_trials",
+              "label": "Clinical Trials",
+              "note": ""
+            },
+            {
+              "table": "prescription_change_reason",
+              "label": "Prescription Change Reason",
+              "note": "Reasons for prescription changes."
+            },
+            {
+              "table": "prescription_staging",
+              "label": "Prescription Staging",
+              "note": ""
+            },
+            {
+              "table": "recsys_diagnostic",
+              "label": "Recsys Diagnostic",
+              "note": ""
+            },
+            {
+              "table": "recsys_intrinsic_measures",
+              "label": "Recsys Intrinsic Measures",
+              "note": ""
+            },
+            {
+              "table": "recsys_metrics",
+              "label": "Recsys Metrics",
+              "note": ""
+            },
+            {
+              "table": "recsys_notes",
+              "label": "Recsys Notes",
+              "note": ""
+            }
+          ],
+          "subgroups": []
+        },
+        {
+          "name": "SaddlePoint",
+          "description": "Predictive analytics (SPS) sources, diagnosis, prognosis.",
+          "table_families": [],
+          "tables": [
+            {
+              "table": "prediction_data_source_sps",
+              "label": "Prediction Data Source Sps",
+              "note": ""
+            },
+            {
+              "table": "sps_diagnosis",
+              "label": "Sps Diagnosis",
+              "note": ""
+            },
+            {
+              "table": "sps_prediction_source",
+              "label": "Sps Prediction Source",
+              "note": ""
+            },
+            {
+              "table": "sps_prognosis",
+              "label": "Sps Prognosis",
+              "note": ""
+            }
+          ],
+          "subgroups": []
+        }
+      ]
+    },
+    {
+      "name": "RGS Housekeeping",
+      "description": "",
+      "groups": [
+        {
+          "name": "RGS Housekeeping",
+          "description": "Reference entities: protocols, platforms, software, versions.",
+          "table_families": [],
+          "tables": [
+            {
+              "table": "activity",
+              "label": "Activity",
+              "note": ""
+            },
+            {
+              "table": "affectation",
+              "label": "Affectation",
+              "note": ""
+            },
+            {
+              "table": "component",
+              "label": "Component",
+              "note": ""
+            },
+            {
+              "table": "distributor",
+              "label": "Distributor",
+              "note": ""
+            },
+            {
+              "table": "platform",
+              "label": "Platform",
+              "note": ""
+            },
+            {
+              "table": "privacy_policy",
+              "label": "Privacy Policy",
+              "note": ""
+            },
+            {
+              "table": "protocol",
+              "label": "Protocol",
+              "note": ""
+            },
+            {
+              "table": "protocol_device_support",
+              "label": "Protocol Device Support",
+              "note": ""
+            },
+            {
+              "table": "protocol_platform",
+              "label": "Protocol Platform",
+              "note": ""
+            },
+            {
+              "table": "protocol_software",
+              "label": "Protocol Software",
+              "note": ""
+            },
+            {
+              "table": "protocol_type",
+              "label": "Protocol Type",
+              "note": ""
+            },
+            {
+              "table": "software",
+              "label": "Software",
+              "note": ""
+            },
+            {
+              "table": "version_matching",
+              "label": "Version Matching",
+              "note": ""
+            }
+          ],
+          "subgroups": []
+        }
+      ]
+    },
+    {
+      "name": "Miscellaneous",
+      "description": "",
+      "groups": [
+        {
+          "name": "Miscellaneous",
+          "description": "Ungrouped or uncategorized tables.",
+          "table_families": [],
+          "tables": [],
+          "subgroups": [
+            {
+              "name": "Clinical and Data Sources",
+              "description": "Clinical source data and clinical prediction sources.",
+              "table_families": [],
+              "tables": [
+                {
+                  "table": "clinical_data",
+                  "label": "Clinical Data",
+                  "note": "Likely raw clinical inputs or measurements."
+                },
+                {
+                  "table": "prediction_data_source_clinical",
+                  "label": "Prediction Data Source Clinical",
+                  "note": "Clinical data source for predictions."
+                }
+              ]
+            },
+            {
+              "name": "Codes and Reference",
+              "description": "Codes, code usage, and reference structures.",
+              "table_families": [],
+              "tables": [
+                {
+                  "table": "code",
+                  "label": "Code",
+                  "note": "Generic code/reference table."
+                },
+                {
+                  "table": "code_redemption",
+                  "label": "Code Redemption",
+                  "note": "Code usage or redemption tracking."
+                },
+                {
+                  "table": "tree",
+                  "label": "Tree",
+                  "note": "Generic hierarchy/tree structure."
+                }
+              ]
+            },
+            {
+              "name": "Device and Telemetry",
+              "description": "Device, station, and telemetry related tables.",
+              "table_families": [],
+              "tables": [
+                {
+                  "table": "control_plus",
+                  "label": "Control Plus",
+                  "note": "Control/telemetry data for plus variant."
+                },
+                {
+                  "table": "device_cloud_messaging",
+                  "label": "Device Cloud Messaging",
+                  "note": "Device messaging or telemetry stream."
+                },
+                {
+                  "table": "reference_date_wear",
+                  "label": "Reference Date Wear",
+                  "note": "Reference dates for wear data."
+                },
+                {
+                  "table": "station",
+                  "label": "Station",
+                  "note": "Device or station metadata."
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "group_hierarchy": {
+    "sessions": {
+      "description": "",
+      "parent_groups": [],
+      "tables": [
+        "session_app",
+        "session_clinic",
+        "session_home",
+        "session_icu",
+        "session_plus",
+        "session_web"
+      ]
+    },
+    "Prescriptions": {
+      "description": "",
+      "parent_groups": [],
+      "tables": [
+        "prescription_app",
+        "prescription_change_reason",
+        "prescription_clinic",
+        "prescription_home",
+        "prescription_plus",
+        "prescription_web"
+      ]
+    },
+    "AI Coach": {
+      "description": "",
+      "parent_groups": [],
+      "tables": [
+        "coach_messages",
+        "coach_messages_per_patient",
+        "coach_messages_per_protocol",
+        "coach_messages_schedule_per_patient",
+        "coach_status",
+        "coach_training_time",
+        "commitment_answer",
+        "commitment_question",
+        "commitment_question_patient"
+      ]
+    },
+    "Recordings": {
+      "description": "",
+      "parent_groups": [],
+      "tables": [
+        "recording_app",
+        "recording_clinic",
+        "recording_home",
+        "recording_icu",
+        "recording_plus",
+        "recording_web"
+      ]
+    },
+    "RecSys": {
+      "description": "",
+      "parent_groups": [],
+      "tables": [
+        "clinical_trials",
+        "prescription_change_reason",
+        "prescription_staging",
+        "recsys_diagnostic",
+        "recsys_intrinsic_measures",
+        "recsys_metrics",
+        "recsys_notes"
+      ]
+    },
+    "Difficulty Adaptation and Performance": {
+      "description": "",
+      "parent_groups": [],
+      "tables": [
+        "difficulty_modulators_app",
+        "difficulty_modulators_plus",
+        "difficulty_settings_app",
+        "difficulty_settings_plus",
+        "parameter_app",
+        "parameter_clinic",
+        "parameter_home",
+        "parameter_icu",
+        "parameter_plus",
+        "parameter_web",
+        "performance_estimators_app",
+        "performance_estimators_plus"
+      ]
+    },
+    "SaddlePoint": {
+      "description": "",
+      "parent_groups": [],
+      "tables": [
+        "prediction_data_source_sps",
+        "sps_diagnosis",
+        "sps_prediction_source",
+        "sps_prognosis"
+      ]
+    },
+    "EmotionalSlider": {
+      "description": "",
+      "parent_groups": [],
+      "tables": [
+        "emotional_answer",
+        "emotional_question",
+        "emotional_question_patient",
+        "evaluation"
+      ]
+    },
+    "Patient": {
+      "description": "",
+      "parent_groups": [],
+      "tables": [
+        "patient",
+        "patient_affectation",
+        "patient_affectation_features",
+        "patient_aisn_data",
+        "patient_device_data",
+        "patient_diagnosis_data",
+        "patient_inactivity",
+        "patient_language_app",
+        "patient_language_plus",
+        "patient_privacy_policy",
+        "patient_software",
+        "patient_subscription"
+      ]
+    },
+    "Hospital": {
+      "description": "",
+      "parent_groups": [],
+      "tables": [
+        "hospital",
+        "hospital_clinician",
+        "hospital_project",
+        "hospital_software",
+        "hospital_subscription",
+        "protocol_hospital",
+        "protocol_software_hospital"
+      ]
+    },
+    "RGS Housekeeping": {
+      "description": "",
+      "parent_groups": [],
+      "tables": [
+        "activity",
+        "affectation",
+        "component",
+        "distributor",
+        "platform",
+        "privacy_policy",
+        "protocol",
+        "protocol_device_support",
+        "protocol_platform",
+        "protocol_software",
+        "protocol_type",
+        "software",
+        "version_matching"
+      ]
+    },
+    "Clinician": {
+      "description": "",
+      "parent_groups": [],
+      "tables": [
+        "clinician",
+        "clinician_activity",
+        "clinician_activity_patient",
+        "clinician_activity_protocol",
+        "clinician_patient",
+        "clinician_privacy_policy"
+      ]
+    },
+    "patient_aisn_data": {
+      "description": "",
+      "parent_groups": [],
+      "tables": [
+        "patient_aisn_data"
+      ]
+    },
+    "AISN": {
+      "description": "",
+      "parent_groups": [],
+      "tables": [
+        "clinical_trials",
+        "patient_aisn_data"
+      ]
+    },
+    "Kinematic Features": {
+      "description": "Kinematic features captured from sessions (e.g., displacement, volume, surfaces).",
+      "parent_groups": [],
+      "tables": [
+        "metric_app",
+        "metric_plus"
+      ]
+    },
+    "Miscellaneous": {
+      "description": "Ungrouped or uncategorized tables.",
+      "parent_groups": [],
+      "tables": [
+        "clinical_data",
+        "code",
+        "code_redemption",
+        "control_plus",
+        "device_cloud_messaging",
+        "prediction_data_source_clinical",
+        "reference_date_wear",
+        "station",
+        "tree"
+      ]
+    }
+  },
+  "table_index": {
+    "activity": {
+      "label": "Activity",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "domains": [
+        "RGS Housekeeping"
+      ],
+      "family": ""
+    },
+    "affectation": {
+      "label": "Affectation",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "domains": [
+        "RGS Housekeeping"
+      ],
+      "family": ""
+    },
+    "clinical_data": {
+      "label": "Clinical Data",
+      "description": "",
+      "groups": [
+        "Miscellaneous"
+      ],
+      "domains": [
+        "Miscellaneous"
+      ],
+      "family": ""
+    },
+    "clinical_trials": {
+      "label": "Clinical Trials",
+      "description": "Clinical trial scores and assessments for enrolled patients.",
+      "groups": [
+        "AISN",
+        "RecSys"
+      ],
+      "domains": [
+        "Clinical Trial",
+        "Predictive Analytics"
+      ],
+      "family": ""
+    },
+    "clinician": {
+      "label": "Clinician",
+      "description": "",
+      "groups": [
+        "Clinician"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "clinician_activity": {
+      "label": "Clinician Activity",
+      "description": "",
+      "groups": [
+        "Clinician"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "clinician_activity_patient": {
+      "label": "Clinician Activity Patient",
+      "description": "",
+      "groups": [
+        "Clinician"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "clinician_activity_protocol": {
+      "label": "Clinician Activity Protocol",
+      "description": "",
+      "groups": [
+        "Clinician"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "clinician_patient": {
+      "label": "Clinician Patient",
+      "description": "",
+      "groups": [
+        "Clinician"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "clinician_privacy_policy": {
+      "label": "Clinician Privacy Policy",
+      "description": "",
+      "groups": [
+        "Clinician"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "coach_messages": {
+      "label": "Coach Messages",
+      "description": "",
+      "groups": [
+        "AI Coach"
+      ],
+      "domains": [
+        "Engagement and Coaching"
+      ],
+      "family": ""
+    },
+    "coach_messages_per_patient": {
+      "label": "Coach Messages Per Patient",
+      "description": "",
+      "groups": [
+        "AI Coach"
+      ],
+      "domains": [
+        "Engagement and Coaching"
+      ],
+      "family": ""
+    },
+    "coach_messages_per_protocol": {
+      "label": "Coach Messages Per Protocol",
+      "description": "",
+      "groups": [
+        "AI Coach"
+      ],
+      "domains": [
+        "Engagement and Coaching"
+      ],
+      "family": ""
+    },
+    "coach_messages_schedule_per_patient": {
+      "label": "Coach Messages Schedule Per Patient",
+      "description": "",
+      "groups": [
+        "AI Coach"
+      ],
+      "domains": [
+        "Engagement and Coaching"
+      ],
+      "family": ""
+    },
+    "coach_status": {
+      "label": "Coach Status",
+      "description": "",
+      "groups": [
+        "AI Coach"
+      ],
+      "domains": [
+        "Engagement and Coaching"
+      ],
+      "family": ""
+    },
+    "coach_training_time": {
+      "label": "Coach Training Time",
+      "description": "",
+      "groups": [
+        "AI Coach"
+      ],
+      "domains": [
+        "Engagement and Coaching"
+      ],
+      "family": ""
+    },
+    "code": {
+      "label": "Code",
+      "description": "",
+      "groups": [
+        "Miscellaneous"
+      ],
+      "domains": [
+        "Miscellaneous"
+      ],
+      "family": ""
+    },
+    "code_redemption": {
+      "label": "Code Redemption",
+      "description": "",
+      "groups": [
+        "Miscellaneous"
+      ],
+      "domains": [
+        "Miscellaneous"
+      ],
+      "family": ""
+    },
+    "commitment_answer": {
+      "label": "Commitment Answer",
+      "description": "",
+      "groups": [
+        "AI Coach"
+      ],
+      "domains": [
+        "Engagement and Coaching"
+      ],
+      "family": ""
+    },
+    "commitment_question": {
+      "label": "Commitment Question",
+      "description": "",
+      "groups": [
+        "AI Coach"
+      ],
+      "domains": [
+        "Engagement and Coaching"
+      ],
+      "family": ""
+    },
+    "commitment_question_patient": {
+      "label": "Commitment Question Patient",
+      "description": "",
+      "groups": [
+        "AI Coach"
+      ],
+      "domains": [
+        "Engagement and Coaching"
+      ],
+      "family": ""
+    },
+    "component": {
+      "label": "Component",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "domains": [
+        "RGS Housekeeping"
+      ],
+      "family": ""
+    },
+    "control_plus": {
+      "label": "Control Plus",
+      "description": "",
+      "groups": [
+        "Miscellaneous"
+      ],
+      "domains": [
+        "Miscellaneous"
+      ],
+      "family": "control"
+    },
+    "device_cloud_messaging": {
+      "label": "Device Cloud Messaging",
+      "description": "",
+      "groups": [
+        "Miscellaneous"
+      ],
+      "domains": [
+        "Miscellaneous"
+      ],
+      "family": ""
+    },
+    "difficulty_modulators_app": {
+      "label": "Difficulty Modulators App",
+      "description": "Time series of difficulty modulator values per patient/protocol.",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "domains": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "family": "difficulty_modulators"
+    },
+    "difficulty_modulators_plus": {
+      "label": "Difficulty Modulators Plus",
+      "description": "Time series of difficulty modulator values per patient/protocol.",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "domains": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "family": "difficulty_modulators"
+    },
+    "difficulty_settings_app": {
+      "label": "Difficulty Settings App",
+      "description": "",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "domains": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "family": "difficulty_settings"
+    },
+    "difficulty_settings_plus": {
+      "label": "Difficulty Settings Plus",
+      "description": "",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "domains": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "family": "difficulty_settings"
+    },
+    "distributor": {
+      "label": "Distributor",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "domains": [
+        "RGS Housekeeping"
+      ],
+      "family": ""
+    },
+    "emotional_answer": {
+      "label": "Emotional Answer",
+      "description": "",
+      "groups": [
+        "EmotionalSlider"
+      ],
+      "domains": [
+        "Engagement and Coaching"
+      ],
+      "family": ""
+    },
+    "emotional_question": {
+      "label": "Emotional Question",
+      "description": "",
+      "groups": [
+        "EmotionalSlider"
+      ],
+      "domains": [
+        "Engagement and Coaching"
+      ],
+      "family": ""
+    },
+    "emotional_question_patient": {
+      "label": "Emotional Question Patient",
+      "description": "",
+      "groups": [
+        "EmotionalSlider"
+      ],
+      "domains": [
+        "Engagement and Coaching"
+      ],
+      "family": ""
+    },
+    "evaluation": {
+      "label": "Evaluation",
+      "description": "",
+      "groups": [
+        "EmotionalSlider"
+      ],
+      "domains": [
+        "Engagement and Coaching"
+      ],
+      "family": ""
+    },
+    "hospital": {
+      "label": "Hospital",
+      "description": "",
+      "groups": [
+        "Hospital"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "hospital_clinician": {
+      "label": "Hospital Clinician",
+      "description": "",
+      "groups": [
+        "Hospital"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "hospital_project": {
+      "label": "Hospital Project",
+      "description": "",
+      "groups": [
+        "Hospital"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "hospital_software": {
+      "label": "Hospital Software",
+      "description": "",
+      "groups": [
+        "Hospital"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "hospital_subscription": {
+      "label": "Hospital Subscription",
+      "description": "",
+      "groups": [
+        "Hospital"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "metric_app": {
+      "label": "Metric App",
+      "description": "Kinematic feature measurements (e.g., displacement, volume, surface area).",
+      "groups": [
+        "Kinematic Features"
+      ],
+      "domains": [
+        "Measurements and Features"
+      ],
+      "family": "metric"
+    },
+    "metric_plus": {
+      "label": "Metric Plus",
+      "description": "Kinematic feature measurements (e.g., displacement, volume, surface area).",
+      "groups": [
+        "Kinematic Features"
+      ],
+      "domains": [
+        "Measurements and Features"
+      ],
+      "family": "metric"
+    },
+    "parameter_app": {
+      "label": "Parameter App",
+      "description": "Last logged difficulty modulator for a session.",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "domains": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "family": "parameter"
+    },
+    "parameter_clinic": {
+      "label": "Parameter Clinic",
+      "description": "Last logged difficulty modulator for a session.",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "domains": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "family": "parameter"
+    },
+    "parameter_home": {
+      "label": "Parameter Home",
+      "description": "Last logged difficulty modulator for a session.",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "domains": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "family": "parameter"
+    },
+    "parameter_icu": {
+      "label": "Parameter Icu",
+      "description": "Last logged difficulty modulator for a session.",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "domains": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "family": "parameter"
+    },
+    "parameter_plus": {
+      "label": "Parameter Plus",
+      "description": "Last logged difficulty modulator for a session.",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "domains": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "family": "parameter"
+    },
+    "parameter_web": {
+      "label": "Parameter Web",
+      "description": "Last logged difficulty modulator for a session.",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "domains": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "family": "parameter"
+    },
+    "patient": {
+      "label": "Patient",
+      "description": "Main patient table at signup with identity and demographic fields.",
+      "groups": [
+        "Patient"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "patient_affectation": {
+      "label": "Patient Affectation",
+      "description": "",
+      "groups": [
+        "Patient"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "patient_affectation_features": {
+      "label": "Patient Affectation Features",
+      "description": "",
+      "groups": [
+        "Patient"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "patient_aisn_data": {
+      "label": "Patient Aisn Data",
+      "description": "AISN-related patient data (experimental group, demographics, start date).",
+      "groups": [
+        "AISN",
+        "Patient",
+        "patient_aisn_data"
+      ],
+      "domains": [
+        "Clinical Trial",
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "patient_device_data": {
+      "label": "Patient Device Data",
+      "description": "",
+      "groups": [
+        "Patient"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "patient_diagnosis_data": {
+      "label": "Patient Diagnosis Data",
+      "description": "",
+      "groups": [
+        "Patient"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "patient_inactivity": {
+      "label": "Patient Inactivity",
+      "description": "",
+      "groups": [
+        "Patient"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "patient_language_app": {
+      "label": "Patient Language App",
+      "description": "",
+      "groups": [
+        "Patient"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": "patient_language"
+    },
+    "patient_language_plus": {
+      "label": "Patient Language Plus",
+      "description": "",
+      "groups": [
+        "Patient"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": "patient_language"
+    },
+    "patient_privacy_policy": {
+      "label": "Patient Privacy Policy",
+      "description": "",
+      "groups": [
+        "Patient"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "patient_software": {
+      "label": "Patient Software",
+      "description": "",
+      "groups": [
+        "Patient"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "patient_subscription": {
+      "label": "Patient Subscription",
+      "description": "",
+      "groups": [
+        "Patient"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "performance_estimators_app": {
+      "label": "Performance Estimators App",
+      "description": "Time series of performance estimators used to adapt difficulty.",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "domains": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "family": "performance_estimators"
+    },
+    "performance_estimators_plus": {
+      "label": "Performance Estimators Plus",
+      "description": "Time series of performance estimators used to adapt difficulty.",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "domains": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "family": "performance_estimators"
+    },
+    "platform": {
+      "label": "Platform",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "domains": [
+        "RGS Housekeeping"
+      ],
+      "family": ""
+    },
+    "prediction_data_source_clinical": {
+      "label": "Prediction Data Source Clinical",
+      "description": "",
+      "groups": [
+        "Miscellaneous"
+      ],
+      "domains": [
+        "Miscellaneous"
+      ],
+      "family": ""
+    },
+    "prediction_data_source_sps": {
+      "label": "Prediction Data Source Sps",
+      "description": "",
+      "groups": [
+        "SaddlePoint"
+      ],
+      "domains": [
+        "Predictive Analytics"
+      ],
+      "family": ""
+    },
+    "prescription_app": {
+      "label": "Prescription App",
+      "description": "Prescriptions across app/clinic/home/plus/web contexts.",
+      "groups": [
+        "Prescriptions"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": "prescription"
+    },
+    "prescription_change_reason": {
+      "label": "Prescription Change Reason",
+      "description": "Reasons for prescription changes.",
+      "groups": [
+        "Prescriptions",
+        "RecSys"
+      ],
+      "domains": [
+        "Predictive Analytics",
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "prescription_clinic": {
+      "label": "Prescription Clinic",
+      "description": "Prescriptions across app/clinic/home/plus/web contexts.",
+      "groups": [
+        "Prescriptions"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": "prescription"
+    },
+    "prescription_home": {
+      "label": "Prescription Home",
+      "description": "Prescriptions across app/clinic/home/plus/web contexts.",
+      "groups": [
+        "Prescriptions"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": "prescription"
+    },
+    "prescription_plus": {
+      "label": "Prescription Plus",
+      "description": "Clinician-approved prescriptions (moved from staging).",
+      "groups": [
+        "Prescriptions"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": "prescription"
+    },
+    "prescription_staging": {
+      "label": "Prescription Staging",
+      "description": "Recsys-staged prescriptions awaiting clinician approval.",
+      "groups": [
+        "RecSys"
+      ],
+      "domains": [
+        "Predictive Analytics"
+      ],
+      "family": ""
+    },
+    "prescription_web": {
+      "label": "Prescription Web",
+      "description": "Prescriptions across app/clinic/home/plus/web contexts.",
+      "groups": [
+        "Prescriptions"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": "prescription"
+    },
+    "privacy_policy": {
+      "label": "Privacy Policy",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "domains": [
+        "RGS Housekeeping"
+      ],
+      "family": ""
+    },
+    "protocol": {
+      "label": "Protocol",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "domains": [
+        "RGS Housekeeping"
+      ],
+      "family": ""
+    },
+    "protocol_device_support": {
+      "label": "Protocol Device Support",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "domains": [
+        "RGS Housekeeping"
+      ],
+      "family": ""
+    },
+    "protocol_hospital": {
+      "label": "Protocol Hospital",
+      "description": "",
+      "groups": [
+        "Hospital"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "protocol_platform": {
+      "label": "Protocol Platform",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "domains": [
+        "RGS Housekeeping"
+      ],
+      "family": ""
+    },
+    "protocol_software": {
+      "label": "Protocol Software",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "domains": [
+        "RGS Housekeeping"
+      ],
+      "family": ""
+    },
+    "protocol_software_hospital": {
+      "label": "Protocol Software Hospital",
+      "description": "",
+      "groups": [
+        "Hospital"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": ""
+    },
+    "protocol_type": {
+      "label": "Protocol Type",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "domains": [
+        "RGS Housekeeping"
+      ],
+      "family": ""
+    },
+    "recording_app": {
+      "label": "Recording App",
+      "description": "Session recordings including duration and other capture metrics.",
+      "groups": [
+        "Recordings"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": "recording"
+    },
+    "recording_clinic": {
+      "label": "Recording Clinic",
+      "description": "Session recordings including duration and other capture metrics.",
+      "groups": [
+        "Recordings"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": "recording"
+    },
+    "recording_home": {
+      "label": "Recording Home",
+      "description": "Session recordings including duration and other capture metrics.",
+      "groups": [
+        "Recordings"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": "recording"
+    },
+    "recording_icu": {
+      "label": "Recording Icu",
+      "description": "Session recordings including duration and other capture metrics.",
+      "groups": [
+        "Recordings"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": "recording"
+    },
+    "recording_plus": {
+      "label": "Recording Plus",
+      "description": "Session recordings including duration and other capture metrics.",
+      "groups": [
+        "Recordings"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": "recording"
+    },
+    "recording_web": {
+      "label": "Recording Web",
+      "description": "Session recordings including duration and other capture metrics.",
+      "groups": [
+        "Recordings"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": "recording"
+    },
+    "recsys_diagnostic": {
+      "label": "Recsys Diagnostic",
+      "description": "Home diagnostic evaluation schedules for RGS app protocols.",
+      "groups": [
+        "RecSys"
+      ],
+      "domains": [
+        "Predictive Analytics"
+      ],
+      "family": ""
+    },
+    "recsys_intrinsic_measures": {
+      "label": "Recsys Intrinsic Measures",
+      "description": "Clinic evaluation milestones (baseline, end, follow-up).",
+      "groups": [
+        "RecSys"
+      ],
+      "domains": [
+        "Predictive Analytics"
+      ],
+      "family": ""
+    },
+    "recsys_metrics": {
+      "label": "Recsys Metrics",
+      "description": "Metrics used by the recommender system (delta_dm, adherence, PPF, etc.).",
+      "groups": [
+        "RecSys"
+      ],
+      "domains": [
+        "Predictive Analytics"
+      ],
+      "family": ""
+    },
+    "recsys_notes": {
+      "label": "Recsys Notes",
+      "description": "Clinician notes associated with recommender system output.",
+      "groups": [
+        "RecSys"
+      ],
+      "domains": [
+        "Predictive Analytics"
+      ],
+      "family": ""
+    },
+    "reference_date_wear": {
+      "label": "Reference Date Wear",
+      "description": "",
+      "groups": [
+        "Miscellaneous"
+      ],
+      "domains": [
+        "Miscellaneous"
+      ],
+      "family": ""
+    },
+    "session_app": {
+      "label": "Session App",
+      "description": "Session instances tied to prescriptions (id, status, timing).",
+      "groups": [
+        "sessions"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": "session"
+    },
+    "session_clinic": {
+      "label": "Session Clinic",
+      "description": "Session instances tied to prescriptions (id, status, timing).",
+      "groups": [
+        "sessions"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": "session"
+    },
+    "session_home": {
+      "label": "Session Home",
+      "description": "Session instances tied to prescriptions (id, status, timing).",
+      "groups": [
+        "sessions"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": "session"
+    },
+    "session_icu": {
+      "label": "Session Icu",
+      "description": "Session instances tied to prescriptions (id, status, timing).",
+      "groups": [
+        "sessions"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": "session"
+    },
+    "session_plus": {
+      "label": "Session Plus",
+      "description": "Session instances tied to prescriptions (id, status, timing).",
+      "groups": [
+        "sessions"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": "session"
+    },
+    "session_web": {
+      "label": "Session Web",
+      "description": "Session instances tied to prescriptions (id, status, timing).",
+      "groups": [
+        "sessions"
+      ],
+      "domains": [
+        "RGS Core"
+      ],
+      "family": "session"
+    },
+    "software": {
+      "label": "Software",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "domains": [
+        "RGS Housekeeping"
+      ],
+      "family": ""
+    },
+    "sps_diagnosis": {
+      "label": "Sps Diagnosis",
+      "description": "",
+      "groups": [
+        "SaddlePoint"
+      ],
+      "domains": [
+        "Predictive Analytics"
+      ],
+      "family": ""
+    },
+    "sps_prediction_source": {
+      "label": "Sps Prediction Source",
+      "description": "",
+      "groups": [
+        "SaddlePoint"
+      ],
+      "domains": [
+        "Predictive Analytics"
+      ],
+      "family": ""
+    },
+    "sps_prognosis": {
+      "label": "Sps Prognosis",
+      "description": "",
+      "groups": [
+        "SaddlePoint"
+      ],
+      "domains": [
+        "Predictive Analytics"
+      ],
+      "family": ""
+    },
+    "station": {
+      "label": "Station",
+      "description": "",
+      "groups": [
+        "Miscellaneous"
+      ],
+      "domains": [
+        "Miscellaneous"
+      ],
+      "family": ""
+    },
+    "tree": {
+      "label": "Tree",
+      "description": "",
+      "groups": [
+        "Miscellaneous"
+      ],
+      "domains": [
+        "Miscellaneous"
+      ],
+      "family": ""
+    },
+    "version_matching": {
+      "label": "Version Matching",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "domains": [
+        "RGS Housekeeping"
+      ],
+      "family": ""
+    }
+  },
+  "table_details": {
+    "activity": {
+      "description": "",
+      "columns": [
+        {
+          "name": "ACTIVITY_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "ACTIVITY_TYPE",
+          "data_type": "enum",
+          "description": "Type or category classification (e.g., REPORT_ADHERENCE, REPORT_PROTOCOL, LOGIN)"
+        }
+      ]
+    },
+    "affectation": {
+      "description": "",
+      "columns": [
+        {
+          "name": "AFFECTATION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 8, 3, 1)"
+        },
+        {
+          "name": "NAME",
+          "data_type": "varchar",
+          "description": "Name of the entity"
+        }
+      ]
+    },
+    "clinical_data": {
+      "description": "",
+      "columns": [
+        {
+          "name": "CLINICAL_DATA_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "CLINICAL_DATA_KEY",
+          "data_type": "varchar",
+          "description": "Clinical Data Key field"
+        },
+        {
+          "name": "CLINICAL_DATA_VALUE",
+          "data_type": "varchar",
+          "description": "Clinical Data Value field"
+        },
+        {
+          "name": "ASSESSMENT_DATETIME",
+          "data_type": "datetime",
+          "description": "Time value"
+        },
+        {
+          "name": "SERVER_DATETIME",
+          "data_type": "datetime",
+          "description": "Time value"
+        }
+      ]
+    },
+    "clinical_trials": {
+      "description": "Clinical trial scores and assessments for enrolled patients.",
+      "columns": [
+        {
+          "name": "CLINICAL_TRIALS_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "STUDY_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2)"
+        },
+        {
+          "name": "STUDY_NAME",
+          "data_type": "varchar",
+          "description": "Name of the entity (e.g., AISN)"
+        },
+        {
+          "name": "START_DATE",
+          "data_type": "datetime",
+          "description": "Date value (e.g., 2025-09-21 00:00:00, 2025-09-16 00:00:00, 2025-09-18 00:00:00)"
+        },
+        {
+          "name": "END_DATE",
+          "data_type": "datetime",
+          "description": "Date value (e.g., 2025-12-09 10:00:00, 2025-12-14 10:00:00, 2025-12-11 10:00:00)"
+        },
+        {
+          "name": "CLINICAL_SCORES",
+          "data_type": "varchar",
+          "description": "Clinical Scores field"
+        },
+        {
+          "name": "RECOMMEND",
+          "data_type": "tinyint",
+          "description": "Recommend field"
+        }
+      ]
+    },
+    "clinician": {
+      "description": "",
+      "columns": [
+        {
+          "name": "CLINICIAN_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 540, 4, 3, 1)"
+        },
+        {
+          "name": "HOSPITAL_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "CLINICIAN_USER",
+          "data_type": "varchar",
+          "description": "User-related information (e.g., EodyneAdmin, HospitalTest1Admin, HospitalTest2Admin)"
+        },
+        {
+          "name": "PASSWORD",
+          "data_type": "varchar",
+          "description": "Password field"
+        },
+        {
+          "name": "ROLE",
+          "data_type": "enum",
+          "description": "Role field"
+        },
+        {
+          "name": "AISN_GROUP",
+          "data_type": "enum",
+          "description": "Aisn Group field"
+        },
+        {
+          "name": "NAME",
+          "data_type": "varchar",
+          "description": "Name of the entity"
+        },
+        {
+          "name": "SURNAME1",
+          "data_type": "varchar",
+          "description": "Surname1 field"
+        },
+        {
+          "name": "SURNAME2",
+          "data_type": "varchar",
+          "description": "Surname2 field"
+        },
+        {
+          "name": "EMAIL",
+          "data_type": "varchar",
+          "description": "Email address (e.g., davidnery1555@gmail.com, None, david.nery@eodyne.com)"
+        },
+        {
+          "name": "PHONE",
+          "data_type": "varchar",
+          "description": "Phone number (e.g., None)"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        },
+        {
+          "name": "VERSION",
+          "data_type": "int",
+          "description": "Version field"
+        },
+        {
+          "name": "FIRST_LOGIN_TO_MIMS",
+          "data_type": "int",
+          "description": "First Login To Mims field"
+        }
+      ]
+    },
+    "clinician_activity": {
+      "description": "",
+      "columns": [
+        {
+          "name": "CLINICIAN_ACTIVITY_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "CLINICIAN_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 540, 4, 3, 1)"
+        },
+        {
+          "name": "ACTIVITY_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "SERVER_DATETIME",
+          "data_type": "datetime",
+          "description": "Time value"
+        }
+      ]
+    },
+    "clinician_activity_patient": {
+      "description": "",
+      "columns": [
+        {
+          "name": "CLINICIAN_ACTIVITY_PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "CLINICIAN_ACTIVITY_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        }
+      ]
+    },
+    "clinician_activity_protocol": {
+      "description": "",
+      "columns": [
+        {
+          "name": "CLINICIAN_ACTIVITY_PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "CLINICIAN_ACTIVITY_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        }
+      ]
+    },
+    "clinician_patient": {
+      "description": "",
+      "columns": [
+        {
+          "name": "CLINICIAN_PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "CLINICIAN_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 540, 4, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "CREATION_TIME",
+          "data_type": "datetime",
+          "description": "Time value"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        }
+      ]
+    },
+    "clinician_privacy_policy": {
+      "description": "",
+      "columns": [
+        {
+          "name": "CLINICIAN_PRIVACY_POLICY_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PRIVACY_POLICY_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 1)"
+        },
+        {
+          "name": "CLINICIAN_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 540, 4, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "CREATION_TIME",
+          "data_type": "datetime",
+          "description": "Time value"
+        }
+      ]
+    },
+    "coach_messages": {
+      "description": "",
+      "columns": [
+        {
+          "name": "COACH_MESSAGES_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "MESSAGE",
+          "data_type": "varchar",
+          "description": "Message field"
+        },
+        {
+          "name": "SENDER",
+          "data_type": "enum",
+          "description": "Sender field"
+        },
+        {
+          "name": "TYPE",
+          "data_type": "enum",
+          "description": "Type or category classification (e.g., NOTIFICATION, GREETING)"
+        },
+        {
+          "name": "CREATION_TIME",
+          "data_type": "datetime",
+          "description": "Time value"
+        }
+      ]
+    },
+    "coach_messages_per_patient": {
+      "description": "",
+      "columns": [
+        {
+          "name": "COACH_MESSAGES_PER_PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "COACH_MESSAGES_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "SHOW_ONLY_ONCE",
+          "data_type": "int",
+          "description": "Show Only Once field"
+        },
+        {
+          "name": "COACH_PERSONALITY",
+          "data_type": "int",
+          "description": "Person-related information (e.g., 2, 1)"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        }
+      ]
+    },
+    "coach_messages_per_protocol": {
+      "description": "",
+      "columns": [
+        {
+          "name": "COACH_MESSAGES_PER_PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "COACH_MESSAGES_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        }
+      ]
+    },
+    "coach_messages_schedule_per_patient": {
+      "description": "",
+      "columns": [
+        {
+          "name": "COACH_MESSAGES_SCHEDULE_PER_PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "COACH_MESSAGES_PER_PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "LAUNCH_TIME",
+          "data_type": "time",
+          "description": "Time value (e.g., 7:30:00, 9:30:00, 10:00:00)"
+        },
+        {
+          "name": "LAUNCH_DAY",
+          "data_type": "enum",
+          "description": "Launch Day field"
+        },
+        {
+          "name": "LAUNCH_DATETIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-15 07:30:00, 2023-09-15 09:30:00)"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        }
+      ]
+    },
+    "coach_status": {
+      "description": "",
+      "columns": [
+        {
+          "name": "COACH_STATUS_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        }
+      ]
+    },
+    "coach_training_time": {
+      "description": "",
+      "columns": [
+        {
+          "name": "COACH_TRAINING_TIME_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "STARTING_TRAINING_TIME",
+          "data_type": "time",
+          "description": "Time value (e.g., 16:00:00, 14:00:00, 10:00:00)"
+        },
+        {
+          "name": "ENDING_TRAINING_TIME",
+          "data_type": "time",
+          "description": "Time value (e.g., 16:00:00, 18:00:00, 12:00:00)"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        }
+      ]
+    },
+    "code": {
+      "description": "",
+      "columns": [
+        {
+          "name": "CODE_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "DISTRIBUTOR_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 1)"
+        },
+        {
+          "name": "SOFTWARE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 4, 3, 1)"
+        },
+        {
+          "name": "CODE",
+          "data_type": "varchar",
+          "description": "Code or identifier (e.g., VYDMVRVR, 5L4JTHDT, U9GHQ78T)"
+        },
+        {
+          "name": "CREATION_TIME",
+          "data_type": "datetime",
+          "description": "Time value"
+        },
+        {
+          "name": "EXPIRATION_DATE",
+          "data_type": "datetime",
+          "description": "Date value (e.g., None, 2024-10-16 01:04:00, 2025-05-04, 2025-12-05 00:00:00, 2023-03-10 13:48:54)"
+        },
+        {
+          "name": "USAGE_LIMIT",
+          "data_type": "int",
+          "description": "Usage Limit field"
+        },
+        {
+          "name": "SUBSCRIPTION_DAYS",
+          "data_type": "int",
+          "description": "Subscription Days field"
+        },
+        {
+          "name": "ORDER_ID",
+          "data_type": "varchar",
+          "description": "Unique identifier (e.g., None, 3539, 3538)"
+        },
+        {
+          "name": "DESCRIPTION",
+          "data_type": "varchar",
+          "description": "Description or details (e.g., None)"
+        },
+        {
+          "name": "STATUS",
+          "data_type": "enum",
+          "description": "Status or state of the record (e.g., ABORTED, INACTIVE)"
+        }
+      ]
+    },
+    "code_redemption": {
+      "description": "",
+      "columns": [
+        {
+          "name": "CODE_REDEMPTION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "CODE_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "REDEEMED_DATE",
+          "data_type": "datetime",
+          "description": "Date value (e.g., 2025-12-11 13:52:03, 2025-12-12 13:48:22, 2025-12-12 14:29:41)"
+        }
+      ]
+    },
+    "commitment_answer": {
+      "description": "",
+      "columns": [
+        {
+          "name": "COMMITMENT_ANSWER_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "COMMITMENT_QUESTION_PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 4, 3, 1)"
+        },
+        {
+          "name": "COMMITMENT_ANSWER",
+          "data_type": "int",
+          "description": "Commitment Answer field"
+        },
+        {
+          "name": "CREATION_TIME",
+          "data_type": "datetime",
+          "description": "Time value"
+        },
+        {
+          "name": "SUCCEED_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-01 17:17:44)"
+        }
+      ]
+    },
+    "commitment_question": {
+      "description": "",
+      "columns": [
+        {
+          "name": "COMMITMENT_QUESTION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "COMMITMENT_QUESTION_KEY",
+          "data_type": "varchar",
+          "description": "Commitment Question Key field"
+        },
+        {
+          "name": "MAX_VALUE",
+          "data_type": "int",
+          "description": "Max Value field"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        }
+      ]
+    },
+    "commitment_question_patient": {
+      "description": "",
+      "columns": [
+        {
+          "name": "COMMITMENT_QUESTION_PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 4, 3, 1)"
+        },
+        {
+          "name": "COMMITMENT_QUESTION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "SOFTWARE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 4, 3, 1)"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        }
+      ]
+    },
+    "component": {
+      "description": "",
+      "columns": [
+        {
+          "name": "COMPONENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 0, 10, 1)"
+        },
+        {
+          "name": "NAME",
+          "data_type": "varchar",
+          "description": "Name of the entity"
+        }
+      ]
+    },
+    "control_plus": {
+      "description": "",
+      "columns": [
+        {
+          "name": "CONTROL_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "CONTROL_KEY",
+          "data_type": "varchar",
+          "description": "Control Key field"
+        },
+        {
+          "name": "CONTROL_VALUE",
+          "data_type": "varchar",
+          "description": "Control Value field"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        }
+      ]
+    },
+    "device_cloud_messaging": {
+      "description": "",
+      "columns": [
+        {
+          "name": "DEVICE_CLOUD_MESSAGING_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "DEVICE_TOKEN",
+          "data_type": "varchar",
+          "description": "Device Token field"
+        },
+        {
+          "name": "DEVICE_MODEL",
+          "data_type": "varchar",
+          "description": "Device Model field"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        }
+      ]
+    },
+    "difficulty_modulators_app": {
+      "description": "Time series of difficulty modulator values per patient/protocol.",
+      "columns": [
+        {
+          "name": "DIFFICULTY_MODULATORS_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "GAME_MODE",
+          "data_type": "varchar",
+          "description": "Game Mode field"
+        },
+        {
+          "name": "SECONDS_FROM_START",
+          "data_type": "int",
+          "description": "Seconds From Start field"
+        },
+        {
+          "name": "PARAMETER_KEY",
+          "data_type": "varchar",
+          "description": "Parameter Key field"
+        },
+        {
+          "name": "PARAMETER_VALUE",
+          "data_type": "varchar",
+          "description": "Parameter Value field"
+        }
+      ]
+    },
+    "difficulty_modulators_plus": {
+      "description": "Time series of difficulty modulator values per patient/protocol.",
+      "columns": [
+        {
+          "name": "DIFFICULTY_MODULATORS_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "GAME_MODE",
+          "data_type": "varchar",
+          "description": "Game Mode field"
+        },
+        {
+          "name": "SECONDS_FROM_START",
+          "data_type": "int",
+          "description": "Seconds From Start field"
+        },
+        {
+          "name": "PARAMETER_KEY",
+          "data_type": "varchar",
+          "description": "Parameter Key field"
+        },
+        {
+          "name": "PARAMETER_VALUE",
+          "data_type": "varchar",
+          "description": "Parameter Value field"
+        }
+      ]
+    },
+    "difficulty_settings_app": {
+      "description": "",
+      "columns": [
+        {
+          "name": "DIFFICULTY_SETTINGS_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "GAME_MODE",
+          "data_type": "varchar",
+          "description": "Game Mode field"
+        },
+        {
+          "name": "COMPLEXITY_MODEL",
+          "data_type": "varchar",
+          "description": "Complexity Model field"
+        },
+        {
+          "name": "MODULATORS_NUMBER",
+          "data_type": "int",
+          "description": "Modulators Number field"
+        },
+        {
+          "name": "SAMPLER",
+          "data_type": "varchar",
+          "description": "Sampler field"
+        }
+      ]
+    },
+    "difficulty_settings_plus": {
+      "description": "",
+      "columns": [
+        {
+          "name": "DIFFICULTY_SETTINGS_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "GAME_MODE",
+          "data_type": "varchar",
+          "description": "Game Mode field"
+        },
+        {
+          "name": "COMPLEXITY_MODEL",
+          "data_type": "varchar",
+          "description": "Complexity Model field"
+        },
+        {
+          "name": "MODULATORS_NUMBER",
+          "data_type": "int",
+          "description": "Modulators Number field"
+        },
+        {
+          "name": "SAMPLER",
+          "data_type": "varchar",
+          "description": "Sampler field"
+        }
+      ]
+    },
+    "distributor": {
+      "description": "",
+      "columns": [
+        {
+          "name": "DISTRIBUTOR_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 1)"
+        },
+        {
+          "name": "DISTRIBUTOR_NAME",
+          "data_type": "varchar",
+          "description": "Name of the entity (e.g., Eodyne)"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        }
+      ]
+    },
+    "emotional_answer": {
+      "description": "",
+      "columns": [
+        {
+          "name": "EMOTIONAL_ANSWER_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "EMOTIONAL_QUESTION_PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "EMOTIONAL_ANSWER",
+          "data_type": "int",
+          "description": "Emotional Answer field"
+        },
+        {
+          "name": "CREATION_TIME",
+          "data_type": "datetime",
+          "description": "Time value"
+        }
+      ]
+    },
+    "emotional_question": {
+      "description": "",
+      "columns": [
+        {
+          "name": "EMOTIONAL_QUESTION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "EMOTIONAL_QUESTION_KEY",
+          "data_type": "varchar",
+          "description": "Emotional Question Key field"
+        },
+        {
+          "name": "MIN_VALUE_TEXT_KEY",
+          "data_type": "varchar",
+          "description": "Min Value Text Key field"
+        },
+        {
+          "name": "MAX_VALUE_TEXT_KEY",
+          "data_type": "varchar",
+          "description": "Max Value Text Key field"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        }
+      ]
+    },
+    "emotional_question_patient": {
+      "description": "",
+      "columns": [
+        {
+          "name": "EMOTIONAL_QUESTION_PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "EMOTIONAL_QUESTION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "SOFTWARE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 4, 3, 1)"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        }
+      ]
+    },
+    "evaluation": {
+      "description": "",
+      "columns": [
+        {
+          "name": "EVALUATION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "EVALUATION_UNIT",
+          "data_type": "int",
+          "description": "Evaluation Unit field"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "SOFTWARE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 4, 3, 1)"
+        },
+        {
+          "name": "EVALUATION_KEY",
+          "data_type": "varchar",
+          "description": "Evaluation Key field"
+        },
+        {
+          "name": "EVALUATION_VALUE",
+          "data_type": "varchar",
+          "description": "Evaluation Value field"
+        },
+        {
+          "name": "SERVER_DATETIME",
+          "data_type": "datetime",
+          "description": "Time value"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        }
+      ]
+    },
+    "hospital": {
+      "description": "",
+      "columns": [
+        {
+          "name": "HOSPITAL_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "NAME",
+          "data_type": "varchar",
+          "description": "Name of the entity"
+        },
+        {
+          "name": "ADDRESS",
+          "data_type": "varchar",
+          "description": "Address information (e.g., None)"
+        },
+        {
+          "name": "CONTACT",
+          "data_type": "varchar",
+          "description": "Contact field"
+        },
+        {
+          "name": "PHONE",
+          "data_type": "varchar",
+          "description": "Phone number (e.g., None)"
+        },
+        {
+          "name": "EMAIL",
+          "data_type": "varchar",
+          "description": "Email address (e.g., davidnery1555@gmail.com, None, david.nery@eodyne.com)"
+        }
+      ]
+    },
+    "hospital_clinician": {
+      "description": "",
+      "columns": [
+        {
+          "name": "HOSPITAL_CLINICIAN_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "HOSPITAL_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "CLINICIAN_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 540, 4, 3, 1)"
+        }
+      ]
+    },
+    "hospital_project": {
+      "description": "",
+      "columns": [
+        {
+          "name": "HOSPITAL_PROJECT_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "HOSPITAL_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PROJECT",
+          "data_type": "enum",
+          "description": "Project field"
+        }
+      ]
+    },
+    "hospital_software": {
+      "description": "",
+      "columns": [
+        {
+          "name": "HOSPITAL_SOFTWARE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "HOSPITAL_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "SOFTWARE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 4, 3, 1)"
+        },
+        {
+          "name": "STATUS",
+          "data_type": "enum",
+          "description": "Status or state of the record (e.g., ABORTED, INACTIVE)"
+        },
+        {
+          "name": "EXPIRATION_DATE",
+          "data_type": "datetime",
+          "description": "Date value (e.g., None, 2024-10-16 01:04:00, 2025-05-04, 2025-12-05 00:00:00, 2023-03-10 13:48:54)"
+        }
+      ]
+    },
+    "hospital_subscription": {
+      "description": "",
+      "columns": [
+        {
+          "name": "HOSPITAL_SUBSCRIPTION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 1)"
+        },
+        {
+          "name": "HOSPITAL_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "SOFTWARE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 4, 3, 1)"
+        },
+        {
+          "name": "SUBSCRIPTION_DAYS",
+          "data_type": "int",
+          "description": "Subscription Days field"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        }
+      ]
+    },
+    "metric_app": {
+      "description": "Kinematic feature measurements (e.g., displacement, volume, surface area).",
+      "columns": [
+        {
+          "name": "METRIC_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "METRIC_KEY",
+          "data_type": "varchar",
+          "description": "Metric Key field"
+        },
+        {
+          "name": "METRIC_VALUE",
+          "data_type": "varchar",
+          "description": "Metric Value field"
+        }
+      ]
+    },
+    "metric_plus": {
+      "description": "Kinematic feature measurements (e.g., displacement, volume, surface area).",
+      "columns": [
+        {
+          "name": "METRIC_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "METRIC_KEY",
+          "data_type": "varchar",
+          "description": "Metric Key field"
+        },
+        {
+          "name": "METRIC_VALUE",
+          "data_type": "varchar",
+          "description": "Metric Value field"
+        }
+      ]
+    },
+    "parameter_app": {
+      "description": "Last logged difficulty modulator for a session.",
+      "columns": [
+        {
+          "name": "PARAMETER_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PARAMETER_KEY",
+          "data_type": "varchar",
+          "description": "Parameter Key field"
+        },
+        {
+          "name": "PARAMETER_VALUE",
+          "data_type": "varchar",
+          "description": "Parameter Value field"
+        }
+      ]
+    },
+    "parameter_clinic": {
+      "description": "Last logged difficulty modulator for a session.",
+      "columns": [
+        {
+          "name": "PARAMETER_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PARAMETER_KEY",
+          "data_type": "varchar",
+          "description": "Parameter Key field"
+        },
+        {
+          "name": "PARAMETER_VALUE",
+          "data_type": "varchar",
+          "description": "Parameter Value field"
+        }
+      ]
+    },
+    "parameter_home": {
+      "description": "Last logged difficulty modulator for a session.",
+      "columns": [
+        {
+          "name": "PARAMETER_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PARAMETER_KEY",
+          "data_type": "varchar",
+          "description": "Parameter Key field"
+        },
+        {
+          "name": "PARAMETER_VALUE",
+          "data_type": "varchar",
+          "description": "Parameter Value field"
+        }
+      ]
+    },
+    "parameter_icu": {
+      "description": "Last logged difficulty modulator for a session.",
+      "columns": [
+        {
+          "name": "PARAMETER_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PARAMETER_KEY",
+          "data_type": "varchar",
+          "description": "Parameter Key field"
+        },
+        {
+          "name": "PARAMETER_VALUE",
+          "data_type": "varchar",
+          "description": "Parameter Value field"
+        }
+      ]
+    },
+    "parameter_plus": {
+      "description": "Last logged difficulty modulator for a session.",
+      "columns": [
+        {
+          "name": "PARAMETER_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PARAMETER_KEY",
+          "data_type": "varchar",
+          "description": "Parameter Key field"
+        },
+        {
+          "name": "PARAMETER_VALUE",
+          "data_type": "varchar",
+          "description": "Parameter Value field"
+        }
+      ]
+    },
+    "parameter_web": {
+      "description": "Last logged difficulty modulator for a session.",
+      "columns": [
+        {
+          "name": "PARAMETER_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PARAMETER_KEY",
+          "data_type": "varchar",
+          "description": "Parameter Key field"
+        },
+        {
+          "name": "PARAMETER_VALUE",
+          "data_type": "varchar",
+          "description": "Parameter Value field"
+        }
+      ]
+    },
+    "patient": {
+      "description": "Main patient table at signup with identity and demographic fields.",
+      "columns": [
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "HOSPITAL_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_USER",
+          "data_type": "varchar",
+          "description": "User-related information (e.g., david, pedro, andres)"
+        },
+        {
+          "name": "PASSWORD",
+          "data_type": "varchar",
+          "description": "Password field"
+        },
+        {
+          "name": "CREATION_TIME",
+          "data_type": "datetime",
+          "description": "Time value"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        },
+        {
+          "name": "NAME",
+          "data_type": "varchar",
+          "description": "Name of the entity"
+        },
+        {
+          "name": "SURNAME1",
+          "data_type": "varchar",
+          "description": "Surname1 field"
+        },
+        {
+          "name": "SURNAME2",
+          "data_type": "varchar",
+          "description": "Surname2 field"
+        },
+        {
+          "name": "EMAIL",
+          "data_type": "varchar",
+          "description": "Email address (e.g., davidnery1555@gmail.com, None, david.nery@eodyne.com)"
+        },
+        {
+          "name": "EMAIL_VERIFIED",
+          "data_type": "int",
+          "description": "Email Verified field"
+        },
+        {
+          "name": "PARETIC_SIDE",
+          "data_type": "enum",
+          "description": "Paretic Side field"
+        },
+        {
+          "name": "UPPER_EXTREMITY_TO_TRAIN",
+          "data_type": "enum",
+          "description": "Upper Extremity To Train field"
+        },
+        {
+          "name": "HAND_RAISING_CAPACITY",
+          "data_type": "enum",
+          "description": "Hand Raising Capacity field"
+        },
+        {
+          "name": "COGNITIVE_FUNCTION_LEVEL",
+          "data_type": "enum",
+          "description": "Cognitive Function Level field"
+        },
+        {
+          "name": "HAS_HEMINEGLIGENCE",
+          "data_type": "int",
+          "description": "Has Heminegligence field"
+        },
+        {
+          "name": "GENDER",
+          "data_type": "enum",
+          "description": "Gender field"
+        },
+        {
+          "name": "SKIN_COLOR",
+          "data_type": "enum",
+          "description": "Skin Color field"
+        },
+        {
+          "name": "BIRTH_DATE",
+          "data_type": "date",
+          "description": "Date value (e.g., 2004-02-03, 1965-02-03, 1996-05-10)"
+        },
+        {
+          "name": "VIDEOGAME_EXP",
+          "data_type": "int",
+          "description": "Videogame Exp field"
+        },
+        {
+          "name": "COMPUTER_EXP",
+          "data_type": "int",
+          "description": "Computer Exp field"
+        },
+        {
+          "name": "COMMENTS",
+          "data_type": "varchar",
+          "description": "Comments field"
+        },
+        {
+          "name": "PTN_HEIGHT_CM",
+          "data_type": "int",
+          "description": "Ptn Height Cm field"
+        },
+        {
+          "name": "ARM_SIZE_CM",
+          "data_type": "int",
+          "description": "Arm Size Cm field"
+        },
+        {
+          "name": "DEMO",
+          "data_type": "int",
+          "description": "Demo field"
+        },
+        {
+          "name": "VERSION",
+          "data_type": "int",
+          "description": "Version field"
+        }
+      ]
+    },
+    "patient_affectation": {
+      "description": "",
+      "columns": [
+        {
+          "name": "PATIENT_AFFECTATION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "AFFECTATION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 8, 3, 1)"
+        },
+        {
+          "name": "CREATION_TIME",
+          "data_type": "datetime",
+          "description": "Time value"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        }
+      ]
+    },
+    "patient_affectation_features": {
+      "description": "",
+      "columns": [
+        {
+          "name": "PATIENT_AFFECTATION_FEATURES_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PATIENT_AFFECTATION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "FEATURE_NAME",
+          "data_type": "varchar",
+          "description": "Name of the entity"
+        },
+        {
+          "name": "FEATURE_VALUE",
+          "data_type": "varchar",
+          "description": "Feature Value field"
+        },
+        {
+          "name": "STARTING_DATE",
+          "data_type": "datetime",
+          "description": "Date value"
+        },
+        {
+          "name": "ENDING_DATE",
+          "data_type": "datetime",
+          "description": "Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)"
+        }
+      ]
+    },
+    "patient_aisn_data": {
+      "description": "AISN-related patient data (experimental group, demographics, start date).",
+      "columns": [
+        {
+          "name": "PATIENT_AISN_DATA_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "AISN_GROUP",
+          "data_type": "enum",
+          "description": "Aisn Group field"
+        },
+        {
+          "name": "CIVIL_STATUS",
+          "data_type": "enum",
+          "description": "Status or state of the record (e.g., Married, Divorced)"
+        },
+        {
+          "name": "HOME_SUPPORT",
+          "data_type": "int",
+          "description": "Home Support field"
+        },
+        {
+          "name": "EDUCATION",
+          "data_type": "enum",
+          "description": "Education field"
+        },
+        {
+          "name": "WORK",
+          "data_type": "enum",
+          "description": "Work field"
+        },
+        {
+          "name": "STROKE_SIDE",
+          "data_type": "enum",
+          "description": "Stroke Side field"
+        },
+        {
+          "name": "STROKE_TYPE",
+          "data_type": "enum",
+          "description": "Type or category classification (e.g., Ischemic, Lacunar, Hemorrhagic)"
+        },
+        {
+          "name": "STROKE_LOCATION",
+          "data_type": "enum",
+          "description": "Stroke Location field"
+        },
+        {
+          "name": "ROUTINE_STARTING_DATE",
+          "data_type": "date",
+          "description": "Date value (e.g., 2025-09-18, 2025-09-16)"
+        },
+        {
+          "name": "COMORBIDITY",
+          "data_type": "enum",
+          "description": "Comorbidity field"
+        }
+      ]
+    },
+    "patient_device_data": {
+      "description": "",
+      "columns": [
+        {
+          "name": "PATIENT_DEVICE_DATA_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "CREATION_TIME",
+          "data_type": "datetime",
+          "description": "Time value"
+        },
+        {
+          "name": "PHONE_MODEL",
+          "data_type": "varchar",
+          "description": "Phone Model field"
+        },
+        {
+          "name": "AR_COMPATIBILITY",
+          "data_type": "int",
+          "description": "Ar Compatibility field"
+        },
+        {
+          "name": "APP_VERSION",
+          "data_type": "varchar",
+          "description": "App Version field"
+        },
+        {
+          "name": "SCREEN_INCHES",
+          "data_type": "float",
+          "description": "Screen Inches field"
+        },
+        {
+          "name": "FINGERPRINT",
+          "data_type": "varchar",
+          "description": "Fingerprint field"
+        },
+        {
+          "name": "DEVICE_ARCHITECTURE",
+          "data_type": "varchar",
+          "description": "Device Architecture field"
+        }
+      ]
+    },
+    "patient_diagnosis_data": {
+      "description": "",
+      "columns": [
+        {
+          "name": "PATIENT_DIAGNOSIS_DATA_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "DIAGNOSIS_OBSERVATION",
+          "data_type": "varchar",
+          "description": "Diagnosis Observation field"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        }
+      ]
+    },
+    "patient_inactivity": {
+      "description": "",
+      "columns": [
+        {
+          "name": "PATIENT_INACTIVITY_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "SOFTWARE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 4, 3, 1)"
+        },
+        {
+          "name": "BEGINNING_INACTIVITY",
+          "data_type": "datetime",
+          "description": "Beginning Inactivity field"
+        },
+        {
+          "name": "ENDING_INACTIVITY",
+          "data_type": "datetime",
+          "description": "Ending Inactivity field"
+        }
+      ]
+    },
+    "patient_language_app": {
+      "description": "",
+      "columns": [
+        {
+          "name": "PATIENT_LANGUAGE_APP_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "LANGUAGE_KEY",
+          "data_type": "varchar",
+          "description": "Language Key field"
+        }
+      ]
+    },
+    "patient_language_plus": {
+      "description": "",
+      "columns": [
+        {
+          "name": "PATIENT_LANGUAGE_PLUS_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "LANGUAGE_KEY",
+          "data_type": "varchar",
+          "description": "Language Key field"
+        }
+      ]
+    },
+    "patient_privacy_policy": {
+      "description": "",
+      "columns": [
+        {
+          "name": "PATIENT_PRIVACY_POLICY_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PRIVACY_POLICY_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "CREATION_TIME",
+          "data_type": "datetime",
+          "description": "Time value"
+        }
+      ]
+    },
+    "patient_software": {
+      "description": "",
+      "columns": [
+        {
+          "name": "PATIENT_SOFTWARE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 19, 17, 18)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "SOFTWARE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 4, 3, 1)"
+        },
+        {
+          "name": "CREATION_TIME",
+          "data_type": "datetime",
+          "description": "Time value"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        }
+      ]
+    },
+    "patient_subscription": {
+      "description": "",
+      "columns": [
+        {
+          "name": "PATIENT_SUBSCRIPTION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "SOFTWARE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 4, 3, 1)"
+        },
+        {
+          "name": "EXPIRATION_DATE",
+          "data_type": "date",
+          "description": "Date value (e.g., None, 2024-10-16 01:04:00, 2025-05-04, 2025-12-05 00:00:00, 2023-03-10 13:48:54)"
+        },
+        {
+          "name": "RENEWAL_DATE",
+          "data_type": "datetime",
+          "description": "Date value (e.g., 2025-04-29 17:38:13, 2025-04-29 14:13:51, 2025-04-29 11:33:25)"
+        },
+        {
+          "name": "TICKET_ID",
+          "data_type": "varchar",
+          "description": "Unique identifier (e.g., 2718, 2615, 1342)"
+        },
+        {
+          "name": "STATUS",
+          "data_type": "enum",
+          "description": "Status or state of the record (e.g., ABORTED, INACTIVE)"
+        }
+      ]
+    },
+    "performance_estimators_app": {
+      "description": "Time series of performance estimators used to adapt difficulty.",
+      "columns": [
+        {
+          "name": "PERFORMANCE_ESTIMATORS_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "GAME_MODE",
+          "data_type": "varchar",
+          "description": "Game Mode field"
+        },
+        {
+          "name": "SECONDS_FROM_START",
+          "data_type": "int",
+          "description": "Seconds From Start field"
+        },
+        {
+          "name": "PARAMETER_KEY",
+          "data_type": "varchar",
+          "description": "Parameter Key field"
+        },
+        {
+          "name": "PARAMETER_VALUE",
+          "data_type": "varchar",
+          "description": "Parameter Value field"
+        }
+      ]
+    },
+    "performance_estimators_plus": {
+      "description": "Time series of performance estimators used to adapt difficulty.",
+      "columns": [
+        {
+          "name": "PERFORMANCE_ESTIMATORS_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "GAME_MODE",
+          "data_type": "varchar",
+          "description": "Game Mode field"
+        },
+        {
+          "name": "SECONDS_FROM_START",
+          "data_type": "int",
+          "description": "Seconds From Start field"
+        },
+        {
+          "name": "PARAMETER_KEY",
+          "data_type": "varchar",
+          "description": "Parameter Key field"
+        },
+        {
+          "name": "PARAMETER_VALUE",
+          "data_type": "varchar",
+          "description": "Parameter Value field"
+        }
+      ]
+    },
+    "platform": {
+      "description": "",
+      "columns": [
+        {
+          "name": "PLATFORM_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PLATFORM",
+          "data_type": "varchar",
+          "description": "Platform field"
+        },
+        {
+          "name": "SUBCATEGORY",
+          "data_type": "enum",
+          "description": "Category classification (e.g., TABLET, PHONE, NONE)"
+        }
+      ]
+    },
+    "prediction_data_source_clinical": {
+      "description": "",
+      "columns": [
+        {
+          "name": "PREDICTION_DATA_SOURCE_CLINICAL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PREDICTION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "CLINICAL_DATA_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        }
+      ]
+    },
+    "prediction_data_source_sps": {
+      "description": "",
+      "columns": [
+        {
+          "name": "PREDICTION_DATA_SOURCE_SPS_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PREDICTION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "SPS_DIAGNOSIS_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 1, 3, 510)"
+        }
+      ]
+    },
+    "prescription_app": {
+      "description": "Prescriptions across app/clinic/home/plus/web contexts.",
+      "columns": [
+        {
+          "name": "PRESCRIPTION_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "STARTING_DATE",
+          "data_type": "datetime",
+          "description": "Date value"
+        },
+        {
+          "name": "ENDING_DATE",
+          "data_type": "datetime",
+          "description": "Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)"
+        },
+        {
+          "name": "WEEKDAY",
+          "data_type": "enum",
+          "description": "Weekday field"
+        },
+        {
+          "name": "SESSION_DURATION",
+          "data_type": "int",
+          "description": "Session Duration field"
+        },
+        {
+          "name": "AR_MODE",
+          "data_type": "enum",
+          "description": "Ar Mode field"
+        }
+      ]
+    },
+    "prescription_change_reason": {
+      "description": "Reasons for prescription changes.",
+      "columns": [
+        {
+          "name": "PRESCRIPTION_CHANGE_REASON_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "CHANGE_DATE",
+          "data_type": "date",
+          "description": "Date value (e.g., 2025-09-17, 2025-09-23, 2025-09-15)"
+        },
+        {
+          "name": "REASON_KEY",
+          "data_type": "varchar",
+          "description": "Reason Key field"
+        },
+        {
+          "name": "REASON",
+          "data_type": "varchar",
+          "description": "Reason field"
+        }
+      ]
+    },
+    "prescription_clinic": {
+      "description": "Prescriptions across app/clinic/home/plus/web contexts.",
+      "columns": [
+        {
+          "name": "PRESCRIPTION_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "STARTING_DATE",
+          "data_type": "datetime",
+          "description": "Date value"
+        },
+        {
+          "name": "ENDING_DATE",
+          "data_type": "datetime",
+          "description": "Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)"
+        },
+        {
+          "name": "WEEKDAY",
+          "data_type": "enum",
+          "description": "Weekday field"
+        },
+        {
+          "name": "SESSION_DURATION",
+          "data_type": "int",
+          "description": "Session Duration field"
+        },
+        {
+          "name": "VERSION",
+          "data_type": "int",
+          "description": "Version field"
+        }
+      ]
+    },
+    "prescription_home": {
+      "description": "Prescriptions across app/clinic/home/plus/web contexts.",
+      "columns": [
+        {
+          "name": "PRESCRIPTION_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "STARTING_DATE",
+          "data_type": "datetime",
+          "description": "Date value"
+        },
+        {
+          "name": "ENDING_DATE",
+          "data_type": "datetime",
+          "description": "Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)"
+        },
+        {
+          "name": "WEEKDAY",
+          "data_type": "enum",
+          "description": "Weekday field"
+        },
+        {
+          "name": "SESSION_DURATION",
+          "data_type": "int",
+          "description": "Session Duration field"
+        },
+        {
+          "name": "VERSION",
+          "data_type": "int",
+          "description": "Version field"
+        }
+      ]
+    },
+    "prescription_plus": {
+      "description": "Clinician-approved prescriptions (moved from staging).",
+      "columns": [
+        {
+          "name": "PRESCRIPTION_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "STARTING_DATE",
+          "data_type": "datetime",
+          "description": "Date value"
+        },
+        {
+          "name": "ENDING_DATE",
+          "data_type": "datetime",
+          "description": "Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)"
+        },
+        {
+          "name": "WEEKDAY",
+          "data_type": "enum",
+          "description": "Weekday field"
+        },
+        {
+          "name": "SESSION_DURATION",
+          "data_type": "int",
+          "description": "Session Duration field"
+        },
+        {
+          "name": "AR_MODE",
+          "data_type": "enum",
+          "description": "Ar Mode field"
+        }
+      ]
+    },
+    "prescription_staging": {
+      "description": "Recsys-staged prescriptions awaiting clinician approval.",
+      "columns": [
+        {
+          "name": "PRESCRIPTION_STAGING_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "STARTING_DATE",
+          "data_type": "datetime",
+          "description": "Date value"
+        },
+        {
+          "name": "ENDING_DATE",
+          "data_type": "datetime",
+          "description": "Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)"
+        },
+        {
+          "name": "WEEKDAY",
+          "data_type": "enum",
+          "description": "Weekday field"
+        },
+        {
+          "name": "SESSION_DURATION",
+          "data_type": "int",
+          "description": "Session Duration field"
+        },
+        {
+          "name": "RECOMMENDATION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 0, 551484)"
+        },
+        {
+          "name": "WEEKS_SINCE_START",
+          "data_type": "int",
+          "description": "Weeks Since Start field"
+        },
+        {
+          "name": "STATUS",
+          "data_type": "enum",
+          "description": "Status or state of the record (e.g., ABORTED, INACTIVE)"
+        }
+      ]
+    },
+    "prescription_web": {
+      "description": "Prescriptions across app/clinic/home/plus/web contexts.",
+      "columns": [
+        {
+          "name": "PRESCRIPTION_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "STARTING_DATE",
+          "data_type": "datetime",
+          "description": "Date value"
+        },
+        {
+          "name": "ENDING_DATE",
+          "data_type": "datetime",
+          "description": "Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)"
+        },
+        {
+          "name": "WEEKDAY",
+          "data_type": "enum",
+          "description": "Weekday field"
+        },
+        {
+          "name": "SESSION_DURATION",
+          "data_type": "int",
+          "description": "Session Duration field"
+        }
+      ]
+    },
+    "privacy_policy": {
+      "description": "",
+      "columns": [
+        {
+          "name": "PRIVACY_POLICY_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 1)"
+        },
+        {
+          "name": "PRIVACY_POLICY_VERSION",
+          "data_type": "varchar",
+          "description": "Privacy Policy Version field"
+        },
+        {
+          "name": "PRIVACY_POLICY_WEB",
+          "data_type": "varchar",
+          "description": "Privacy Policy Web field"
+        },
+        {
+          "name": "CREATION_TIME",
+          "data_type": "datetime",
+          "description": "Time value"
+        }
+      ]
+    },
+    "protocol": {
+      "description": "",
+      "columns": [
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_TYPE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 1, 3, 4)"
+        },
+        {
+          "name": "NAME_KEY",
+          "data_type": "varchar",
+          "description": "Name Key field"
+        },
+        {
+          "name": "DESCRIPTION_KEY",
+          "data_type": "varchar",
+          "description": "Description Key field"
+        }
+      ]
+    },
+    "protocol_device_support": {
+      "description": "",
+      "columns": [
+        {
+          "name": "PROTOCOL_DEVICE_SUPPORT_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        }
+      ]
+    },
+    "protocol_hospital": {
+      "description": "",
+      "columns": [
+        {
+          "name": "PROTOCOL_HOSPITAL_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "HOSPITAL_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "STATUS",
+          "data_type": "enum",
+          "description": "Status or state of the record (e.g., ABORTED, INACTIVE)"
+        },
+        {
+          "name": "EXPIRATION_DATE",
+          "data_type": "datetime",
+          "description": "Date value (e.g., None, 2024-10-16 01:04:00, 2025-05-04, 2025-12-05 00:00:00, 2023-03-10 13:48:54)"
+        }
+      ]
+    },
+    "protocol_platform": {
+      "description": "",
+      "columns": [
+        {
+          "name": "PROTOCOL_PLATFORM_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PLATFORM_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        }
+      ]
+    },
+    "protocol_software": {
+      "description": "",
+      "columns": [
+        {
+          "name": "PROTOCOL_SOFTWARE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "SOFTWARE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 4, 3, 1)"
+        }
+      ]
+    },
+    "protocol_software_hospital": {
+      "description": "",
+      "columns": [
+        {
+          "name": "PROTOCOL_SOFTWARE_HOSPITAL_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "SOFTWARE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 4, 3, 1)"
+        },
+        {
+          "name": "HOSPITAL_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "STATUS",
+          "data_type": "enum",
+          "description": "Status or state of the record (e.g., ABORTED, INACTIVE)"
+        }
+      ]
+    },
+    "protocol_type": {
+      "description": "",
+      "columns": [
+        {
+          "name": "PROTOCOL_TYPE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 1, 3, 4)"
+        },
+        {
+          "name": "PROTOCOL_TYPE",
+          "data_type": "varchar",
+          "description": "Type or category classification (e.g., Arms Gravity, Body, Hands)"
+        }
+      ]
+    },
+    "recording_app": {
+      "description": "Session recordings including duration and other capture metrics.",
+      "columns": [
+        {
+          "name": "RECORDING_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "RECORDING_KEY",
+          "data_type": "varchar",
+          "description": "Recording Key field"
+        },
+        {
+          "name": "RECORDING_VALUE",
+          "data_type": "varchar",
+          "description": "Recording Value field"
+        }
+      ]
+    },
+    "recording_clinic": {
+      "description": "Session recordings including duration and other capture metrics.",
+      "columns": [
+        {
+          "name": "RECORDING_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "RECORDING_KEY",
+          "data_type": "varchar",
+          "description": "Recording Key field"
+        },
+        {
+          "name": "RECORDING_VALUE",
+          "data_type": "varchar",
+          "description": "Recording Value field"
+        }
+      ]
+    },
+    "recording_home": {
+      "description": "Session recordings including duration and other capture metrics.",
+      "columns": [
+        {
+          "name": "RECORDING_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "RECORDING_KEY",
+          "data_type": "varchar",
+          "description": "Recording Key field"
+        },
+        {
+          "name": "RECORDING_VALUE",
+          "data_type": "varchar",
+          "description": "Recording Value field"
+        }
+      ]
+    },
+    "recording_icu": {
+      "description": "Session recordings including duration and other capture metrics.",
+      "columns": [
+        {
+          "name": "RECORDING_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "RECORDING_KEY",
+          "data_type": "varchar",
+          "description": "Recording Key field"
+        },
+        {
+          "name": "RECORDING_VALUE",
+          "data_type": "varchar",
+          "description": "Recording Value field"
+        }
+      ]
+    },
+    "recording_plus": {
+      "description": "Session recordings including duration and other capture metrics.",
+      "columns": [
+        {
+          "name": "RECORDING_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "RECORDING_KEY",
+          "data_type": "varchar",
+          "description": "Recording Key field"
+        },
+        {
+          "name": "RECORDING_VALUE",
+          "data_type": "varchar",
+          "description": "Recording Value field"
+        }
+      ]
+    },
+    "recording_web": {
+      "description": "Session recordings including duration and other capture metrics.",
+      "columns": [
+        {
+          "name": "RECORDING_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "RECORDING_KEY",
+          "data_type": "varchar",
+          "description": "Recording Key field"
+        },
+        {
+          "name": "RECORDING_VALUE",
+          "data_type": "varchar",
+          "description": "Recording Value field"
+        }
+      ]
+    },
+    "recsys_diagnostic": {
+      "description": "Home diagnostic evaluation schedules for RGS app protocols.",
+      "columns": [
+        {
+          "name": "RECSYS_DIAGNOSTIC_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "DIAGNOSTIC_KEY",
+          "data_type": "varchar",
+          "description": "Diagnostic Key field"
+        },
+        {
+          "name": "DIAGNOSTIC_DATE",
+          "data_type": "date",
+          "description": "Date value (e.g., 2025-09-18, 2025-11-06, 2025-10-09)"
+        }
+      ]
+    },
+    "recsys_intrinsic_measures": {
+      "description": "Clinic evaluation milestones (baseline, end, follow-up).",
+      "columns": [
+        {
+          "name": "RECSYS_INTRINSIC_MEASURES_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "INTRINSIC_MEASURE_KEY",
+          "data_type": "varchar",
+          "description": "Intrinsic Measure Key field"
+        },
+        {
+          "name": "INTRINSIC_MEASURE_DATE",
+          "data_type": "date",
+          "description": "Date value (e.g., 2025-09-17, 2025-09-15)"
+        }
+      ]
+    },
+    "recsys_metrics": {
+      "description": "Metrics used by the recommender system (delta_dm, adherence, PPF, etc.).",
+      "columns": [
+        {
+          "name": "RECSYS_METRICS_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "RECOMMENDATION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 0, 551484)"
+        },
+        {
+          "name": "METRIC_DATE",
+          "data_type": "datetime",
+          "description": "Date value (e.g., 2025-09-22 22:23:54)"
+        },
+        {
+          "name": "METRIC_KEY",
+          "data_type": "varchar",
+          "description": "Metric Key field"
+        },
+        {
+          "name": "METRIC_VALUE",
+          "data_type": "varchar",
+          "description": "Metric Value field"
+        }
+      ]
+    },
+    "recsys_notes": {
+      "description": "Clinician notes associated with recommender system output.",
+      "columns": [
+        {
+          "name": "RECSYS_NOTES_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "NOTE",
+          "data_type": "varchar",
+          "description": "Notes or comments"
+        },
+        {
+          "name": "NOTE_CREATION_DATE",
+          "data_type": "date",
+          "description": "Date value"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        }
+      ]
+    },
+    "reference_date_wear": {
+      "description": "",
+      "columns": [
+        {
+          "name": "REFERENCE_DATES_WEAR_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "REFERENCE_KEY",
+          "data_type": "varchar",
+          "description": "Reference Key field"
+        },
+        {
+          "name": "REFERENCE_DATE",
+          "data_type": "date",
+          "description": "Date value (e.g., 2023-08-30, 2023-10-11)"
+        },
+        {
+          "name": "DELETE_TIME",
+          "data_type": "datetime",
+          "description": "Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+        }
+      ]
+    },
+    "session_app": {
+      "description": "Session instances tied to prescriptions (id, status, timing).",
+      "columns": [
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PRESCRIPTION_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "STARTING_DATE",
+          "data_type": "datetime",
+          "description": "Date value"
+        },
+        {
+          "name": "ENDING_DATE",
+          "data_type": "datetime",
+          "description": "Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)"
+        },
+        {
+          "name": "STATUS",
+          "data_type": "enum",
+          "description": "Status or state of the record (e.g., ABORTED, INACTIVE)"
+        },
+        {
+          "name": "SESSION_LOG_PARSED",
+          "data_type": "int",
+          "description": "Session Log Parsed field"
+        }
+      ]
+    },
+    "session_clinic": {
+      "description": "Session instances tied to prescriptions (id, status, timing).",
+      "columns": [
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PRESCRIPTION_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "STATION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 5, 3, 1)"
+        },
+        {
+          "name": "SOFTWARE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 4, 3, 1)"
+        },
+        {
+          "name": "STARTING_DATE",
+          "data_type": "datetime",
+          "description": "Date value"
+        },
+        {
+          "name": "ENDING_DATE",
+          "data_type": "datetime",
+          "description": "Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)"
+        },
+        {
+          "name": "STATUS",
+          "data_type": "enum",
+          "description": "Status or state of the record (e.g., ABORTED, INACTIVE)"
+        },
+        {
+          "name": "SESSION_LOG_PARSED",
+          "data_type": "int",
+          "description": "Session Log Parsed field"
+        }
+      ]
+    },
+    "session_home": {
+      "description": "Session instances tied to prescriptions (id, status, timing).",
+      "columns": [
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PRESCRIPTION_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "STATION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 5, 3, 1)"
+        },
+        {
+          "name": "SOFTWARE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 4, 3, 1)"
+        },
+        {
+          "name": "STARTING_DATE",
+          "data_type": "datetime",
+          "description": "Date value"
+        },
+        {
+          "name": "ENDING_DATE",
+          "data_type": "datetime",
+          "description": "Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)"
+        },
+        {
+          "name": "STATUS",
+          "data_type": "enum",
+          "description": "Status or state of the record (e.g., ABORTED, INACTIVE)"
+        },
+        {
+          "name": "SESSION_LOG_PARSED",
+          "data_type": "int",
+          "description": "Session Log Parsed field"
+        }
+      ]
+    },
+    "session_icu": {
+      "description": "Session instances tied to prescriptions (id, status, timing).",
+      "columns": [
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "PROTOCOL_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "STARTING_DATE",
+          "data_type": "datetime",
+          "description": "Date value"
+        },
+        {
+          "name": "ENDING_DATE",
+          "data_type": "datetime",
+          "description": "Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)"
+        },
+        {
+          "name": "STATUS",
+          "data_type": "enum",
+          "description": "Status or state of the record (e.g., ABORTED, INACTIVE)"
+        },
+        {
+          "name": "SESSION_LOG_PARSED",
+          "data_type": "int",
+          "description": "Session Log Parsed field"
+        }
+      ]
+    },
+    "session_plus": {
+      "description": "Session instances tied to prescriptions (id, status, timing).",
+      "columns": [
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PRESCRIPTION_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "STARTING_DATE",
+          "data_type": "datetime",
+          "description": "Date value"
+        },
+        {
+          "name": "ENDING_DATE",
+          "data_type": "datetime",
+          "description": "Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)"
+        },
+        {
+          "name": "STATUS",
+          "data_type": "enum",
+          "description": "Status or state of the record (e.g., ABORTED, INACTIVE)"
+        },
+        {
+          "name": "PLATFORM",
+          "data_type": "enum",
+          "description": "Platform field"
+        },
+        {
+          "name": "DEVICE",
+          "data_type": "varchar",
+          "description": "Device field"
+        },
+        {
+          "name": "SESSION_LOG_PARSED",
+          "data_type": "int",
+          "description": "Session Log Parsed field"
+        }
+      ]
+    },
+    "session_web": {
+      "description": "Session instances tied to prescriptions (id, status, timing).",
+      "columns": [
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "PRESCRIPTION_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "STARTING_DATE",
+          "data_type": "datetime",
+          "description": "Date value"
+        },
+        {
+          "name": "ENDING_DATE",
+          "data_type": "datetime",
+          "description": "Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)"
+        },
+        {
+          "name": "STATUS",
+          "data_type": "enum",
+          "description": "Status or state of the record (e.g., ABORTED, INACTIVE)"
+        },
+        {
+          "name": "SESSION_LOG_PARSED",
+          "data_type": "int",
+          "description": "Session Log Parsed field"
+        }
+      ]
+    },
+    "software": {
+      "description": "",
+      "columns": [
+        {
+          "name": "SOFTWARE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 4, 3, 1)"
+        },
+        {
+          "name": "NAME",
+          "data_type": "varchar",
+          "description": "Name of the entity"
+        }
+      ]
+    },
+    "sps_diagnosis": {
+      "description": "",
+      "columns": [
+        {
+          "name": "SPS_DIAGNOSIS_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 1, 3, 510)"
+        },
+        {
+          "name": "SOFTWARE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 4, 3, 1)"
+        },
+        {
+          "name": "SESSION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)"
+        },
+        {
+          "name": "DIAGNOSIS_ASSESSMENT_KEY",
+          "data_type": "varchar",
+          "description": "Diagnosis Assessment Key field"
+        },
+        {
+          "name": "DIAGNOSIS_ASSESSMENT_VALUE",
+          "data_type": "varchar",
+          "description": "Diagnosis Assessment Value field"
+        },
+        {
+          "name": "SERVER_DATETIME",
+          "data_type": "datetime",
+          "description": "Time value"
+        }
+      ]
+    },
+    "sps_prediction_source": {
+      "description": "",
+      "columns": [
+        {
+          "name": "PREDICTION_SOURCE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "SPS_DATA_SOURCE",
+          "data_type": "varchar",
+          "description": "Sps Data Source field"
+        }
+      ]
+    },
+    "sps_prognosis": {
+      "description": "",
+      "columns": [
+        {
+          "name": "SPS_PROGNOSIS_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PREDICTION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PROGNOSIS_PREDICTION_KEY",
+          "data_type": "varchar",
+          "description": "Prognosis Prediction Key field"
+        },
+        {
+          "name": "PROGNOSIS_PREDICTION_VALUE",
+          "data_type": "varchar",
+          "description": "Prognosis Prediction Value field"
+        },
+        {
+          "name": "MODEL_DATA",
+          "data_type": "varchar",
+          "description": "Model Data field"
+        },
+        {
+          "name": "PREDICTION_SOURCE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "SERVER_DATETIME",
+          "data_type": "datetime",
+          "description": "Time value"
+        }
+      ]
+    },
+    "station": {
+      "description": "",
+      "columns": [
+        {
+          "name": "STATION_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 5, 3, 1)"
+        },
+        {
+          "name": "SOFTWARE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 4, 3, 1)"
+        },
+        {
+          "name": "HOSPITAL_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "TAG",
+          "data_type": "varchar",
+          "description": "Tag field"
+        },
+        {
+          "name": "CURRENT_VERSION",
+          "data_type": "varchar",
+          "description": "Current Version field"
+        },
+        {
+          "name": "TARGET_VERSION",
+          "data_type": "varchar",
+          "description": "Target Version field"
+        }
+      ]
+    },
+    "tree": {
+      "description": "",
+      "columns": [
+        {
+          "name": "TREE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 3, 1)"
+        },
+        {
+          "name": "PATIENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier"
+        },
+        {
+          "name": "TREE_HEIGHT_M",
+          "data_type": "float",
+          "description": "Tree Height M field"
+        },
+        {
+          "name": "USER_LIKES",
+          "data_type": "int",
+          "description": "User-related information (e.g., 0)"
+        }
+      ]
+    },
+    "version_matching": {
+      "description": "",
+      "columns": [
+        {
+          "name": "SOFTWARE_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 2, 4, 3, 1)"
+        },
+        {
+          "name": "COMPONENT_ID",
+          "data_type": "int",
+          "description": "Unique identifier (e.g., 0, 10, 1)"
+        },
+        {
+          "name": "SOFTWARE_VERSION",
+          "data_type": "varchar",
+          "description": "Software Version field"
+        },
+        {
+          "name": "COMPONENT_VERSION",
+          "data_type": "varchar",
+          "description": "Component Version field"
+        }
+      ]
+    }
+  },
+  "explicit_relationships": [
+    {
+      "source": "patient",
+      "target": "hospital",
+      "columns": [
+        "hospital_id"
+      ],
+      "type": "foreign_key",
+      "note": "Each patient is assigned to a hospital."
+    },
+    {
+      "source": "recsys_metrics",
+      "target": "prescription_staging",
+      "columns": [
+        "recommendation_id"
+      ],
+      "type": "reference",
+      "note": "Recsys metrics are tied to staged prescriptions."
+    },
+    {
+      "source": "session_home",
+      "target": "prescription_home",
+      "columns": [
+        "prescription_id"
+      ],
+      "type": "foreign_key",
+      "note": "Each session corresponds to a prescription."
+    },
+    {
+      "source": "session_plus",
+      "target": "prescription_plus",
+      "columns": [
+        "prescription_id"
+      ],
+      "type": "foreign_key",
+      "note": "Each session corresponds to a prescription."
+    },
+    {
+      "source": "session_clinic",
+      "target": "prescription_clinic",
+      "columns": [
+        "prescription_id"
+      ],
+      "type": "foreign_key",
+      "note": "Each session corresponds to a prescription."
+    },
+    {
+      "source": "session_web",
+      "target": "prescription_web",
+      "columns": [
+        "prescription_id"
+      ],
+      "type": "foreign_key",
+      "note": "Each session corresponds to a prescription."
+    },
+    {
+      "source": "session_app",
+      "target": "prescription_app",
+      "columns": [
+        "prescription_id"
+      ],
+      "type": "foreign_key",
+      "note": "Each session corresponds to a prescription."
+    },
+    {
+      "source": "recording_home",
+      "target": "session_home",
+      "columns": [
+        "session_id"
+      ],
+      "type": "foreign_key",
+      "note": "Each recording corresponds to a session."
+    },
+    {
+      "source": "recording_plus",
+      "target": "session_plus",
+      "columns": [
+        "session_id"
+      ],
+      "type": "foreign_key",
+      "note": "Each recording corresponds to a session."
+    },
+    {
+      "source": "recording_clinic",
+      "target": "session_clinic",
+      "columns": [
+        "session_id"
+      ],
+      "type": "foreign_key",
+      "note": "Each recording corresponds to a session."
+    },
+    {
+      "source": "recording_web",
+      "target": "session_web",
+      "columns": [
+        "session_id"
+      ],
+      "type": "foreign_key",
+      "note": "Each recording corresponds to a session."
+    },
+    {
+      "source": "recording_app",
+      "target": "session_app",
+      "columns": [
+        "session_id"
+      ],
+      "type": "foreign_key",
+      "note": "Each recording corresponds to a session."
+    },
+    {
+      "source": "recording_icu",
+      "target": "session_icu",
+      "columns": [
+        "session_id"
+      ],
+      "type": "foreign_key",
+      "note": "Each recording corresponds to a session."
+    },
+    {
+      "source": "parameter_home",
+      "target": "session_home",
+      "columns": [
+        "session_id"
+      ],
+      "type": "foreign_key",
+      "note": "Parameter contains the last logged difficulty modulator for a session."
+    },
+    {
+      "source": "parameter_plus",
+      "target": "session_plus",
+      "columns": [
+        "session_id"
+      ],
+      "type": "foreign_key",
+      "note": "Parameter contains the last logged difficulty modulator for a session."
+    },
+    {
+      "source": "parameter_clinic",
+      "target": "session_clinic",
+      "columns": [
+        "session_id"
+      ],
+      "type": "foreign_key",
+      "note": "Parameter contains the last logged difficulty modulator for a session."
+    },
+    {
+      "source": "parameter_web",
+      "target": "session_web",
+      "columns": [
+        "session_id"
+      ],
+      "type": "foreign_key",
+      "note": "Parameter contains the last logged difficulty modulator for a session."
+    },
+    {
+      "source": "parameter_app",
+      "target": "session_app",
+      "columns": [
+        "session_id"
+      ],
+      "type": "foreign_key",
+      "note": "Parameter contains the last logged difficulty modulator for a session."
+    },
+    {
+      "source": "parameter_icu",
+      "target": "session_icu",
+      "columns": [
+        "session_id"
+      ],
+      "type": "foreign_key",
+      "note": "Parameter contains the last logged difficulty modulator for a session."
+    },
+    {
+      "source": "performance_estimators_plus",
+      "target": "difficulty_modulators_plus",
+      "columns": [
+        "session_id"
+      ],
+      "type": "foreign_key",
+      "note": "Performance estimators inform difficulty modulator updates."
+    },
+    {
+      "source": "performance_estimators_app",
+      "target": "difficulty_modulators_app",
+      "columns": [
+        "session_id"
+      ],
+      "type": "foreign_key",
+      "note": "Performance estimators inform difficulty modulator updates."
+    }
+  ]
+}
