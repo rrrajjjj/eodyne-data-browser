@@ -1,0 +1,3342 @@
+{
+  "metadata": {
+    "groups": {
+      "sessions": {
+        "description": "",
+        "parent_groups": [
+          "AISN"
+        ],
+        "tables": [
+          "session_app",
+          "session_icu",
+          "session_web",
+          "session_home",
+          "session_plus",
+          "session_clinic"
+        ]
+      },
+      "Prescriptions": {
+        "description": "",
+        "parent_groups": [
+          "AISN"
+        ],
+        "tables": [
+          "prescription_web",
+          "prescription_app",
+          "prescription_home",
+          "prescription_plus",
+          "prescription_clinic"
+        ]
+      },
+      "AI Coach": {
+        "description": "",
+        "parent_groups": [],
+        "tables": [
+          "coach_training_time",
+          "coach_messages",
+          "commitment_answer",
+          "commitment_question_patient",
+          "coach_messages_per_protocol",
+          "coach_status",
+          "coach_messages_per_patient",
+          "coach_messages_schedule_per_patient",
+          "commitment_question"
+        ]
+      },
+      "Recordings": {
+        "description": "",
+        "parent_groups": [
+          "AISN"
+        ],
+        "tables": [
+          "recording_web",
+          "recording_clinic",
+          "recording_app",
+          "recording_icu",
+          "recording_plus",
+          "recording_home"
+        ]
+      },
+      "RecSys": {
+        "description": "",
+        "parent_groups": [
+          "AISN"
+        ],
+        "tables": [
+          "recsys_intrinsic_measures",
+          "recsys_diagnostic",
+          "recsys_metrics",
+          "recsys_notes",
+          "clinical_trials",
+          "prescription_staging"
+        ]
+      },
+      "Difficulty Adaptation and Performance": {
+        "description": "",
+        "parent_groups": [
+          "AISN"
+        ],
+        "tables": [
+          "performance_estimators_app",
+          "difficulty_settings_plus",
+          "parameter_app",
+          "parameter_home",
+          "parameter_plus",
+          "parameter_web",
+          "performance_estimators_plus",
+          "difficulty_modulators_plus",
+          "parameter_clinic",
+          "difficulty_modulators_app",
+          "difficulty_settings_app",
+          "parameter_icu"
+        ]
+      },
+      "SaddlePoint": {
+        "description": "",
+        "parent_groups": [
+          "AISN"
+        ],
+        "tables": [
+          "sps_prognosis",
+          "sps_prediction_source",
+          "sps_diagnosis",
+          "prediction_data_source_sps"
+        ]
+      },
+      "EmotionalSlider": {
+        "description": "",
+        "parent_groups": [
+          "AISN"
+        ],
+        "tables": [
+          "emotional_question",
+          "evaluation",
+          "emotional_question_patient",
+          "emotional_answer"
+        ]
+      },
+      "Patient": {
+        "description": "",
+        "parent_groups": [],
+        "tables": [
+          "patient_language_app",
+          "patient_aisn_data",
+          "patient_privacy_policy",
+          "patient_diagnosis_data",
+          "patient_subscription",
+          "patient_affectation_features",
+          "patient_affectation",
+          "patient",
+          "patient_software",
+          "patient_device_data",
+          "patient_language_plus",
+          "patient_inactivity"
+        ]
+      },
+      "Hospital": {
+        "description": "",
+        "parent_groups": [
+          "AISN"
+        ],
+        "tables": [
+          "hospital_subscription",
+          "hospital",
+          "hospital_software",
+          "protocol_software_hospital",
+          "hospital_clinician",
+          "hospital_project",
+          "protocol_hospital"
+        ]
+      },
+      "RGS Housekeeping": {
+        "description": "",
+        "parent_groups": [],
+        "tables": [
+          "protocol_device_support",
+          "protocol_type",
+          "protocol_platform",
+          "software",
+          "affectation",
+          "component",
+          "activity",
+          "version_matching",
+          "platform",
+          "protocol",
+          "distributor",
+          "protocol_software",
+          "privacy_policy"
+        ]
+      },
+      "Clinician": {
+        "description": "",
+        "parent_groups": [
+          "AISN"
+        ],
+        "tables": [
+          "clinician_activity_protocol",
+          "clinician_patient",
+          "clinician_privacy_policy",
+          "clinician_activity",
+          "clinician",
+          "clinician_activity_patient"
+        ]
+      },
+      "patient_aisn_data": {
+        "description": "",
+        "parent_groups": [
+          "AISN"
+        ],
+        "tables": [
+          "patient_aisn_data"
+        ]
+      },
+      "AISN": {
+        "description": "",
+        "parent_groups": [],
+        "tables": []
+      }
+    },
+    "export_timestamp": "2026-01-22T13:10:40.556243"
+  },
+  "tables": [
+    {
+      "table": "activity",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "columns": [
+        "ACTIVITY_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "ACTIVITY_TYPE (enum): Type or category classification (e.g., REPORT_ADHERENCE, REPORT_PROTOCOL, LOGIN)"
+      ],
+      "sample_rows": [
+        {
+          "ACTIVITY_ID": "1",
+          "ACTIVITY_TYPE": "LOGIN"
+        },
+        {
+          "ACTIVITY_ID": "2",
+          "ACTIVITY_TYPE": "REPORT_ADHERENCE"
+        }
+      ]
+    },
+    {
+      "table": "affectation",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "columns": [
+        "AFFECTATION_ID (int): Unique identifier (e.g., 2, 8, 3, 1)",
+        "NAME (varchar): Name of the entity"
+      ],
+      "sample_rows": [
+        {
+          "AFFECTATION_ID": "1",
+          "NAME": "Alzheimer's"
+        },
+        {
+          "AFFECTATION_ID": "2",
+          "NAME": "Ataxia"
+        }
+      ]
+    },
+    {
+      "table": "clinical_data",
+      "description": "",
+      "groups": [],
+      "columns": [
+        "CLINICAL_DATA_ID (int): Unique identifier",
+        "PATIENT_ID (int): Unique identifier",
+        "CLINICAL_DATA_KEY (varchar): Clinical Data Key field",
+        "CLINICAL_DATA_VALUE (varchar): Clinical Data Value field",
+        "ASSESSMENT_DATETIME (datetime): Time value",
+        "SERVER_DATETIME (datetime): Time value"
+      ],
+      "sample_rows": []
+    },
+    {
+      "table": "clinical_trials",
+      "description": "",
+      "groups": [
+        "RecSys"
+      ],
+      "columns": [
+        "CLINICAL_TRIALS_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "STUDY_ID (int): Unique identifier (e.g., 2)",
+        "STUDY_NAME (varchar): Name of the entity (e.g., AISN)",
+        "START_DATE (datetime): Date value (e.g., 2025-09-21 00:00:00, 2025-09-16 00:00:00, 2025-09-18 00:00:00)",
+        "END_DATE (datetime): Date value (e.g., 2025-12-09 10:00:00, 2025-12-14 10:00:00, 2025-12-11 10:00:00)",
+        "CLINICAL_SCORES (varchar): Clinical Scores field",
+        "RECOMMEND (tinyint): Recommend field"
+      ],
+      "sample_rows": [
+        {
+          "CLINICAL_TRIALS_ID": "1",
+          "PATIENT_ID": "4255",
+          "STUDY_ID": "2",
+          "STUDY_NAME": "AISN",
+          "START_DATE": "2025-09-18 00:00:00",
+          "END_DATE": "2025-12-11 10:00:00",
+          "CLINICAL_SCORES": "[{\"evaluation_date\":\"2025-09-18\",\"condition\":\"pre\",\"MoCA\":{\"Visuospatial/Executive\":1,\"Naming\":3,\"Attention\":5,\"Language\":3,\"Abstraction\":2,\"DelayedRecall\":1,\"Orientation\":2},\"ARAT\":{\"Grip\":12,\"GrossMovement\":9,\"Pinch\":2,\"Grasp\":10},\"Other\":{\"Depression\":10,\"Pain\":10,\"Fatigue\":63}}]",
+          "RECOMMEND": "1"
+        },
+        {
+          "CLINICAL_TRIALS_ID": "2",
+          "PATIENT_ID": "4264",
+          "STUDY_ID": "2",
+          "STUDY_NAME": "AISN",
+          "START_DATE": "2025-09-16 00:00:00",
+          "END_DATE": "2025-12-09 10:00:00",
+          "CLINICAL_SCORES": "[{\"evaluation_date\":\"2025-09-16\",\"condition\":\"pre\",\"MoCA\":{\"Visuospatial/Executive\":3,\"Naming\":2,\"Attention\":3,\"Language\":2,\"Abstraction\":2,\"DelayedRecall\":1,\"Orientation\":3},\"ARAT\":{\"Grip\":4,\"GrossMovement\":3,\"Pinch\":2,\"Grasp\":3},\"Other\":{\"Depression\":8,\"Pain\":5,\"Fatigue\":2}}]",
+          "RECOMMEND": "1"
+        }
+      ]
+    },
+    {
+      "table": "clinician",
+      "description": "",
+      "groups": [
+        "Clinician"
+      ],
+      "columns": [
+        "CLINICIAN_ID (int): Unique identifier (e.g., 540, 4, 3, 1)",
+        "HOSPITAL_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "CLINICIAN_USER (varchar): User-related information (e.g., EodyneAdmin, HospitalTest1Admin, HospitalTest2Admin)",
+        "PASSWORD (varchar): Password field",
+        "ROLE (enum): Role field",
+        "AISN_GROUP (enum): Aisn Group field",
+        "NAME (varchar): Name of the entity",
+        "SURNAME1 (varchar): Surname1 field",
+        "SURNAME2 (varchar): Surname2 field",
+        "EMAIL (varchar): Email address (e.g., davidnery1555@gmail.com, None, david.nery@eodyne.com)",
+        "PHONE (varchar): Phone number (e.g., None)",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)",
+        "VERSION (int): Version field",
+        "FIRST_LOGIN_TO_MIMS (int): First Login To Mims field"
+      ],
+      "sample_rows": [
+        {
+          "CLINICIAN_ID": "1",
+          "HOSPITAL_ID": "1",
+          "CLINICIAN_USER": "EodyneAdmin",
+          "PASSWORD": "3a96f746707f450fdd35527acb2ebef4",
+          "ROLE": "ADMIN",
+          "AISN_GROUP": "None",
+          "NAME": "None",
+          "SURNAME1": "None",
+          "SURNAME2": "None",
+          "EMAIL": "david.nery@eodyne.com",
+          "PHONE": "None",
+          "DELETE_TIME": "None",
+          "VERSION": "12",
+          "FIRST_LOGIN_TO_MIMS": "0"
+        },
+        {
+          "CLINICIAN_ID": "3",
+          "HOSPITAL_ID": "2",
+          "CLINICIAN_USER": "HospitalTest1Admin",
+          "PASSWORD": "174d38ff1d7b67828e6e3d5db52b7a1e",
+          "ROLE": "THERAPIST",
+          "AISN_GROUP": "None",
+          "NAME": "None",
+          "SURNAME1": "None",
+          "SURNAME2": "None",
+          "EMAIL": "None",
+          "PHONE": "None",
+          "DELETE_TIME": "None",
+          "VERSION": "1",
+          "FIRST_LOGIN_TO_MIMS": "0"
+        }
+      ]
+    },
+    {
+      "table": "clinician_activity",
+      "description": "",
+      "groups": [
+        "Clinician"
+      ],
+      "columns": [
+        "CLINICIAN_ACTIVITY_ID (int): Unique identifier",
+        "CLINICIAN_ID (int): Unique identifier (e.g., 540, 4, 3, 1)",
+        "ACTIVITY_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "SERVER_DATETIME (datetime): Time value"
+      ],
+      "sample_rows": [
+        {
+          "CLINICIAN_ACTIVITY_ID": "1",
+          "CLINICIAN_ID": "1",
+          "ACTIVITY_ID": "1",
+          "SERVER_DATETIME": "2023-03-10 13:47:53"
+        },
+        {
+          "CLINICIAN_ACTIVITY_ID": "2",
+          "CLINICIAN_ID": "1",
+          "ACTIVITY_ID": "3",
+          "SERVER_DATETIME": "2023-03-10 14:00:36"
+        }
+      ]
+    },
+    {
+      "table": "clinician_activity_patient",
+      "description": "",
+      "groups": [
+        "Clinician"
+      ],
+      "columns": [
+        "CLINICIAN_ACTIVITY_PATIENT_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "CLINICIAN_ACTIVITY_ID (int): Unique identifier",
+        "PATIENT_ID (int): Unique identifier"
+      ],
+      "sample_rows": [
+        {
+          "CLINICIAN_ACTIVITY_PATIENT_ID": "1",
+          "CLINICIAN_ACTIVITY_ID": "2",
+          "PATIENT_ID": "228"
+        },
+        {
+          "CLINICIAN_ACTIVITY_PATIENT_ID": "2",
+          "CLINICIAN_ACTIVITY_ID": "16",
+          "PATIENT_ID": "4"
+        }
+      ]
+    },
+    {
+      "table": "clinician_activity_protocol",
+      "description": "",
+      "groups": [
+        "Clinician"
+      ],
+      "columns": [
+        "CLINICIAN_ACTIVITY_PROTOCOL_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "CLINICIAN_ACTIVITY_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier"
+      ],
+      "sample_rows": [
+        {
+          "CLINICIAN_ACTIVITY_PROTOCOL_ID": "1",
+          "CLINICIAN_ACTIVITY_ID": "2",
+          "PROTOCOL_ID": "205"
+        },
+        {
+          "CLINICIAN_ACTIVITY_PROTOCOL_ID": "2",
+          "CLINICIAN_ACTIVITY_ID": "16",
+          "PROTOCOL_ID": "224"
+        }
+      ]
+    },
+    {
+      "table": "clinician_patient",
+      "description": "",
+      "groups": [
+        "Clinician"
+      ],
+      "columns": [
+        "CLINICIAN_PATIENT_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "CLINICIAN_ID (int): Unique identifier (e.g., 540, 4, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "CREATION_TIME (datetime): Time value",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+      ],
+      "sample_rows": [
+        {
+          "CLINICIAN_PATIENT_ID": "1",
+          "CLINICIAN_ID": "1",
+          "PATIENT_ID": "699",
+          "CREATION_TIME": "2023-09-22 12:39:26",
+          "DELETE_TIME": "None"
+        },
+        {
+          "CLINICIAN_PATIENT_ID": "2",
+          "CLINICIAN_ID": "1",
+          "PATIENT_ID": "700",
+          "CREATION_TIME": "2023-09-22 13:24:13",
+          "DELETE_TIME": "None"
+        }
+      ]
+    },
+    {
+      "table": "clinician_privacy_policy",
+      "description": "",
+      "groups": [
+        "Clinician"
+      ],
+      "columns": [
+        "CLINICIAN_PRIVACY_POLICY_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PRIVACY_POLICY_ID (int): Unique identifier (e.g., 1)",
+        "CLINICIAN_ID (int): Unique identifier (e.g., 540, 4, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "CREATION_TIME (datetime): Time value"
+      ],
+      "sample_rows": [
+        {
+          "CLINICIAN_PRIVACY_POLICY_ID": "1",
+          "PRIVACY_POLICY_ID": "1",
+          "CLINICIAN_ID": "540",
+          "PATIENT_ID": "4505",
+          "CREATION_TIME": "2025-12-02 08:24:04"
+        },
+        {
+          "CLINICIAN_PRIVACY_POLICY_ID": "2",
+          "PRIVACY_POLICY_ID": "1",
+          "CLINICIAN_ID": "1",
+          "PATIENT_ID": "4506",
+          "CREATION_TIME": "2025-12-02 11:15:23"
+        }
+      ]
+    },
+    {
+      "table": "coach_messages",
+      "description": "",
+      "groups": [
+        "AI Coach"
+      ],
+      "columns": [
+        "COACH_MESSAGES_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "MESSAGE (varchar): Message field",
+        "SENDER (enum): Sender field",
+        "TYPE (enum): Type or category classification (e.g., NOTIFICATION, GREETING)",
+        "CREATION_TIME (datetime): Time value"
+      ],
+      "sample_rows": [
+        {
+          "COACH_MESSAGES_ID": "1",
+          "MESSAGE": ",jgf",
+          "SENDER": "CLINICIAN",
+          "TYPE": "GREETING",
+          "CREATION_TIME": "2023-09-08 14:17:03"
+        },
+        {
+          "COACH_MESSAGES_ID": "2",
+          "MESSAGE": "Hello, a quick reminder that your session is scheduled in 30 minutes. Take a moment to prepare.",
+          "SENDER": "IA_COACH",
+          "TYPE": "NOTIFICATION",
+          "CREATION_TIME": "2023-09-15 12:16:55"
+        }
+      ]
+    },
+    {
+      "table": "coach_messages_per_patient",
+      "description": "",
+      "groups": [
+        "AI Coach"
+      ],
+      "columns": [
+        "COACH_MESSAGES_PER_PATIENT_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "COACH_MESSAGES_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "SHOW_ONLY_ONCE (int): Show Only Once field",
+        "COACH_PERSONALITY (int): Person-related information (e.g., 2, 1)",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+      ],
+      "sample_rows": [
+        {
+          "COACH_MESSAGES_PER_PATIENT_ID": "1",
+          "COACH_MESSAGES_ID": "1",
+          "PATIENT_ID": "670",
+          "SHOW_ONLY_ONCE": "0",
+          "COACH_PERSONALITY": "1",
+          "DELETE_TIME": "2023-09-08 14:17:27"
+        },
+        {
+          "COACH_MESSAGES_PER_PATIENT_ID": "2",
+          "COACH_MESSAGES_ID": "2",
+          "PATIENT_ID": "681",
+          "SHOW_ONLY_ONCE": "1",
+          "COACH_PERSONALITY": "2",
+          "DELETE_TIME": "2023-09-15 09:30:00"
+        }
+      ]
+    },
+    {
+      "table": "coach_messages_per_protocol",
+      "description": "",
+      "groups": [
+        "AI Coach"
+      ],
+      "columns": [
+        "COACH_MESSAGES_PER_PROTOCOL_ID (int): Unique identifier",
+        "COACH_MESSAGES_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PROTOCOL_ID (int): Unique identifier"
+      ],
+      "sample_rows": []
+    },
+    {
+      "table": "coach_messages_schedule_per_patient",
+      "description": "",
+      "groups": [
+        "AI Coach"
+      ],
+      "columns": [
+        "COACH_MESSAGES_SCHEDULE_PER_PATIENT_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "COACH_MESSAGES_PER_PATIENT_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "LAUNCH_TIME (time): Time value (e.g., 7:30:00, 9:30:00, 10:00:00)",
+        "LAUNCH_DAY (enum): Launch Day field",
+        "LAUNCH_DATETIME (datetime): Time value (e.g., None, 2023-09-15 07:30:00, 2023-09-15 09:30:00)",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+      ],
+      "sample_rows": [
+        {
+          "COACH_MESSAGES_SCHEDULE_PER_PATIENT_ID": "1",
+          "COACH_MESSAGES_PER_PATIENT_ID": "1",
+          "LAUNCH_TIME": "10:00:00",
+          "LAUNCH_DAY": "MONDAY",
+          "LAUNCH_DATETIME": "None",
+          "DELETE_TIME": "None"
+        },
+        {
+          "COACH_MESSAGES_SCHEDULE_PER_PATIENT_ID": "2",
+          "COACH_MESSAGES_PER_PATIENT_ID": "2",
+          "LAUNCH_TIME": "9:30:00",
+          "LAUNCH_DAY": "FRIDAY",
+          "LAUNCH_DATETIME": "2023-09-15 09:30:00",
+          "DELETE_TIME": "None"
+        }
+      ]
+    },
+    {
+      "table": "coach_status",
+      "description": "",
+      "groups": [
+        "AI Coach"
+      ],
+      "columns": [
+        "COACH_STATUS_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+      ],
+      "sample_rows": [
+        {
+          "COACH_STATUS_ID": "1",
+          "PATIENT_ID": "672",
+          "DELETE_TIME": "None"
+        },
+        {
+          "COACH_STATUS_ID": "2",
+          "PATIENT_ID": "228",
+          "DELETE_TIME": "None"
+        }
+      ]
+    },
+    {
+      "table": "coach_training_time",
+      "description": "",
+      "groups": [
+        "AI Coach"
+      ],
+      "columns": [
+        "COACH_TRAINING_TIME_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "STARTING_TRAINING_TIME (time): Time value (e.g., 16:00:00, 14:00:00, 10:00:00)",
+        "ENDING_TRAINING_TIME (time): Time value (e.g., 16:00:00, 18:00:00, 12:00:00)",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+      ],
+      "sample_rows": [
+        {
+          "COACH_TRAINING_TIME_ID": "1",
+          "PATIENT_ID": "207",
+          "STARTING_TRAINING_TIME": "14:00:00",
+          "ENDING_TRAINING_TIME": "16:00:00",
+          "DELETE_TIME": "None"
+        },
+        {
+          "COACH_TRAINING_TIME_ID": "2",
+          "PATIENT_ID": "672",
+          "STARTING_TRAINING_TIME": "16:00:00",
+          "ENDING_TRAINING_TIME": "18:00:00",
+          "DELETE_TIME": "2023-09-08 14:36:03"
+        }
+      ]
+    },
+    {
+      "table": "code",
+      "description": "",
+      "groups": [],
+      "columns": [
+        "CODE_ID (int): Unique identifier",
+        "DISTRIBUTOR_ID (int): Unique identifier (e.g., 1)",
+        "SOFTWARE_ID (int): Unique identifier (e.g., 2, 4, 3, 1)",
+        "CODE (varchar): Code or identifier (e.g., VYDMVRVR, 5L4JTHDT, U9GHQ78T)",
+        "CREATION_TIME (datetime): Time value",
+        "EXPIRATION_DATE (datetime): Date value (e.g., None, 2024-10-16 01:04:00, 2025-05-04, 2025-12-05 00:00:00, 2023-03-10 13:48:54)",
+        "USAGE_LIMIT (int): Usage Limit field",
+        "SUBSCRIPTION_DAYS (int): Subscription Days field",
+        "ORDER_ID (varchar): Unique identifier (e.g., None, 3539, 3538)",
+        "DESCRIPTION (varchar): Description or details (e.g., None)",
+        "STATUS (enum): Status or state of the record (e.g., ABORTED, INACTIVE)"
+      ],
+      "sample_rows": [
+        {
+          "CODE_ID": "1",
+          "DISTRIBUTOR_ID": "1",
+          "SOFTWARE_ID": "7",
+          "CODE": "VYDMVRVR",
+          "CREATION_TIME": "2025-12-03 16:05:45",
+          "EXPIRATION_DATE": "None",
+          "USAGE_LIMIT": "1",
+          "SUBSCRIPTION_DAYS": "182",
+          "ORDER_ID": "3538",
+          "DESCRIPTION": "None",
+          "STATUS": "UNREDEEMED"
+        },
+        {
+          "CODE_ID": "2",
+          "DISTRIBUTOR_ID": "1",
+          "SOFTWARE_ID": "7",
+          "CODE": "U9GHQ78T",
+          "CREATION_TIME": "2025-12-04 11:12:08",
+          "EXPIRATION_DATE": "None",
+          "USAGE_LIMIT": "1",
+          "SUBSCRIPTION_DAYS": "90",
+          "ORDER_ID": "3539",
+          "DESCRIPTION": "None",
+          "STATUS": "UNREDEEMED"
+        }
+      ]
+    },
+    {
+      "table": "code_redemption",
+      "description": "",
+      "groups": [],
+      "columns": [
+        "CODE_REDEMPTION_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "CODE_ID (int): Unique identifier",
+        "PATIENT_ID (int): Unique identifier",
+        "REDEEMED_DATE (datetime): Date value (e.g., 2025-12-11 13:52:03, 2025-12-12 13:48:22, 2025-12-12 14:29:41)"
+      ],
+      "sample_rows": [
+        {
+          "CODE_REDEMPTION_ID": "1",
+          "CODE_ID": "15",
+          "PATIENT_ID": "4539",
+          "REDEEMED_DATE": "2025-12-11 13:52:03"
+        },
+        {
+          "CODE_REDEMPTION_ID": "2",
+          "CODE_ID": "18",
+          "PATIENT_ID": "4544",
+          "REDEEMED_DATE": "2025-12-12 13:48:22"
+        }
+      ]
+    },
+    {
+      "table": "commitment_answer",
+      "description": "",
+      "groups": [
+        "AI Coach"
+      ],
+      "columns": [
+        "COMMITMENT_ANSWER_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "COMMITMENT_QUESTION_PATIENT_ID (int): Unique identifier (e.g., 2, 4, 3, 1)",
+        "COMMITMENT_ANSWER (int): Commitment Answer field",
+        "CREATION_TIME (datetime): Time value",
+        "SUCCEED_TIME (datetime): Time value (e.g., None, 2023-09-01 17:17:44)"
+      ],
+      "sample_rows": [
+        {
+          "COMMITMENT_ANSWER_ID": "1",
+          "COMMITMENT_QUESTION_PATIENT_ID": "1",
+          "COMMITMENT_ANSWER": "7",
+          "CREATION_TIME": "2023-08-31 10:21:10",
+          "SUCCEED_TIME": "None"
+        },
+        {
+          "COMMITMENT_ANSWER_ID": "2",
+          "COMMITMENT_QUESTION_PATIENT_ID": "3",
+          "COMMITMENT_ANSWER": "28",
+          "CREATION_TIME": "2023-08-31 19:18:40",
+          "SUCCEED_TIME": "None"
+        }
+      ]
+    },
+    {
+      "table": "commitment_question",
+      "description": "",
+      "groups": [
+        "AI Coach"
+      ],
+      "columns": [
+        "COMMITMENT_QUESTION_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "COMMITMENT_QUESTION_KEY (varchar): Commitment Question Key field",
+        "MAX_VALUE (int): Max Value field",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+      ],
+      "sample_rows": [
+        {
+          "COMMITMENT_QUESTION_ID": "1",
+          "COMMITMENT_QUESTION_KEY": "how_many_exercises_today",
+          "MAX_VALUE": "6",
+          "DELETE_TIME": "None"
+        },
+        {
+          "COMMITMENT_QUESTION_ID": "2",
+          "COMMITMENT_QUESTION_KEY": "how_many_minutes_today",
+          "MAX_VALUE": "30",
+          "DELETE_TIME": "None"
+        }
+      ]
+    },
+    {
+      "table": "commitment_question_patient",
+      "description": "",
+      "groups": [
+        "AI Coach"
+      ],
+      "columns": [
+        "COMMITMENT_QUESTION_PATIENT_ID (int): Unique identifier (e.g., 2, 4, 3, 1)",
+        "COMMITMENT_QUESTION_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "SOFTWARE_ID (int): Unique identifier (e.g., 2, 4, 3, 1)",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+      ],
+      "sample_rows": [
+        {
+          "COMMITMENT_QUESTION_PATIENT_ID": "1",
+          "COMMITMENT_QUESTION_ID": "1",
+          "PATIENT_ID": "207",
+          "SOFTWARE_ID": "4",
+          "DELETE_TIME": "None"
+        },
+        {
+          "COMMITMENT_QUESTION_PATIENT_ID": "2",
+          "COMMITMENT_QUESTION_ID": "1",
+          "PATIENT_ID": "672",
+          "SOFTWARE_ID": "4",
+          "DELETE_TIME": "None"
+        }
+      ]
+    },
+    {
+      "table": "component",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "columns": [
+        "COMPONENT_ID (int): Unique identifier (e.g., 0, 10, 1)",
+        "NAME (varchar): Name of the entity"
+      ],
+      "sample_rows": [
+        {
+          "COMPONENT_ID": "0",
+          "NAME": "Localization"
+        },
+        {
+          "COMPONENT_ID": "1",
+          "NAME": "OS"
+        }
+      ]
+    },
+    {
+      "table": "control_plus",
+      "description": "",
+      "groups": [],
+      "columns": [
+        "CONTROL_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "CONTROL_KEY (varchar): Control Key field",
+        "CONTROL_VALUE (varchar): Control Value field",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+      ],
+      "sample_rows": [
+        {
+          "CONTROL_ID": "1",
+          "PATIENT_ID": "4",
+          "PROTOCOL_ID": "309",
+          "CONTROL_KEY": "level_1",
+          "CONTROL_VALUE": "60",
+          "DELETE_TIME": "None"
+        },
+        {
+          "CONTROL_ID": "2",
+          "PATIENT_ID": "4",
+          "PROTOCOL_ID": "310",
+          "CONTROL_KEY": "level_2",
+          "CONTROL_VALUE": "60",
+          "DELETE_TIME": "None"
+        }
+      ]
+    },
+    {
+      "table": "device_cloud_messaging",
+      "description": "",
+      "groups": [],
+      "columns": [
+        "DEVICE_CLOUD_MESSAGING_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "DEVICE_TOKEN (varchar): Device Token field",
+        "DEVICE_MODEL (varchar): Device Model field",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+      ],
+      "sample_rows": [
+        {
+          "DEVICE_CLOUD_MESSAGING_ID": "1",
+          "PATIENT_ID": "672",
+          "DEVICE_TOKEN": "eCNolTrISsSO08R46piL-f:APA91bFYlHZjdt0n6xbF7i59_lVuxgW_ERiFg4tvQ9gCkhxH3cqDhIYlwbJH4_e8j1vNIOhyeKtgduQfFWMRKyDpFy7lPpEPU_dcKFbJhuFl9diGHsRefGxz5UEhT5WNvwFgLJimzZyd",
+          "DEVICE_MODEL": "Xiaomi M2007J20CG",
+          "DELETE_TIME": "2024-10-18 20:08:34"
+        },
+        {
+          "DEVICE_CLOUD_MESSAGING_ID": "2",
+          "PATIENT_ID": "437",
+          "DEVICE_TOKEN": "fMChE70Qw0q6jX9sYXy1At:APA91bG3Bk69cAAvYwhqFR85jGxAzFymp1yLJNTSu7jReJ-0E_3_pxZ4VtfE3bTFkUT3eBnKTWOR63V5Gc02YzuV_OABhai5nHIyCQJLBsTXlGkJDjbM7p5tCiN90nTnaydN1CUIay8D",
+          "DEVICE_MODEL": "iPhone15,2",
+          "DELETE_TIME": "2023-09-13 09:54:59"
+        }
+      ]
+    },
+    {
+      "table": "difficulty_modulators_app",
+      "description": "",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "columns": [
+        "DIFFICULTY_MODULATORS_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "GAME_MODE (varchar): Game Mode field",
+        "SECONDS_FROM_START (int): Seconds From Start field",
+        "PARAMETER_KEY (varchar): Parameter Key field",
+        "PARAMETER_VALUE (varchar): Parameter Value field"
+      ],
+      "sample_rows": [
+        {
+          "DIFFICULTY_MODULATORS_ID": "1",
+          "SESSION_ID": "2273",
+          "PATIENT_ID": "207",
+          "PROTOCOL_ID": "201",
+          "GAME_MODE": "UNORDERED_GROUP",
+          "SECONDS_FROM_START": "8235",
+          "PARAMETER_KEY": "unorderedGroup_dm_targetsNumber",
+          "PARAMETER_VALUE": "0.1"
+        },
+        {
+          "DIFFICULTY_MODULATORS_ID": "2",
+          "SESSION_ID": "2273",
+          "PATIENT_ID": "207",
+          "PROTOCOL_ID": "201",
+          "GAME_MODE": "UNORDERED_GROUP",
+          "SECONDS_FROM_START": "8235",
+          "PARAMETER_KEY": "unorderedGroup_dm_distractorsNumber",
+          "PARAMETER_VALUE": "0.1"
+        }
+      ]
+    },
+    {
+      "table": "difficulty_modulators_plus",
+      "description": "",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "columns": [
+        "DIFFICULTY_MODULATORS_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "GAME_MODE (varchar): Game Mode field",
+        "SECONDS_FROM_START (int): Seconds From Start field",
+        "PARAMETER_KEY (varchar): Parameter Key field",
+        "PARAMETER_VALUE (varchar): Parameter Value field"
+      ],
+      "sample_rows": [
+        {
+          "DIFFICULTY_MODULATORS_ID": "1",
+          "SESSION_ID": "100002",
+          "PATIENT_ID": "3130",
+          "PROTOCOL_ID": "201",
+          "GAME_MODE": "INVERSE_CATEGORIES",
+          "SECONDS_FROM_START": "17788",
+          "PARAMETER_KEY": "inverseCategories_dm_targetsNumber",
+          "PARAMETER_VALUE": "0"
+        },
+        {
+          "DIFFICULTY_MODULATORS_ID": "2",
+          "SESSION_ID": "100002",
+          "PATIENT_ID": "3130",
+          "PROTOCOL_ID": "201",
+          "GAME_MODE": "INVERSE_CATEGORIES",
+          "SECONDS_FROM_START": "17788",
+          "PARAMETER_KEY": "inverseCategories_dm_distractorsNumber",
+          "PARAMETER_VALUE": "0"
+        }
+      ]
+    },
+    {
+      "table": "difficulty_settings_app",
+      "description": "",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "columns": [
+        "DIFFICULTY_SETTINGS_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "GAME_MODE (varchar): Game Mode field",
+        "COMPLEXITY_MODEL (varchar): Complexity Model field",
+        "MODULATORS_NUMBER (int): Modulators Number field",
+        "SAMPLER (varchar): Sampler field"
+      ],
+      "sample_rows": [
+        {
+          "DIFFICULTY_SETTINGS_ID": "1",
+          "SESSION_ID": "10824",
+          "PATIENT_ID": "1003",
+          "PROTOCOL_ID": "208",
+          "GAME_MODE": "SEQUENCE",
+          "COMPLEXITY_MODEL": "Product",
+          "MODULATORS_NUMBER": "4",
+          "SAMPLER": "MicroCanonical"
+        },
+        {
+          "DIFFICULTY_SETTINGS_ID": "2",
+          "SESSION_ID": "10825",
+          "PATIENT_ID": "1003",
+          "PROTOCOL_ID": "208",
+          "GAME_MODE": "SEQUENCE",
+          "COMPLEXITY_MODEL": "Product",
+          "MODULATORS_NUMBER": "4",
+          "SAMPLER": "MicroCanonical"
+        }
+      ]
+    },
+    {
+      "table": "difficulty_settings_plus",
+      "description": "",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "columns": [
+        "DIFFICULTY_SETTINGS_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "GAME_MODE (varchar): Game Mode field",
+        "COMPLEXITY_MODEL (varchar): Complexity Model field",
+        "MODULATORS_NUMBER (int): Modulators Number field",
+        "SAMPLER (varchar): Sampler field"
+      ],
+      "sample_rows": [
+        {
+          "DIFFICULTY_SETTINGS_ID": "1",
+          "SESSION_ID": "100000",
+          "PATIENT_ID": "672",
+          "PROTOCOL_ID": "307",
+          "GAME_MODE": "SEQUENCES",
+          "COMPLEXITY_MODEL": "Direct",
+          "MODULATORS_NUMBER": "5",
+          "SAMPLER": "SPSDirect"
+        },
+        {
+          "DIFFICULTY_SETTINGS_ID": "2",
+          "SESSION_ID": "100000",
+          "PATIENT_ID": "672",
+          "PROTOCOL_ID": "307",
+          "GAME_MODE": "SUBSETS",
+          "COMPLEXITY_MODEL": "Direct",
+          "MODULATORS_NUMBER": "5",
+          "SAMPLER": "SPSDirect"
+        }
+      ]
+    },
+    {
+      "table": "distributor",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "columns": [
+        "DISTRIBUTOR_ID (int): Unique identifier (e.g., 1)",
+        "DISTRIBUTOR_NAME (varchar): Name of the entity (e.g., Eodyne)",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+      ],
+      "sample_rows": [
+        {
+          "DISTRIBUTOR_ID": "1",
+          "DISTRIBUTOR_NAME": "Eodyne",
+          "DELETE_TIME": "None"
+        }
+      ]
+    },
+    {
+      "table": "emotional_answer",
+      "description": "",
+      "groups": [
+        "EmotionalSlider"
+      ],
+      "columns": [
+        "EMOTIONAL_ANSWER_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "EMOTIONAL_QUESTION_PATIENT_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "EMOTIONAL_ANSWER (int): Emotional Answer field",
+        "CREATION_TIME (datetime): Time value"
+      ],
+      "sample_rows": [
+        {
+          "EMOTIONAL_ANSWER_ID": "1",
+          "EMOTIONAL_QUESTION_PATIENT_ID": "1",
+          "EMOTIONAL_ANSWER": "4",
+          "CREATION_TIME": "2023-08-31 10:21:04"
+        },
+        {
+          "EMOTIONAL_ANSWER_ID": "2",
+          "EMOTIONAL_QUESTION_PATIENT_ID": "2",
+          "EMOTIONAL_ANSWER": "6",
+          "CREATION_TIME": "2023-08-31 10:21:04"
+        }
+      ]
+    },
+    {
+      "table": "emotional_question",
+      "description": "",
+      "groups": [
+        "EmotionalSlider"
+      ],
+      "columns": [
+        "EMOTIONAL_QUESTION_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "EMOTIONAL_QUESTION_KEY (varchar): Emotional Question Key field",
+        "MIN_VALUE_TEXT_KEY (varchar): Min Value Text Key field",
+        "MAX_VALUE_TEXT_KEY (varchar): Max Value Text Key field",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+      ],
+      "sample_rows": [
+        {
+          "EMOTIONAL_QUESTION_ID": "1",
+          "EMOTIONAL_QUESTION_KEY": "mood",
+          "MIN_VALUE_TEXT_KEY": "OS_questionnaire_sad",
+          "MAX_VALUE_TEXT_KEY": "OS_questionnaire_happy",
+          "DELETE_TIME": "None"
+        },
+        {
+          "EMOTIONAL_QUESTION_ID": "2",
+          "EMOTIONAL_QUESTION_KEY": "pain",
+          "MIN_VALUE_TEXT_KEY": "OS_questionnaire_withoutPain",
+          "MAX_VALUE_TEXT_KEY": "OS_questionnaire_withPain",
+          "DELETE_TIME": "None"
+        }
+      ]
+    },
+    {
+      "table": "emotional_question_patient",
+      "description": "",
+      "groups": [
+        "EmotionalSlider"
+      ],
+      "columns": [
+        "EMOTIONAL_QUESTION_PATIENT_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "EMOTIONAL_QUESTION_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "SOFTWARE_ID (int): Unique identifier (e.g., 2, 4, 3, 1)",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+      ],
+      "sample_rows": [
+        {
+          "EMOTIONAL_QUESTION_PATIENT_ID": "1",
+          "EMOTIONAL_QUESTION_ID": "1",
+          "PATIENT_ID": "207",
+          "SOFTWARE_ID": "4",
+          "DELETE_TIME": "None"
+        },
+        {
+          "EMOTIONAL_QUESTION_PATIENT_ID": "2",
+          "EMOTIONAL_QUESTION_ID": "2",
+          "PATIENT_ID": "207",
+          "SOFTWARE_ID": "4",
+          "DELETE_TIME": "None"
+        }
+      ]
+    },
+    {
+      "table": "evaluation",
+      "description": "",
+      "groups": [
+        "EmotionalSlider"
+      ],
+      "columns": [
+        "EVALUATION_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "EVALUATION_UNIT (int): Evaluation Unit field",
+        "PATIENT_ID (int): Unique identifier",
+        "SOFTWARE_ID (int): Unique identifier (e.g., 2, 4, 3, 1)",
+        "EVALUATION_KEY (varchar): Evaluation Key field",
+        "EVALUATION_VALUE (varchar): Evaluation Value field",
+        "SERVER_DATETIME (datetime): Time value",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+      ],
+      "sample_rows": [
+        {
+          "EVALUATION_ID": "1",
+          "EVALUATION_UNIT": "1",
+          "PATIENT_ID": "180",
+          "SOFTWARE_ID": "2",
+          "EVALUATION_KEY": "EmotionalSlider_Valence",
+          "EVALUATION_VALUE": "0.8150684",
+          "SERVER_DATETIME": "2022-02-25 11:13:18",
+          "DELETE_TIME": "None"
+        },
+        {
+          "EVALUATION_ID": "2",
+          "EVALUATION_UNIT": "1",
+          "PATIENT_ID": "180",
+          "SOFTWARE_ID": "2",
+          "EVALUATION_KEY": "EmotionalSlider_Arousal",
+          "EVALUATION_VALUE": "0.6917808",
+          "SERVER_DATETIME": "2022-02-25 11:13:18",
+          "DELETE_TIME": "None"
+        }
+      ]
+    },
+    {
+      "table": "hospital",
+      "description": "",
+      "groups": [
+        "Hospital"
+      ],
+      "columns": [
+        "HOSPITAL_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "NAME (varchar): Name of the entity",
+        "ADDRESS (varchar): Address information (e.g., None)",
+        "CONTACT (varchar): Contact field",
+        "PHONE (varchar): Phone number (e.g., None)",
+        "EMAIL (varchar): Email address (e.g., davidnery1555@gmail.com, None, david.nery@eodyne.com)"
+      ],
+      "sample_rows": [
+        {
+          "HOSPITAL_ID": "1",
+          "NAME": "Eodyne Hospital",
+          "ADDRESS": "None",
+          "CONTACT": "None",
+          "PHONE": "None",
+          "EMAIL": "None"
+        },
+        {
+          "HOSPITAL_ID": "2",
+          "NAME": "Hospital Test1",
+          "ADDRESS": "None",
+          "CONTACT": "None",
+          "PHONE": "None",
+          "EMAIL": "None"
+        }
+      ]
+    },
+    {
+      "table": "hospital_clinician",
+      "description": "",
+      "groups": [
+        "Hospital"
+      ],
+      "columns": [
+        "HOSPITAL_CLINICIAN_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "HOSPITAL_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "CLINICIAN_ID (int): Unique identifier (e.g., 540, 4, 3, 1)"
+      ],
+      "sample_rows": [
+        {
+          "HOSPITAL_CLINICIAN_ID": "1",
+          "HOSPITAL_ID": "12",
+          "CLINICIAN_ID": "25"
+        },
+        {
+          "HOSPITAL_CLINICIAN_ID": "2",
+          "HOSPITAL_ID": "13",
+          "CLINICIAN_ID": "25"
+        }
+      ]
+    },
+    {
+      "table": "hospital_project",
+      "description": "",
+      "groups": [
+        "Hospital"
+      ],
+      "columns": [
+        "HOSPITAL_PROJECT_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "HOSPITAL_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PROJECT (enum): Project field"
+      ],
+      "sample_rows": [
+        {
+          "HOSPITAL_PROJECT_ID": "1",
+          "HOSPITAL_ID": "1",
+          "PROJECT": "PHRASE"
+        },
+        {
+          "HOSPITAL_PROJECT_ID": "2",
+          "HOSPITAL_ID": "7",
+          "PROJECT": "PHRASE"
+        }
+      ]
+    },
+    {
+      "table": "hospital_software",
+      "description": "",
+      "groups": [
+        "Hospital"
+      ],
+      "columns": [
+        "HOSPITAL_SOFTWARE_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "HOSPITAL_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "SOFTWARE_ID (int): Unique identifier (e.g., 2, 4, 3, 1)",
+        "STATUS (enum): Status or state of the record (e.g., ABORTED, INACTIVE)",
+        "EXPIRATION_DATE (datetime): Date value (e.g., None, 2024-10-16 01:04:00, 2025-05-04, 2025-12-05 00:00:00, 2023-03-10 13:48:54)"
+      ],
+      "sample_rows": [
+        {
+          "HOSPITAL_SOFTWARE_ID": "1",
+          "HOSPITAL_ID": "1",
+          "SOFTWARE_ID": "1",
+          "STATUS": "INACTIVE",
+          "EXPIRATION_DATE": "2024-10-16 01:04:00"
+        },
+        {
+          "HOSPITAL_SOFTWARE_ID": "2",
+          "HOSPITAL_ID": "1",
+          "SOFTWARE_ID": "2",
+          "STATUS": "INACTIVE",
+          "EXPIRATION_DATE": "2024-10-16 01:04:00"
+        }
+      ]
+    },
+    {
+      "table": "hospital_subscription",
+      "description": "",
+      "groups": [
+        "Hospital"
+      ],
+      "columns": [
+        "HOSPITAL_SUBSCRIPTION_ID (int): Unique identifier (e.g., 1)",
+        "HOSPITAL_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "SOFTWARE_ID (int): Unique identifier (e.g., 2, 4, 3, 1)",
+        "SUBSCRIPTION_DAYS (int): Subscription Days field",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+      ],
+      "sample_rows": [
+        {
+          "HOSPITAL_SUBSCRIPTION_ID": "1",
+          "HOSPITAL_ID": "180",
+          "SOFTWARE_ID": "7",
+          "SUBSCRIPTION_DAYS": "30",
+          "DELETE_TIME": "None"
+        }
+      ]
+    },
+    {
+      "table": "metric_app",
+      "description": "",
+      "groups": [],
+      "columns": [
+        "METRIC_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "METRIC_KEY (varchar): Metric Key field",
+        "METRIC_VALUE (varchar): Metric Value field"
+      ],
+      "sample_rows": [
+        {
+          "METRIC_ID": "1",
+          "SESSION_ID": "2279",
+          "PATIENT_ID": "4",
+          "PROTOCOL_ID": "225",
+          "METRIC_KEY": "totalDisplacement",
+          "METRIC_VALUE": "1.253814"
+        },
+        {
+          "METRIC_ID": "2",
+          "SESSION_ID": "2279",
+          "PATIENT_ID": "4",
+          "PROTOCOL_ID": "225",
+          "METRIC_KEY": "volume",
+          "METRIC_VALUE": "0.000204219"
+        }
+      ]
+    },
+    {
+      "table": "metric_plus",
+      "description": "",
+      "groups": [],
+      "columns": [
+        "METRIC_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "METRIC_KEY (varchar): Metric Key field",
+        "METRIC_VALUE (varchar): Metric Value field"
+      ],
+      "sample_rows": [
+        {
+          "METRIC_ID": "1",
+          "SESSION_ID": "100012",
+          "PATIENT_ID": "3126",
+          "PROTOCOL_ID": "219",
+          "METRIC_KEY": "totalDisplacement",
+          "METRIC_VALUE": "24.52054"
+        },
+        {
+          "METRIC_ID": "2",
+          "SESSION_ID": "100020",
+          "PATIENT_ID": "3126",
+          "PROTOCOL_ID": "218",
+          "METRIC_KEY": "totalDisplacement",
+          "METRIC_VALUE": "12.82923"
+        }
+      ]
+    },
+    {
+      "table": "parameter_app",
+      "description": "",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "columns": [
+        "PARAMETER_ID (int): Unique identifier",
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "PARAMETER_KEY (varchar): Parameter Key field",
+        "PARAMETER_VALUE (varchar): Parameter Value field"
+      ],
+      "sample_rows": [
+        {
+          "PARAMETER_ID": "1",
+          "SESSION_ID": "2",
+          "PATIENT_ID": "91",
+          "PROTOCOL_ID": "201",
+          "PARAMETER_KEY": "categories_dm_targetsNumber",
+          "PARAMETER_VALUE": "0"
+        },
+        {
+          "PARAMETER_ID": "2",
+          "SESSION_ID": "2",
+          "PATIENT_ID": "91",
+          "PROTOCOL_ID": "201",
+          "PARAMETER_KEY": "categories_dm_distractorsNumber",
+          "PARAMETER_VALUE": "0"
+        }
+      ]
+    },
+    {
+      "table": "parameter_clinic",
+      "description": "",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "columns": [
+        "PARAMETER_ID (int): Unique identifier",
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "PARAMETER_KEY (varchar): Parameter Key field",
+        "PARAMETER_VALUE (varchar): Parameter Value field"
+      ],
+      "sample_rows": [
+        {
+          "PARAMETER_ID": "139873",
+          "SESSION_ID": "846",
+          "PATIENT_ID": "10",
+          "PROTOCOL_ID": "10",
+          "PARAMETER_KEY": "ADC_sl_l",
+          "PARAMETER_VALUE": "0.0"
+        },
+        {
+          "PARAMETER_ID": "139874",
+          "SESSION_ID": "846",
+          "PATIENT_ID": "10",
+          "PROTOCOL_ID": "10",
+          "PARAMETER_KEY": "ADC_sl_r",
+          "PARAMETER_VALUE": "0.0"
+        }
+      ]
+    },
+    {
+      "table": "parameter_home",
+      "description": "",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "columns": [
+        "PARAMETER_ID (int): Unique identifier",
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "PARAMETER_KEY (varchar): Parameter Key field",
+        "PARAMETER_VALUE (varchar): Parameter Value field"
+      ],
+      "sample_rows": [
+        {
+          "PARAMETER_ID": "218",
+          "SESSION_ID": "381",
+          "PATIENT_ID": "70",
+          "PROTOCOL_ID": "90",
+          "PARAMETER_KEY": "s_toggle_free",
+          "PARAMETER_VALUE": "1"
+        },
+        {
+          "PARAMETER_ID": "219",
+          "SESSION_ID": "381",
+          "PATIENT_ID": "70",
+          "PROTOCOL_ID": "90",
+          "PARAMETER_KEY": "s_toggle_alarm",
+          "PARAMETER_VALUE": "0"
+        }
+      ]
+    },
+    {
+      "table": "parameter_icu",
+      "description": "",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "columns": [
+        "PARAMETER_ID (int): Unique identifier",
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PARAMETER_KEY (varchar): Parameter Key field",
+        "PARAMETER_VALUE (varchar): Parameter Value field"
+      ],
+      "sample_rows": []
+    },
+    {
+      "table": "parameter_plus",
+      "description": "",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "columns": [
+        "PARAMETER_ID (int): Unique identifier",
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "PARAMETER_KEY (varchar): Parameter Key field",
+        "PARAMETER_VALUE (varchar): Parameter Value field"
+      ],
+      "sample_rows": [
+        {
+          "PARAMETER_ID": "1",
+          "SESSION_ID": "100000",
+          "PATIENT_ID": "672",
+          "PROTOCOL_ID": "307",
+          "PARAMETER_KEY": "sequences_dm_targetsNumber",
+          "PARAMETER_VALUE": "0"
+        },
+        {
+          "PARAMETER_ID": "2",
+          "SESSION_ID": "100000",
+          "PATIENT_ID": "672",
+          "PROTOCOL_ID": "307",
+          "PARAMETER_KEY": "sequences_dm_distractorsNumber",
+          "PARAMETER_VALUE": "0"
+        }
+      ]
+    },
+    {
+      "table": "parameter_web",
+      "description": "",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "columns": [
+        "PARAMETER_ID (int): Unique identifier",
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "PARAMETER_KEY (varchar): Parameter Key field",
+        "PARAMETER_VALUE (varchar): Parameter Value field"
+      ],
+      "sample_rows": [
+        {
+          "PARAMETER_ID": "1",
+          "SESSION_ID": "1",
+          "PATIENT_ID": "207",
+          "PROTOCOL_ID": "301",
+          "PARAMETER_KEY": "categories_dm_targetsNumber",
+          "PARAMETER_VALUE": "0"
+        },
+        {
+          "PARAMETER_ID": "2",
+          "SESSION_ID": "1",
+          "PATIENT_ID": "207",
+          "PROTOCOL_ID": "301",
+          "PARAMETER_KEY": "categories_dm_distractorsNumber",
+          "PARAMETER_VALUE": "0"
+        }
+      ]
+    },
+    {
+      "table": "patient",
+      "description": "",
+      "groups": [
+        "Patient"
+      ],
+      "columns": [
+        "PATIENT_ID (int): Unique identifier",
+        "HOSPITAL_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_USER (varchar): User-related information (e.g., david, pedro, andres)",
+        "PASSWORD (varchar): Password field",
+        "CREATION_TIME (datetime): Time value",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)",
+        "NAME (varchar): Name of the entity",
+        "SURNAME1 (varchar): Surname1 field",
+        "SURNAME2 (varchar): Surname2 field",
+        "EMAIL (varchar): Email address (e.g., davidnery1555@gmail.com, None, david.nery@eodyne.com)",
+        "EMAIL_VERIFIED (int): Email Verified field",
+        "PARETIC_SIDE (enum): Paretic Side field",
+        "UPPER_EXTREMITY_TO_TRAIN (enum): Upper Extremity To Train field",
+        "HAND_RAISING_CAPACITY (enum): Hand Raising Capacity field",
+        "COGNITIVE_FUNCTION_LEVEL (enum): Cognitive Function Level field",
+        "HAS_HEMINEGLIGENCE (int): Has Heminegligence field",
+        "GENDER (enum): Gender field",
+        "SKIN_COLOR (enum): Skin Color field",
+        "BIRTH_DATE (date): Date value (e.g., 2004-02-03, 1965-02-03, 1996-05-10)",
+        "VIDEOGAME_EXP (int): Videogame Exp field",
+        "COMPUTER_EXP (int): Computer Exp field",
+        "COMMENTS (varchar): Comments field",
+        "PTN_HEIGHT_CM (int): Ptn Height Cm field",
+        "ARM_SIZE_CM (int): Arm Size Cm field",
+        "DEMO (int): Demo field",
+        "VERSION (int): Version field"
+      ],
+      "sample_rows": [
+        {
+          "PATIENT_ID": "1",
+          "HOSPITAL_ID": "1",
+          "PATIENT_USER": "pedro",
+          "PASSWORD": "e14b84782304f7fbd8c1a8b36ce07213",
+          "CREATION_TIME": "2021-03-09 10:27:35",
+          "DELETE_TIME": "None",
+          "NAME": "Nuevo nombre",
+          "SURNAME1": "None",
+          "SURNAME2": "None",
+          "EMAIL": "None",
+          "EMAIL_VERIFIED": "0",
+          "PARETIC_SIDE": "NONE",
+          "UPPER_EXTREMITY_TO_TRAIN": "BOTH",
+          "HAND_RAISING_CAPACITY": "NONE",
+          "COGNITIVE_FUNCTION_LEVEL": "LOW",
+          "HAS_HEMINEGLIGENCE": "0",
+          "GENDER": "MALE",
+          "SKIN_COLOR": "FDC3AD",
+          "BIRTH_DATE": "1965-02-03",
+          "VIDEOGAME_EXP": "0",
+          "COMPUTER_EXP": "0",
+          "COMMENTS": "",
+          "PTN_HEIGHT_CM": "175",
+          "ARM_SIZE_CM": "22",
+          "DEMO": "0",
+          "VERSION": "5"
+        },
+        {
+          "PATIENT_ID": "4",
+          "HOSPITAL_ID": "243",
+          "PATIENT_USER": "david",
+          "PASSWORD": "5c5c43253ccd77e4f20d8b5b770abdd6",
+          "CREATION_TIME": "2021-03-11 09:47:07",
+          "DELETE_TIME": "None",
+          "NAME": "None",
+          "SURNAME1": "None",
+          "SURNAME2": "None",
+          "EMAIL": "davidnery1555@gmail.com",
+          "EMAIL_VERIFIED": "1",
+          "PARETIC_SIDE": "RIGHT",
+          "UPPER_EXTREMITY_TO_TRAIN": "BOTH",
+          "HAND_RAISING_CAPACITY": "NONE",
+          "COGNITIVE_FUNCTION_LEVEL": "LOW",
+          "HAS_HEMINEGLIGENCE": "0",
+          "GENDER": "MALE",
+          "SKIN_COLOR": "FDC3AD",
+          "BIRTH_DATE": "1996-05-10",
+          "VIDEOGAME_EXP": "0",
+          "COMPUTER_EXP": "0",
+          "COMMENTS": "",
+          "PTN_HEIGHT_CM": "180",
+          "ARM_SIZE_CM": "22",
+          "DEMO": "0",
+          "VERSION": "31"
+        }
+      ]
+    },
+    {
+      "table": "patient_affectation",
+      "description": "",
+      "groups": [
+        "Patient"
+      ],
+      "columns": [
+        "PATIENT_AFFECTATION_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "AFFECTATION_ID (int): Unique identifier (e.g., 2, 8, 3, 1)",
+        "CREATION_TIME (datetime): Time value",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+      ],
+      "sample_rows": [
+        {
+          "PATIENT_AFFECTATION_ID": "1",
+          "PATIENT_ID": "5",
+          "AFFECTATION_ID": "1",
+          "CREATION_TIME": "2021-05-03 15:41:13",
+          "DELETE_TIME": "2023-10-03 18:47:53"
+        },
+        {
+          "PATIENT_AFFECTATION_ID": "2",
+          "PATIENT_ID": "6",
+          "AFFECTATION_ID": "8",
+          "CREATION_TIME": "2021-05-03 15:41:13",
+          "DELETE_TIME": "None"
+        }
+      ]
+    },
+    {
+      "table": "patient_affectation_features",
+      "description": "",
+      "groups": [
+        "Patient"
+      ],
+      "columns": [
+        "PATIENT_AFFECTATION_FEATURES_ID (int): Unique identifier",
+        "PATIENT_AFFECTATION_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "FEATURE_NAME (varchar): Name of the entity",
+        "FEATURE_VALUE (varchar): Feature Value field",
+        "STARTING_DATE (datetime): Date value",
+        "ENDING_DATE (datetime): Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)"
+      ],
+      "sample_rows": []
+    },
+    {
+      "table": "patient_aisn_data",
+      "description": "",
+      "groups": [
+        "Patient",
+        "patient_aisn_data"
+      ],
+      "columns": [
+        "PATIENT_AISN_DATA_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "AISN_GROUP (enum): Aisn Group field",
+        "CIVIL_STATUS (enum): Status or state of the record (e.g., Married, Divorced)",
+        "HOME_SUPPORT (int): Home Support field",
+        "EDUCATION (enum): Education field",
+        "WORK (enum): Work field",
+        "STROKE_SIDE (enum): Stroke Side field",
+        "STROKE_TYPE (enum): Type or category classification (e.g., Ischemic, Lacunar, Hemorrhagic)",
+        "STROKE_LOCATION (enum): Stroke Location field",
+        "ROUTINE_STARTING_DATE (date): Date value (e.g., 2025-09-18, 2025-09-16)",
+        "COMORBIDITY (enum): Comorbidity field"
+      ],
+      "sample_rows": [
+        {
+          "PATIENT_AISN_DATA_ID": "1",
+          "PATIENT_ID": "4255",
+          "AISN_GROUP": "RGS+AI",
+          "CIVIL_STATUS": "Divorced",
+          "HOME_SUPPORT": "1",
+          "EDUCATION": "University",
+          "WORK": "Retired",
+          "STROKE_SIDE": "Right",
+          "STROKE_TYPE": "Lacunar",
+          "STROKE_LOCATION": "Posterior Cerebral Artery (PCA)",
+          "ROUTINE_STARTING_DATE": "2025-09-18",
+          "COMORBIDITY": "Obesity"
+        },
+        {
+          "PATIENT_AISN_DATA_ID": "2",
+          "PATIENT_ID": "4264",
+          "AISN_GROUP": "RGS+AI",
+          "CIVIL_STATUS": "Married",
+          "HOME_SUPPORT": "0",
+          "EDUCATION": "Other",
+          "WORK": "Employed",
+          "STROKE_SIDE": "Left",
+          "STROKE_TYPE": "Ischemic",
+          "STROKE_LOCATION": "Anterior Cerebral Artery (ACA)",
+          "ROUTINE_STARTING_DATE": "2025-09-16",
+          "COMORBIDITY": "Obesity"
+        }
+      ]
+    },
+    {
+      "table": "patient_device_data",
+      "description": "",
+      "groups": [
+        "Patient"
+      ],
+      "columns": [
+        "PATIENT_DEVICE_DATA_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "CREATION_TIME (datetime): Time value",
+        "PHONE_MODEL (varchar): Phone Model field",
+        "AR_COMPATIBILITY (int): Ar Compatibility field",
+        "APP_VERSION (varchar): App Version field",
+        "SCREEN_INCHES (float): Screen Inches field",
+        "FINGERPRINT (varchar): Fingerprint field",
+        "DEVICE_ARCHITECTURE (varchar): Device Architecture field"
+      ],
+      "sample_rows": [
+        {
+          "PATIENT_DEVICE_DATA_ID": "1",
+          "PATIENT_ID": "207",
+          "CREATION_TIME": "2023-03-10 18:02:54",
+          "PHONE_MODEL": "Xiaomi M2007J20CG",
+          "AR_COMPATIBILITY": "None",
+          "APP_VERSION": "3.1.50",
+          "SCREEN_INCHES": "None",
+          "FINGERPRINT": "None",
+          "DEVICE_ARCHITECTURE": "None"
+        },
+        {
+          "PATIENT_DEVICE_DATA_ID": "2",
+          "PATIENT_ID": "228",
+          "CREATION_TIME": "2023-03-10 18:04:59",
+          "PHONE_MODEL": "iPhone14,2",
+          "AR_COMPATIBILITY": "None",
+          "APP_VERSION": "3.1.50",
+          "SCREEN_INCHES": "None",
+          "FINGERPRINT": "None",
+          "DEVICE_ARCHITECTURE": "None"
+        }
+      ]
+    },
+    {
+      "table": "patient_diagnosis_data",
+      "description": "",
+      "groups": [
+        "Patient"
+      ],
+      "columns": [
+        "PATIENT_DIAGNOSIS_DATA_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "DIAGNOSIS_OBSERVATION (varchar): Diagnosis Observation field",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+      ],
+      "sample_rows": [
+        {
+          "PATIENT_DIAGNOSIS_DATA_ID": "1",
+          "PATIENT_ID": "623",
+          "DIAGNOSIS_OBSERVATION": "",
+          "DELETE_TIME": "None"
+        },
+        {
+          "PATIENT_DIAGNOSIS_DATA_ID": "2",
+          "PATIENT_ID": "691",
+          "DIAGNOSIS_OBSERVATION": "",
+          "DELETE_TIME": "2024-06-04 12:38:55"
+        }
+      ]
+    },
+    {
+      "table": "patient_inactivity",
+      "description": "",
+      "groups": [
+        "Patient"
+      ],
+      "columns": [
+        "PATIENT_INACTIVITY_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "SOFTWARE_ID (int): Unique identifier (e.g., 2, 4, 3, 1)",
+        "BEGINNING_INACTIVITY (datetime): Beginning Inactivity field",
+        "ENDING_INACTIVITY (datetime): Ending Inactivity field"
+      ],
+      "sample_rows": [
+        {
+          "PATIENT_INACTIVITY_ID": "1",
+          "PATIENT_ID": "1264",
+          "SOFTWARE_ID": "3",
+          "BEGINNING_INACTIVITY": "2024-02-07 11:59:38",
+          "ENDING_INACTIVITY": "None"
+        },
+        {
+          "PATIENT_INACTIVITY_ID": "2",
+          "PATIENT_ID": "1189",
+          "SOFTWARE_ID": "4",
+          "BEGINNING_INACTIVITY": "2024-03-14 14:23:29",
+          "ENDING_INACTIVITY": "2024-03-14 14:23:43"
+        }
+      ]
+    },
+    {
+      "table": "patient_language_app",
+      "description": "",
+      "groups": [
+        "Patient"
+      ],
+      "columns": [
+        "PATIENT_LANGUAGE_APP_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "LANGUAGE_KEY (varchar): Language Key field"
+      ],
+      "sample_rows": [
+        {
+          "PATIENT_LANGUAGE_APP_ID": "1",
+          "PATIENT_ID": "207",
+          "LANGUAGE_KEY": "Spanish"
+        },
+        {
+          "PATIENT_LANGUAGE_APP_ID": "2",
+          "PATIENT_ID": "672",
+          "LANGUAGE_KEY": "Spanish"
+        }
+      ]
+    },
+    {
+      "table": "patient_language_plus",
+      "description": "",
+      "groups": [
+        "Patient"
+      ],
+      "columns": [
+        "PATIENT_LANGUAGE_PLUS_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "LANGUAGE_KEY (varchar): Language Key field"
+      ],
+      "sample_rows": [
+        {
+          "PATIENT_LANGUAGE_PLUS_ID": "1",
+          "PATIENT_ID": "672",
+          "LANGUAGE_KEY": "English"
+        },
+        {
+          "PATIENT_LANGUAGE_PLUS_ID": "2",
+          "PATIENT_ID": "3126",
+          "LANGUAGE_KEY": "English"
+        }
+      ]
+    },
+    {
+      "table": "patient_privacy_policy",
+      "description": "",
+      "groups": [
+        "Patient"
+      ],
+      "columns": [
+        "PATIENT_PRIVACY_POLICY_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PRIVACY_POLICY_ID (int): Unique identifier (e.g., 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "CREATION_TIME (datetime): Time value"
+      ],
+      "sample_rows": [
+        {
+          "PATIENT_PRIVACY_POLICY_ID": "1",
+          "PRIVACY_POLICY_ID": "1",
+          "PATIENT_ID": "4539",
+          "CREATION_TIME": "2025-12-11 13:47:00"
+        },
+        {
+          "PATIENT_PRIVACY_POLICY_ID": "2",
+          "PRIVACY_POLICY_ID": "1",
+          "PATIENT_ID": "4542",
+          "CREATION_TIME": "2025-12-11 15:44:05"
+        }
+      ]
+    },
+    {
+      "table": "patient_software",
+      "description": "",
+      "groups": [
+        "Patient"
+      ],
+      "columns": [
+        "PATIENT_SOFTWARE_ID (int): Unique identifier (e.g., 19, 17, 18)",
+        "PATIENT_ID (int): Unique identifier",
+        "SOFTWARE_ID (int): Unique identifier (e.g., 2, 4, 3, 1)",
+        "CREATION_TIME (datetime): Time value",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+      ],
+      "sample_rows": [
+        {
+          "PATIENT_SOFTWARE_ID": "17",
+          "PATIENT_ID": "4",
+          "SOFTWARE_ID": "1",
+          "CREATION_TIME": "2021-04-29 16:00:38",
+          "DELETE_TIME": "None"
+        },
+        {
+          "PATIENT_SOFTWARE_ID": "18",
+          "PATIENT_ID": "4",
+          "SOFTWARE_ID": "2",
+          "CREATION_TIME": "2021-04-29 16:00:38",
+          "DELETE_TIME": "None"
+        }
+      ]
+    },
+    {
+      "table": "patient_subscription",
+      "description": "",
+      "groups": [
+        "Patient"
+      ],
+      "columns": [
+        "PATIENT_SUBSCRIPTION_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "SOFTWARE_ID (int): Unique identifier (e.g., 2, 4, 3, 1)",
+        "EXPIRATION_DATE (date): Date value (e.g., None, 2024-10-16 01:04:00, 2025-05-04, 2025-12-05 00:00:00, 2023-03-10 13:48:54)",
+        "RENEWAL_DATE (datetime): Date value (e.g., 2025-04-29 17:38:13, 2025-04-29 14:13:51, 2025-04-29 11:33:25)",
+        "TICKET_ID (varchar): Unique identifier (e.g., 2718, 2615, 1342)",
+        "STATUS (enum): Status or state of the record (e.g., ABORTED, INACTIVE)"
+      ],
+      "sample_rows": [
+        {
+          "PATIENT_SUBSCRIPTION_ID": "1",
+          "PATIENT_ID": "4",
+          "SOFTWARE_ID": "7",
+          "EXPIRATION_DATE": "2025-05-04",
+          "RENEWAL_DATE": "2025-04-29 11:33:25",
+          "TICKET_ID": "1342",
+          "STATUS": "PROCESSED"
+        },
+        {
+          "PATIENT_SUBSCRIPTION_ID": "2",
+          "PATIENT_ID": "17",
+          "SOFTWARE_ID": "7",
+          "EXPIRATION_DATE": "2025-10-29",
+          "RENEWAL_DATE": "2025-04-29 14:13:51",
+          "TICKET_ID": "2615",
+          "STATUS": "PROCESSED"
+        }
+      ]
+    },
+    {
+      "table": "performance_estimators_app",
+      "description": "",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "columns": [
+        "PERFORMANCE_ESTIMATORS_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "GAME_MODE (varchar): Game Mode field",
+        "SECONDS_FROM_START (int): Seconds From Start field",
+        "PARAMETER_KEY (varchar): Parameter Key field",
+        "PARAMETER_VALUE (varchar): Parameter Value field"
+      ],
+      "sample_rows": [
+        {
+          "PERFORMANCE_ESTIMATORS_ID": "1",
+          "SESSION_ID": "6713",
+          "PATIENT_ID": "437",
+          "PROTOCOL_ID": "208",
+          "GAME_MODE": "SEQUENCE",
+          "SECONDS_FROM_START": "51394",
+          "PARAMETER_KEY": "sequence_pe_ratioErrors",
+          "PARAMETER_VALUE": "1"
+        },
+        {
+          "PERFORMANCE_ESTIMATORS_ID": "2",
+          "SESSION_ID": "6733",
+          "PATIENT_ID": "4",
+          "PROTOCOL_ID": "217",
+          "GAME_MODE": "STANDARD",
+          "SECONDS_FROM_START": "38526",
+          "PARAMETER_KEY": "standard_pe_ratioCrashes",
+          "PARAMETER_VALUE": "1"
+        }
+      ]
+    },
+    {
+      "table": "performance_estimators_plus",
+      "description": "",
+      "groups": [
+        "Difficulty Adaptation and Performance"
+      ],
+      "columns": [
+        "PERFORMANCE_ESTIMATORS_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "GAME_MODE (varchar): Game Mode field",
+        "SECONDS_FROM_START (int): Seconds From Start field",
+        "PARAMETER_KEY (varchar): Parameter Key field",
+        "PARAMETER_VALUE (varchar): Parameter Value field"
+      ],
+      "sample_rows": [
+        {
+          "PERFORMANCE_ESTIMATORS_ID": "1",
+          "SESSION_ID": "100002",
+          "PATIENT_ID": "3130",
+          "PROTOCOL_ID": "201",
+          "GAME_MODE": "INVERSE_CATEGORIES",
+          "SECONDS_FROM_START": "17788",
+          "PARAMETER_KEY": "inverseCategories_pe_ratioErrors",
+          "PARAMETER_VALUE": "0.667"
+        },
+        {
+          "PERFORMANCE_ESTIMATORS_ID": "2",
+          "SESSION_ID": "100002",
+          "PATIENT_ID": "3130",
+          "PROTOCOL_ID": "201",
+          "GAME_MODE": "INVERSE_CATEGORIES",
+          "SECONDS_FROM_START": "23835",
+          "PARAMETER_KEY": "inverseCategories_pe_ratioErrors",
+          "PARAMETER_VALUE": "0.667"
+        }
+      ]
+    },
+    {
+      "table": "platform",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "columns": [
+        "PLATFORM_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PLATFORM (varchar): Platform field",
+        "SUBCATEGORY (enum): Category classification (e.g., TABLET, PHONE, NONE)"
+      ],
+      "sample_rows": [
+        {
+          "PLATFORM_ID": "1",
+          "PLATFORM": "WEB",
+          "SUBCATEGORY": "NONE"
+        },
+        {
+          "PLATFORM_ID": "2",
+          "PLATFORM": "MOBILE",
+          "SUBCATEGORY": "PHONE"
+        }
+      ]
+    },
+    {
+      "table": "prediction_data_source_clinical",
+      "description": "",
+      "groups": [],
+      "columns": [
+        "PREDICTION_DATA_SOURCE_CLINICAL_ID (int): Unique identifier",
+        "PREDICTION_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "CLINICAL_DATA_ID (int): Unique identifier"
+      ],
+      "sample_rows": []
+    },
+    {
+      "table": "prediction_data_source_sps",
+      "description": "",
+      "groups": [
+        "SaddlePoint"
+      ],
+      "columns": [
+        "PREDICTION_DATA_SOURCE_SPS_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PREDICTION_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "SPS_DIAGNOSIS_ID (int): Unique identifier (e.g., 2, 1, 3, 510)"
+      ],
+      "sample_rows": [
+        {
+          "PREDICTION_DATA_SOURCE_SPS_ID": "1",
+          "PREDICTION_ID": "1",
+          "SPS_DIAGNOSIS_ID": "510"
+        },
+        {
+          "PREDICTION_DATA_SOURCE_SPS_ID": "2",
+          "PREDICTION_ID": "2",
+          "SPS_DIAGNOSIS_ID": "510"
+        }
+      ]
+    },
+    {
+      "table": "prescription_app",
+      "description": "",
+      "groups": [
+        "Prescriptions"
+      ],
+      "columns": [
+        "PRESCRIPTION_ID (int): Unique identifier",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "STARTING_DATE (datetime): Date value",
+        "ENDING_DATE (datetime): Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)",
+        "WEEKDAY (enum): Weekday field",
+        "SESSION_DURATION (int): Session Duration field",
+        "AR_MODE (enum): Ar Mode field"
+      ],
+      "sample_rows": [
+        {
+          "PRESCRIPTION_ID": "1",
+          "PATIENT_ID": "205",
+          "PROTOCOL_ID": "201",
+          "STARTING_DATE": "2022-05-20 10:42:54",
+          "ENDING_DATE": "2023-03-14 00:08:42",
+          "WEEKDAY": "MONDAY",
+          "SESSION_DURATION": "600",
+          "AR_MODE": "NONE"
+        },
+        {
+          "PRESCRIPTION_ID": "2",
+          "PATIENT_ID": "205",
+          "PROTOCOL_ID": "201",
+          "STARTING_DATE": "2022-05-20 10:42:54",
+          "ENDING_DATE": "2023-03-14 00:08:42",
+          "WEEKDAY": "TUESDAY",
+          "SESSION_DURATION": "600",
+          "AR_MODE": "NONE"
+        }
+      ]
+    },
+    {
+      "table": "prescription_change_reason",
+      "description": "",
+      "groups": [],
+      "columns": [
+        "PRESCRIPTION_CHANGE_REASON_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "CHANGE_DATE (date): Date value (e.g., 2025-09-17, 2025-09-23, 2025-09-15)",
+        "REASON_KEY (varchar): Reason Key field",
+        "REASON (varchar): Reason field"
+      ],
+      "sample_rows": [
+        {
+          "PRESCRIPTION_CHANGE_REASON_ID": "1",
+          "PATIENT_ID": "4255",
+          "CHANGE_DATE": "2025-09-15",
+          "REASON_KEY": "Clinical Judgment",
+          "REASON": "Patient-specific considerations such as physical limitations, cognitive impairments, or contraindications to certain activities (e.g., VR/AR intolerance)."
+        },
+        {
+          "PRESCRIPTION_CHANGE_REASON_ID": "2",
+          "PATIENT_ID": "4270",
+          "CHANGE_DATE": "2025-09-17",
+          "REASON_KEY": "Clinical Judgment",
+          "REASON": "Patient-specific considerations such as physical limitations, cognitive impairments, or contraindications to certain activities (e.g., VR/AR intolerance)."
+        }
+      ]
+    },
+    {
+      "table": "prescription_clinic",
+      "description": "",
+      "groups": [
+        "Prescriptions"
+      ],
+      "columns": [
+        "PRESCRIPTION_ID (int): Unique identifier",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "STARTING_DATE (datetime): Date value",
+        "ENDING_DATE (datetime): Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)",
+        "WEEKDAY (enum): Weekday field",
+        "SESSION_DURATION (int): Session Duration field",
+        "VERSION (int): Version field"
+      ],
+      "sample_rows": [
+        {
+          "PRESCRIPTION_ID": "296",
+          "PATIENT_ID": "10",
+          "PROTOCOL_ID": "10",
+          "STARTING_DATE": "2021-06-29 15:40:35",
+          "ENDING_DATE": "2021-07-07 13:22:57",
+          "WEEKDAY": "BONUS",
+          "SESSION_DURATION": "300",
+          "VERSION": "2"
+        },
+        {
+          "PRESCRIPTION_ID": "297",
+          "PATIENT_ID": "70",
+          "PROTOCOL_ID": "120",
+          "STARTING_DATE": "2021-06-29 16:02:22",
+          "ENDING_DATE": "2100-01-01 00:00:00",
+          "WEEKDAY": "BONUS",
+          "SESSION_DURATION": "600",
+          "VERSION": "1"
+        }
+      ]
+    },
+    {
+      "table": "prescription_home",
+      "description": "",
+      "groups": [
+        "Prescriptions"
+      ],
+      "columns": [
+        "PRESCRIPTION_ID (int): Unique identifier",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "STARTING_DATE (datetime): Date value",
+        "ENDING_DATE (datetime): Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)",
+        "WEEKDAY (enum): Weekday field",
+        "SESSION_DURATION (int): Session Duration field",
+        "VERSION (int): Version field"
+      ],
+      "sample_rows": [
+        {
+          "PRESCRIPTION_ID": "47",
+          "PATIENT_ID": "70",
+          "PROTOCOL_ID": "152",
+          "STARTING_DATE": "2021-06-29 16:03:13",
+          "ENDING_DATE": "2021-07-01 11:32:21",
+          "WEEKDAY": "BONUS",
+          "SESSION_DURATION": "600",
+          "VERSION": "2"
+        },
+        {
+          "PRESCRIPTION_ID": "48",
+          "PATIENT_ID": "70",
+          "PROTOCOL_ID": "151",
+          "STARTING_DATE": "2021-06-29 16:03:13",
+          "ENDING_DATE": "2021-07-01 11:32:21",
+          "WEEKDAY": "BONUS",
+          "SESSION_DURATION": "600",
+          "VERSION": "2"
+        }
+      ]
+    },
+    {
+      "table": "prescription_plus",
+      "description": "",
+      "groups": [
+        "Prescriptions"
+      ],
+      "columns": [
+        "PRESCRIPTION_ID (int): Unique identifier",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "STARTING_DATE (datetime): Date value",
+        "ENDING_DATE (datetime): Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)",
+        "WEEKDAY (enum): Weekday field",
+        "SESSION_DURATION (int): Session Duration field",
+        "AR_MODE (enum): Ar Mode field"
+      ],
+      "sample_rows": [
+        {
+          "PRESCRIPTION_ID": "1",
+          "PATIENT_ID": "91",
+          "PROTOCOL_ID": "201",
+          "STARTING_DATE": "2022-05-20 11:01:37",
+          "ENDING_DATE": "2100-01-01 00:00:00",
+          "WEEKDAY": "MONDAY",
+          "SESSION_DURATION": "600",
+          "AR_MODE": "NONE"
+        },
+        {
+          "PRESCRIPTION_ID": "2",
+          "PATIENT_ID": "91",
+          "PROTOCOL_ID": "201",
+          "STARTING_DATE": "2022-05-20 11:01:37",
+          "ENDING_DATE": "2100-01-01 00:00:00",
+          "WEEKDAY": "TUESDAY",
+          "SESSION_DURATION": "600",
+          "AR_MODE": "NONE"
+        }
+      ]
+    },
+    {
+      "table": "prescription_staging",
+      "description": "",
+      "groups": [
+        "RecSys"
+      ],
+      "columns": [
+        "PRESCRIPTION_STAGING_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "STARTING_DATE (datetime): Date value",
+        "ENDING_DATE (datetime): Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)",
+        "WEEKDAY (enum): Weekday field",
+        "SESSION_DURATION (int): Session Duration field",
+        "RECOMMENDATION_ID (int): Unique identifier (e.g., 0, 551484)",
+        "WEEKS_SINCE_START (int): Weeks Since Start field",
+        "STATUS (enum): Status or state of the record (e.g., ABORTED, INACTIVE)"
+      ],
+      "sample_rows": [
+        {
+          "PRESCRIPTION_STAGING_ID": "1",
+          "PATIENT_ID": "4275",
+          "PROTOCOL_ID": "200",
+          "STARTING_DATE": "2025-09-26 00:00:00",
+          "ENDING_DATE": "2025-10-03 00:00:00",
+          "WEEKDAY": "MONDAY",
+          "SESSION_DURATION": "300",
+          "RECOMMENDATION_ID": "551484",
+          "WEEKS_SINCE_START": "0",
+          "STATUS": "Pending"
+        },
+        {
+          "PRESCRIPTION_STAGING_ID": "2",
+          "PATIENT_ID": "4275",
+          "PROTOCOL_ID": "200",
+          "STARTING_DATE": "2025-09-26 00:00:00",
+          "ENDING_DATE": "2025-10-03 00:00:00",
+          "WEEKDAY": "THURSDAY",
+          "SESSION_DURATION": "300",
+          "RECOMMENDATION_ID": "551484",
+          "WEEKS_SINCE_START": "0",
+          "STATUS": "Pending"
+        }
+      ]
+    },
+    {
+      "table": "prescription_web",
+      "description": "",
+      "groups": [
+        "Prescriptions"
+      ],
+      "columns": [
+        "PRESCRIPTION_ID (int): Unique identifier",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "STARTING_DATE (datetime): Date value",
+        "ENDING_DATE (datetime): Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)",
+        "WEEKDAY (enum): Weekday field",
+        "SESSION_DURATION (int): Session Duration field"
+      ],
+      "sample_rows": [
+        {
+          "PRESCRIPTION_ID": "1",
+          "PATIENT_ID": "205",
+          "PROTOCOL_ID": "301",
+          "STARTING_DATE": "2022-05-20 10:42:48",
+          "ENDING_DATE": "2100-01-01 00:00:00",
+          "WEEKDAY": "MONDAY",
+          "SESSION_DURATION": "600"
+        },
+        {
+          "PRESCRIPTION_ID": "2",
+          "PATIENT_ID": "205",
+          "PROTOCOL_ID": "301",
+          "STARTING_DATE": "2022-05-20 10:42:48",
+          "ENDING_DATE": "2100-01-01 00:00:00",
+          "WEEKDAY": "TUESDAY",
+          "SESSION_DURATION": "600"
+        }
+      ]
+    },
+    {
+      "table": "privacy_policy",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "columns": [
+        "PRIVACY_POLICY_ID (int): Unique identifier (e.g., 1)",
+        "PRIVACY_POLICY_VERSION (varchar): Privacy Policy Version field",
+        "PRIVACY_POLICY_WEB (varchar): Privacy Policy Web field",
+        "CREATION_TIME (datetime): Time value"
+      ],
+      "sample_rows": [
+        {
+          "PRIVACY_POLICY_ID": "1",
+          "PRIVACY_POLICY_VERSION": "1.0",
+          "PRIVACY_POLICY_WEB": "https://eodynesystems.com/legal-notice-rgs-2026-01-08/",
+          "CREATION_TIME": "2025-12-01 18:44:15"
+        }
+      ]
+    },
+    {
+      "table": "protocol",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "columns": [
+        "PROTOCOL_ID (int): Unique identifier",
+        "PROTOCOL_TYPE_ID (int): Unique identifier (e.g., 2, 1, 3, 4)",
+        "NAME_KEY (varchar): Name Key field",
+        "DESCRIPTION_KEY (varchar): Description Key field"
+      ],
+      "sample_rows": [
+        {
+          "PROTOCOL_ID": "10",
+          "PROTOCOL_TYPE_ID": "4",
+          "NAME_KEY": "Spheroids",
+          "DESCRIPTION_KEY": "Spheroids Protocol"
+        },
+        {
+          "PROTOCOL_ID": "40",
+          "PROTOCOL_TYPE_ID": "4",
+          "NAME_KEY": "Pinball",
+          "DESCRIPTION_KEY": "Pinball Protocol"
+        }
+      ]
+    },
+    {
+      "table": "protocol_device_support",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "columns": [
+        "PROTOCOL_DEVICE_SUPPORT_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PROTOCOL_ID (int): Unique identifier",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+      ],
+      "sample_rows": [
+        {
+          "PROTOCOL_DEVICE_SUPPORT_ID": "1",
+          "PROTOCOL_ID": "218",
+          "DELETE_TIME": "None"
+        },
+        {
+          "PROTOCOL_DEVICE_SUPPORT_ID": "2",
+          "PROTOCOL_ID": "219",
+          "DELETE_TIME": "None"
+        }
+      ]
+    },
+    {
+      "table": "protocol_hospital",
+      "description": "",
+      "groups": [
+        "Hospital"
+      ],
+      "columns": [
+        "PROTOCOL_HOSPITAL_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "HOSPITAL_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PROTOCOL_ID (int): Unique identifier",
+        "STATUS (enum): Status or state of the record (e.g., ABORTED, INACTIVE)",
+        "EXPIRATION_DATE (datetime): Date value (e.g., None, 2024-10-16 01:04:00, 2025-05-04, 2025-12-05 00:00:00, 2023-03-10 13:48:54)"
+      ],
+      "sample_rows": [
+        {
+          "PROTOCOL_HOSPITAL_ID": "1",
+          "HOSPITAL_ID": "1",
+          "PROTOCOL_ID": "10",
+          "STATUS": "INACTIVE",
+          "EXPIRATION_DATE": "2023-03-10 13:48:54"
+        },
+        {
+          "PROTOCOL_HOSPITAL_ID": "2",
+          "HOSPITAL_ID": "1",
+          "PROTOCOL_ID": "40",
+          "STATUS": "INACTIVE",
+          "EXPIRATION_DATE": "2023-03-10 13:48:54"
+        }
+      ]
+    },
+    {
+      "table": "protocol_platform",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "columns": [
+        "PROTOCOL_PLATFORM_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PROTOCOL_ID (int): Unique identifier",
+        "PLATFORM_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+      ],
+      "sample_rows": [
+        {
+          "PROTOCOL_PLATFORM_ID": "1",
+          "PROTOCOL_ID": "201",
+          "PLATFORM_ID": "2",
+          "DELETE_TIME": "None"
+        },
+        {
+          "PROTOCOL_PLATFORM_ID": "2",
+          "PROTOCOL_ID": "201",
+          "PLATFORM_ID": "3",
+          "DELETE_TIME": "None"
+        }
+      ]
+    },
+    {
+      "table": "protocol_software",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "columns": [
+        "PROTOCOL_SOFTWARE_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PROTOCOL_ID (int): Unique identifier",
+        "SOFTWARE_ID (int): Unique identifier (e.g., 2, 4, 3, 1)"
+      ],
+      "sample_rows": [
+        {
+          "PROTOCOL_SOFTWARE_ID": "1",
+          "PROTOCOL_ID": "10",
+          "SOFTWARE_ID": "1"
+        },
+        {
+          "PROTOCOL_SOFTWARE_ID": "2",
+          "PROTOCOL_ID": "10",
+          "SOFTWARE_ID": "2"
+        }
+      ]
+    },
+    {
+      "table": "protocol_software_hospital",
+      "description": "",
+      "groups": [
+        "Hospital"
+      ],
+      "columns": [
+        "PROTOCOL_SOFTWARE_HOSPITAL_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PROTOCOL_ID (int): Unique identifier",
+        "SOFTWARE_ID (int): Unique identifier (e.g., 2, 4, 3, 1)",
+        "HOSPITAL_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "STATUS (enum): Status or state of the record (e.g., ABORTED, INACTIVE)"
+      ],
+      "sample_rows": [
+        {
+          "PROTOCOL_SOFTWARE_HOSPITAL_ID": "1",
+          "PROTOCOL_ID": "309",
+          "SOFTWARE_ID": "1",
+          "HOSPITAL_ID": "1",
+          "STATUS": "ACTIVE"
+        },
+        {
+          "PROTOCOL_SOFTWARE_HOSPITAL_ID": "2",
+          "PROTOCOL_ID": "309",
+          "SOFTWARE_ID": "7",
+          "HOSPITAL_ID": "1",
+          "STATUS": "ACTIVE"
+        }
+      ]
+    },
+    {
+      "table": "protocol_type",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "columns": [
+        "PROTOCOL_TYPE_ID (int): Unique identifier (e.g., 2, 1, 3, 4)",
+        "PROTOCOL_TYPE (varchar): Type or category classification (e.g., Arms Gravity, Body, Hands)"
+      ],
+      "sample_rows": [
+        {
+          "PROTOCOL_TYPE_ID": "1",
+          "PROTOCOL_TYPE": "Body"
+        },
+        {
+          "PROTOCOL_TYPE_ID": "2",
+          "PROTOCOL_TYPE": "Hands"
+        }
+      ]
+    },
+    {
+      "table": "recording_app",
+      "description": "",
+      "groups": [
+        "Recordings"
+      ],
+      "columns": [
+        "RECORDING_ID (int): Unique identifier",
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "RECORDING_KEY (varchar): Recording Key field",
+        "RECORDING_VALUE (varchar): Recording Value field"
+      ],
+      "sample_rows": [
+        {
+          "RECORDING_ID": "1",
+          "SESSION_ID": "1",
+          "PATIENT_ID": "91",
+          "PROTOCOL_ID": "210",
+          "RECORDING_KEY": "score",
+          "RECORDING_VALUE": "0"
+        },
+        {
+          "RECORDING_ID": "2",
+          "SESSION_ID": "1",
+          "PATIENT_ID": "91",
+          "PROTOCOL_ID": "210",
+          "RECORDING_KEY": "totalErrors",
+          "RECORDING_VALUE": "0"
+        }
+      ]
+    },
+    {
+      "table": "recording_clinic",
+      "description": "",
+      "groups": [
+        "Recordings"
+      ],
+      "columns": [
+        "RECORDING_ID (int): Unique identifier",
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "RECORDING_KEY (varchar): Recording Key field",
+        "RECORDING_VALUE (varchar): Recording Value field"
+      ],
+      "sample_rows": [
+        {
+          "RECORDING_ID": "6378",
+          "SESSION_ID": "846",
+          "PATIENT_ID": "10",
+          "PROTOCOL_ID": "10",
+          "RECORDING_KEY": "score",
+          "RECORDING_VALUE": "0"
+        },
+        {
+          "RECORDING_ID": "6379",
+          "SESSION_ID": "846",
+          "PATIENT_ID": "10",
+          "PROTOCOL_ID": "10",
+          "RECORDING_KEY": "version",
+          "RECORDING_VALUE": "23"
+        }
+      ]
+    },
+    {
+      "table": "recording_home",
+      "description": "",
+      "groups": [
+        "Recordings"
+      ],
+      "columns": [
+        "RECORDING_ID (int): Unique identifier",
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "RECORDING_KEY (varchar): Recording Key field",
+        "RECORDING_VALUE (varchar): Recording Value field"
+      ],
+      "sample_rows": [
+        {
+          "RECORDING_ID": "137",
+          "SESSION_ID": "381",
+          "PATIENT_ID": "70",
+          "PROTOCOL_ID": "90",
+          "RECORDING_KEY": "score",
+          "RECORDING_VALUE": "0"
+        },
+        {
+          "RECORDING_ID": "138",
+          "SESSION_ID": "381",
+          "PATIENT_ID": "70",
+          "PROTOCOL_ID": "90",
+          "RECORDING_KEY": "version",
+          "RECORDING_VALUE": "23"
+        }
+      ]
+    },
+    {
+      "table": "recording_icu",
+      "description": "",
+      "groups": [
+        "Recordings"
+      ],
+      "columns": [
+        "RECORDING_ID (int): Unique identifier",
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "RECORDING_KEY (varchar): Recording Key field",
+        "RECORDING_VALUE (varchar): Recording Value field"
+      ],
+      "sample_rows": [
+        {
+          "RECORDING_ID": "1",
+          "SESSION_ID": "1",
+          "RECORDING_KEY": "totalHits",
+          "RECORDING_VALUE": "0"
+        },
+        {
+          "RECORDING_ID": "2",
+          "SESSION_ID": "1",
+          "RECORDING_KEY": "totalErrors",
+          "RECORDING_VALUE": "0"
+        }
+      ]
+    },
+    {
+      "table": "recording_plus",
+      "description": "",
+      "groups": [
+        "Recordings"
+      ],
+      "columns": [
+        "RECORDING_ID (int): Unique identifier",
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "RECORDING_KEY (varchar): Recording Key field",
+        "RECORDING_VALUE (varchar): Recording Value field"
+      ],
+      "sample_rows": [
+        {
+          "RECORDING_ID": "1",
+          "SESSION_ID": "100000",
+          "PATIENT_ID": "672",
+          "PROTOCOL_ID": "307",
+          "RECORDING_KEY": "score",
+          "RECORDING_VALUE": "0"
+        },
+        {
+          "RECORDING_ID": "2",
+          "SESSION_ID": "100000",
+          "PATIENT_ID": "672",
+          "PROTOCOL_ID": "307",
+          "RECORDING_KEY": "totalErrors",
+          "RECORDING_VALUE": "0"
+        }
+      ]
+    },
+    {
+      "table": "recording_web",
+      "description": "",
+      "groups": [
+        "Recordings"
+      ],
+      "columns": [
+        "RECORDING_ID (int): Unique identifier",
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "RECORDING_KEY (varchar): Recording Key field",
+        "RECORDING_VALUE (varchar): Recording Value field"
+      ],
+      "sample_rows": [
+        {
+          "RECORDING_ID": "1",
+          "SESSION_ID": "1",
+          "PATIENT_ID": "207",
+          "PROTOCOL_ID": "301",
+          "RECORDING_KEY": "score",
+          "RECORDING_VALUE": "3"
+        },
+        {
+          "RECORDING_ID": "2",
+          "SESSION_ID": "1",
+          "PATIENT_ID": "207",
+          "PROTOCOL_ID": "301",
+          "RECORDING_KEY": "totalErrors",
+          "RECORDING_VALUE": "1"
+        }
+      ]
+    },
+    {
+      "table": "recsys_diagnostic",
+      "description": "",
+      "groups": [
+        "RecSys"
+      ],
+      "columns": [
+        "RECSYS_DIAGNOSTIC_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "DIAGNOSTIC_KEY (varchar): Diagnostic Key field",
+        "DIAGNOSTIC_DATE (date): Date value (e.g., 2025-09-18, 2025-11-06, 2025-10-09)"
+      ],
+      "sample_rows": [
+        {
+          "RECSYS_DIAGNOSTIC_ID": "1",
+          "PATIENT_ID": "4255",
+          "DIAGNOSTIC_KEY": "diagnostic1",
+          "DIAGNOSTIC_DATE": "2025-09-18"
+        },
+        {
+          "RECSYS_DIAGNOSTIC_ID": "2",
+          "PATIENT_ID": "4255",
+          "DIAGNOSTIC_KEY": "diagnostic2",
+          "DIAGNOSTIC_DATE": "2025-10-09"
+        }
+      ]
+    },
+    {
+      "table": "recsys_intrinsic_measures",
+      "description": "",
+      "groups": [
+        "RecSys"
+      ],
+      "columns": [
+        "RECSYS_INTRINSIC_MEASURES_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "INTRINSIC_MEASURE_KEY (varchar): Intrinsic Measure Key field",
+        "INTRINSIC_MEASURE_DATE (date): Date value (e.g., 2025-09-17, 2025-09-15)"
+      ],
+      "sample_rows": [
+        {
+          "RECSYS_INTRINSIC_MEASURES_ID": "1",
+          "PATIENT_ID": "4264",
+          "INTRINSIC_MEASURE_KEY": "Baseline",
+          "INTRINSIC_MEASURE_DATE": "2025-09-15"
+        },
+        {
+          "RECSYS_INTRINSIC_MEASURES_ID": "2",
+          "PATIENT_ID": "4269",
+          "INTRINSIC_MEASURE_KEY": "Baseline",
+          "INTRINSIC_MEASURE_DATE": "2025-09-17"
+        }
+      ]
+    },
+    {
+      "table": "recsys_metrics",
+      "description": "",
+      "groups": [
+        "RecSys"
+      ],
+      "columns": [
+        "RECSYS_METRICS_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "RECOMMENDATION_ID (int): Unique identifier (e.g., 0, 551484)",
+        "METRIC_DATE (datetime): Date value (e.g., 2025-09-22 22:23:54)",
+        "METRIC_KEY (varchar): Metric Key field",
+        "METRIC_VALUE (varchar): Metric Value field"
+      ],
+      "sample_rows": [
+        {
+          "RECSYS_METRICS_ID": "1",
+          "PATIENT_ID": "4275",
+          "PROTOCOL_ID": "200",
+          "RECOMMENDATION_ID": "0",
+          "METRIC_DATE": "2025-09-22 22:23:54",
+          "METRIC_KEY": "ppf",
+          "METRIC_VALUE": "0.8040648207203038"
+        },
+        {
+          "RECSYS_METRICS_ID": "2",
+          "PATIENT_ID": "4275",
+          "PROTOCOL_ID": "201",
+          "RECOMMENDATION_ID": "0",
+          "METRIC_DATE": "2025-09-22 22:23:54",
+          "METRIC_KEY": "ppf",
+          "METRIC_VALUE": "0.5217216163277363"
+        }
+      ]
+    },
+    {
+      "table": "recsys_notes",
+      "description": "",
+      "groups": [
+        "RecSys"
+      ],
+      "columns": [
+        "RECSYS_NOTES_ID (int): Unique identifier",
+        "PATIENT_ID (int): Unique identifier",
+        "NOTE (varchar): Notes or comments",
+        "NOTE_CREATION_DATE (date): Date value",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+      ],
+      "sample_rows": []
+    },
+    {
+      "table": "reference_date_wear",
+      "description": "",
+      "groups": [],
+      "columns": [
+        "REFERENCE_DATES_WEAR_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "REFERENCE_KEY (varchar): Reference Key field",
+        "REFERENCE_DATE (date): Date value (e.g., 2023-08-30, 2023-10-11)",
+        "DELETE_TIME (datetime): Time value (e.g., None, 2023-09-08 14:36:03, 2023-08-31 19:18:23)"
+      ],
+      "sample_rows": [
+        {
+          "REFERENCE_DATES_WEAR_ID": "1",
+          "PATIENT_ID": "4",
+          "REFERENCE_KEY": "armProgressReferenceDate",
+          "REFERENCE_DATE": "2023-08-30",
+          "DELETE_TIME": "2024-02-12 23:12:42"
+        },
+        {
+          "REFERENCE_DATES_WEAR_ID": "2",
+          "PATIENT_ID": "4",
+          "REFERENCE_KEY": "armCostReferenceDate",
+          "REFERENCE_DATE": "2023-08-30",
+          "DELETE_TIME": "2024-02-12 23:12:42"
+        }
+      ]
+    },
+    {
+      "table": "session_app",
+      "description": "",
+      "groups": [
+        "sessions"
+      ],
+      "columns": [
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PRESCRIPTION_ID (int): Unique identifier",
+        "STARTING_DATE (datetime): Date value",
+        "ENDING_DATE (datetime): Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)",
+        "STATUS (enum): Status or state of the record (e.g., ABORTED, INACTIVE)",
+        "SESSION_LOG_PARSED (int): Session Log Parsed field"
+      ],
+      "sample_rows": [
+        {
+          "SESSION_ID": "1",
+          "PRESCRIPTION_ID": "145",
+          "STARTING_DATE": "2022-05-20 13:03:57",
+          "ENDING_DATE": "2022-05-20 13:04:05",
+          "STATUS": "ABORTED",
+          "SESSION_LOG_PARSED": "0"
+        },
+        {
+          "SESSION_ID": "2",
+          "PRESCRIPTION_ID": "89",
+          "STARTING_DATE": "2022-05-20 13:04:09",
+          "ENDING_DATE": "2022-05-20 13:04:31",
+          "STATUS": "ABORTED",
+          "SESSION_LOG_PARSED": "0"
+        }
+      ]
+    },
+    {
+      "table": "session_clinic",
+      "description": "",
+      "groups": [
+        "sessions"
+      ],
+      "columns": [
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PRESCRIPTION_ID (int): Unique identifier",
+        "STATION_ID (int): Unique identifier (e.g., 2, 5, 3, 1)",
+        "SOFTWARE_ID (int): Unique identifier (e.g., 2, 4, 3, 1)",
+        "STARTING_DATE (datetime): Date value",
+        "ENDING_DATE (datetime): Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)",
+        "STATUS (enum): Status or state of the record (e.g., ABORTED, INACTIVE)",
+        "SESSION_LOG_PARSED (int): Session Log Parsed field"
+      ],
+      "sample_rows": [
+        {
+          "SESSION_ID": "846",
+          "PRESCRIPTION_ID": "296",
+          "STATION_ID": "1",
+          "SOFTWARE_ID": "1",
+          "STARTING_DATE": "2021-06-29 17:42:07",
+          "ENDING_DATE": "2021-06-29 17:42:34",
+          "STATUS": "ABORTED",
+          "SESSION_LOG_PARSED": "0"
+        },
+        {
+          "SESSION_ID": "847",
+          "PRESCRIPTION_ID": "312",
+          "STATION_ID": "3",
+          "SOFTWARE_ID": "1",
+          "STARTING_DATE": "2021-06-30 11:30:56",
+          "ENDING_DATE": "2021-06-30 11:31:17",
+          "STATUS": "ABORTED",
+          "SESSION_LOG_PARSED": "0"
+        }
+      ]
+    },
+    {
+      "table": "session_home",
+      "description": "",
+      "groups": [
+        "sessions"
+      ],
+      "columns": [
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PRESCRIPTION_ID (int): Unique identifier",
+        "STATION_ID (int): Unique identifier (e.g., 2, 5, 3, 1)",
+        "SOFTWARE_ID (int): Unique identifier (e.g., 2, 4, 3, 1)",
+        "STARTING_DATE (datetime): Date value",
+        "ENDING_DATE (datetime): Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)",
+        "STATUS (enum): Status or state of the record (e.g., ABORTED, INACTIVE)",
+        "SESSION_LOG_PARSED (int): Session Log Parsed field"
+      ],
+      "sample_rows": [
+        {
+          "SESSION_ID": "381",
+          "PRESCRIPTION_ID": "52",
+          "STATION_ID": "2",
+          "SOFTWARE_ID": "2",
+          "STARTING_DATE": "2021-06-30 10:41:34",
+          "ENDING_DATE": "2021-06-30 10:41:51",
+          "STATUS": "ABORTED",
+          "SESSION_LOG_PARSED": "0"
+        },
+        {
+          "SESSION_ID": "382",
+          "PRESCRIPTION_ID": "122",
+          "STATION_ID": "5",
+          "SOFTWARE_ID": "2",
+          "STARTING_DATE": "2021-06-30 12:07:40",
+          "ENDING_DATE": "2021-06-30 12:08:03",
+          "STATUS": "ABORTED",
+          "SESSION_LOG_PARSED": "0"
+        }
+      ]
+    },
+    {
+      "table": "session_icu",
+      "description": "",
+      "groups": [
+        "sessions"
+      ],
+      "columns": [
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PATIENT_ID (int): Unique identifier",
+        "PROTOCOL_ID (int): Unique identifier",
+        "STARTING_DATE (datetime): Date value",
+        "ENDING_DATE (datetime): Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)",
+        "STATUS (enum): Status or state of the record (e.g., ABORTED, INACTIVE)",
+        "SESSION_LOG_PARSED (int): Session Log Parsed field"
+      ],
+      "sample_rows": [
+        {
+          "SESSION_ID": "1",
+          "PATIENT_ID": "2402",
+          "PROTOCOL_ID": "401",
+          "STARTING_DATE": "2024-06-04 10:38:28",
+          "ENDING_DATE": "2024-06-04 10:38:49",
+          "STATUS": "CLOSED",
+          "SESSION_LOG_PARSED": "0"
+        },
+        {
+          "SESSION_ID": "2",
+          "PATIENT_ID": "2402",
+          "PROTOCOL_ID": "408",
+          "STARTING_DATE": "2024-06-04 10:38:56",
+          "ENDING_DATE": "2024-06-04 10:39:02",
+          "STATUS": "CLOSED",
+          "SESSION_LOG_PARSED": "0"
+        }
+      ]
+    },
+    {
+      "table": "session_plus",
+      "description": "",
+      "groups": [
+        "sessions"
+      ],
+      "columns": [
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PRESCRIPTION_ID (int): Unique identifier",
+        "STARTING_DATE (datetime): Date value",
+        "ENDING_DATE (datetime): Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)",
+        "STATUS (enum): Status or state of the record (e.g., ABORTED, INACTIVE)",
+        "PLATFORM (enum): Platform field",
+        "DEVICE (varchar): Device field",
+        "SESSION_LOG_PARSED (int): Session Log Parsed field"
+      ],
+      "sample_rows": [
+        {
+          "SESSION_ID": "100000",
+          "PRESCRIPTION_ID": "95163",
+          "STARTING_DATE": "2024-10-16 11:40:25",
+          "ENDING_DATE": "2024-10-16 11:40:43",
+          "STATUS": "ABORTED",
+          "PLATFORM": "MOBILE",
+          "DEVICE": "Xiaomi 23043RP34G",
+          "SESSION_LOG_PARSED": "0"
+        },
+        {
+          "SESSION_ID": "100001",
+          "PRESCRIPTION_ID": "95128",
+          "STARTING_DATE": "2024-10-16 11:40:55",
+          "ENDING_DATE": "2024-10-16 11:41:33",
+          "STATUS": "ABORTED",
+          "PLATFORM": "MOBILE",
+          "DEVICE": "Xiaomi 23043RP34G",
+          "SESSION_LOG_PARSED": "0"
+        }
+      ]
+    },
+    {
+      "table": "session_web",
+      "description": "",
+      "groups": [
+        "sessions"
+      ],
+      "columns": [
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "PRESCRIPTION_ID (int): Unique identifier",
+        "STARTING_DATE (datetime): Date value",
+        "ENDING_DATE (datetime): Date value (e.g., 2022-05-20 14:31:50, 2021-07-07 13:22:57, 2021-07-01 11:32:21, 2100-01-01 00:00:00)",
+        "STATUS (enum): Status or state of the record (e.g., ABORTED, INACTIVE)",
+        "SESSION_LOG_PARSED (int): Session Log Parsed field"
+      ],
+      "sample_rows": [
+        {
+          "SESSION_ID": "1",
+          "PRESCRIPTION_ID": "61",
+          "STARTING_DATE": "2022-05-20 14:36:32",
+          "ENDING_DATE": "2022-05-20 14:31:50",
+          "STATUS": "ABORTED",
+          "SESSION_LOG_PARSED": "0"
+        },
+        {
+          "SESSION_ID": "2",
+          "PRESCRIPTION_ID": "75",
+          "STARTING_DATE": "2022-05-20 14:46:32",
+          "ENDING_DATE": "2022-05-20 14:47:09",
+          "STATUS": "ABORTED",
+          "SESSION_LOG_PARSED": "0"
+        }
+      ]
+    },
+    {
+      "table": "software",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "columns": [
+        "SOFTWARE_ID (int): Unique identifier (e.g., 2, 4, 3, 1)",
+        "NAME (varchar): Name of the entity"
+      ],
+      "sample_rows": [
+        {
+          "SOFTWARE_ID": "1",
+          "NAME": "RGS Clinic"
+        },
+        {
+          "SOFTWARE_ID": "2",
+          "NAME": "RGS Home"
+        }
+      ]
+    },
+    {
+      "table": "sps_diagnosis",
+      "description": "",
+      "groups": [
+        "SaddlePoint"
+      ],
+      "columns": [
+        "SPS_DIAGNOSIS_ID (int): Unique identifier (e.g., 2, 1, 3, 510)",
+        "SOFTWARE_ID (int): Unique identifier (e.g., 2, 4, 3, 1)",
+        "SESSION_ID (int): Unique identifier (e.g., 2273, 100012, 100000, 100020, 846)",
+        "DIAGNOSIS_ASSESSMENT_KEY (varchar): Diagnosis Assessment Key field",
+        "DIAGNOSIS_ASSESSMENT_VALUE (varchar): Diagnosis Assessment Value field",
+        "SERVER_DATETIME (datetime): Time value"
+      ],
+      "sample_rows": [
+        {
+          "SPS_DIAGNOSIS_ID": "1",
+          "SOFTWARE_ID": "1",
+          "SESSION_ID": "4892",
+          "DIAGNOSIS_ASSESSMENT_KEY": "number_of_kinematics_entries",
+          "DIAGNOSIS_ASSESSMENT_VALUE": "10158",
+          "SERVER_DATETIME": "2023-08-31 16:56:04"
+        },
+        {
+          "SPS_DIAGNOSIS_ID": "2",
+          "SOFTWARE_ID": "1",
+          "SESSION_ID": "4892",
+          "DIAGNOSIS_ASSESSMENT_KEY": "session_duration_in_seconds",
+          "DIAGNOSIS_ASSESSMENT_VALUE": "304.685000",
+          "SERVER_DATETIME": "2023-08-31 16:56:04"
+        }
+      ]
+    },
+    {
+      "table": "sps_prediction_source",
+      "description": "",
+      "groups": [
+        "SaddlePoint"
+      ],
+      "columns": [
+        "PREDICTION_SOURCE_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "SPS_DATA_SOURCE (varchar): Sps Data Source field"
+      ],
+      "sample_rows": [
+        {
+          "PREDICTION_SOURCE_ID": "1",
+          "SPS_DATA_SOURCE": "RGS"
+        },
+        {
+          "PREDICTION_SOURCE_ID": "2",
+          "SPS_DATA_SOURCE": "CLINICAL"
+        }
+      ]
+    },
+    {
+      "table": "sps_prognosis",
+      "description": "",
+      "groups": [
+        "SaddlePoint"
+      ],
+      "columns": [
+        "SPS_PROGNOSIS_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PREDICTION_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PROGNOSIS_PREDICTION_KEY (varchar): Prognosis Prediction Key field",
+        "PROGNOSIS_PREDICTION_VALUE (varchar): Prognosis Prediction Value field",
+        "MODEL_DATA (varchar): Model Data field",
+        "PREDICTION_SOURCE_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "SERVER_DATETIME (datetime): Time value"
+      ],
+      "sample_rows": [
+        {
+          "SPS_PROGNOSIS_ID": "1",
+          "PREDICTION_ID": "1",
+          "PROGNOSIS_PREDICTION_KEY": "Trajectory_measured",
+          "PROGNOSIS_PREDICTION_VALUE": "(6.43,35.89),",
+          "MODEL_DATA": "LLMM van der Vliet parameters",
+          "PREDICTION_SOURCE_ID": "3",
+          "SERVER_DATETIME": "2023-10-05 00:00:02"
+        },
+        {
+          "SPS_PROGNOSIS_ID": "2",
+          "PREDICTION_ID": "1",
+          "PROGNOSIS_PREDICTION_KEY": "Trajectory_estimated",
+          "PROGNOSIS_PREDICTION_VALUE": "21.1,24.0,26.6,29.0,31.1,33.1,34.8,36.4,37.9,39.2,40.3,41.4,42.4,43.2,44.0,44.7,45.4,45.9,46.5,46.9,47.4,47.8,48.1,48.4,48.7,",
+          "MODEL_DATA": "LLMM van der Vliet parameters",
+          "PREDICTION_SOURCE_ID": "3",
+          "SERVER_DATETIME": "2023-10-05 00:00:02"
+        }
+      ]
+    },
+    {
+      "table": "station",
+      "description": "",
+      "groups": [],
+      "columns": [
+        "STATION_ID (int): Unique identifier (e.g., 2, 5, 3, 1)",
+        "SOFTWARE_ID (int): Unique identifier (e.g., 2, 4, 3, 1)",
+        "HOSPITAL_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "TAG (varchar): Tag field",
+        "CURRENT_VERSION (varchar): Current Version field",
+        "TARGET_VERSION (varchar): Target Version field"
+      ],
+      "sample_rows": [
+        {
+          "STATION_ID": "1",
+          "SOFTWARE_ID": "1",
+          "HOSPITAL_ID": "1",
+          "TAG": "Eodyne Hospital",
+          "CURRENT_VERSION": "5.0",
+          "TARGET_VERSION": "5.0"
+        },
+        {
+          "STATION_ID": "1",
+          "SOFTWARE_ID": "2",
+          "HOSPITAL_ID": "1",
+          "TAG": "Eodyne Hospital",
+          "CURRENT_VERSION": "5.0",
+          "TARGET_VERSION": "5.0"
+        }
+      ]
+    },
+    {
+      "table": "tree",
+      "description": "",
+      "groups": [],
+      "columns": [
+        "TREE_ID (int): Unique identifier (e.g., 2, 3, 1)",
+        "PATIENT_ID (int): Unique identifier",
+        "TREE_HEIGHT_M (float): Tree Height M field",
+        "USER_LIKES (int): User-related information (e.g., 0)"
+      ],
+      "sample_rows": [
+        {
+          "TREE_ID": "1",
+          "PATIENT_ID": "205",
+          "TREE_HEIGHT_M": "15.14",
+          "USER_LIKES": "0"
+        },
+        {
+          "TREE_ID": "2",
+          "PATIENT_ID": "91",
+          "TREE_HEIGHT_M": "0.07",
+          "USER_LIKES": "0"
+        }
+      ]
+    },
+    {
+      "table": "version_matching",
+      "description": "",
+      "groups": [
+        "RGS Housekeeping"
+      ],
+      "columns": [
+        "SOFTWARE_ID (int): Unique identifier (e.g., 2, 4, 3, 1)",
+        "COMPONENT_ID (int): Unique identifier (e.g., 0, 10, 1)",
+        "SOFTWARE_VERSION (varchar): Software Version field",
+        "COMPONENT_VERSION (varchar): Component Version field"
+      ],
+      "sample_rows": [
+        {
+          "SOFTWARE_ID": "1",
+          "COMPONENT_ID": "0",
+          "SOFTWARE_VERSION": "5.0",
+          "COMPONENT_VERSION": "2.0"
+        },
+        {
+          "SOFTWARE_ID": "1",
+          "COMPONENT_ID": "0",
+          "SOFTWARE_VERSION": "5.1",
+          "COMPONENT_VERSION": "2.1"
+        }
+      ]
+    }
+  ]
+}
