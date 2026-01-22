@@ -3,7 +3,7 @@ import mysql.connector
 import json
 
 # CONFIG
-DB_CONFIG = {'user': 'globalprod', 'password': 'SLf67X94:@5/', 'host': 'rgsweb.eodyne.com', 'database': 'global_prod'}
+DB_CONFIG = {'user': 'user', 'password': 'password', 'host': 'localhost', 'database': 'db'}
 
 def get_profile():
     conn = mysql.connector.connect(**DB_CONFIG)
