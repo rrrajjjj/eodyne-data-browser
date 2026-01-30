@@ -321,7 +321,6 @@ def collect_schema_paths(value, max_depth=3, max_array_items=1):
     visit(value, "", 0)
     return rows
 
-
 def render_table_list(tables, table_index, search, show_inline_desc):
     for t in tables:
         table_name = t["table"]
@@ -813,7 +812,6 @@ def main():
 
         with st.expander("Dataset: RGS@home", expanded=False):
             st.caption("No details added yet.")
-
 
 if __name__ == "__main__":
     main()
